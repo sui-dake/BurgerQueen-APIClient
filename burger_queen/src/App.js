@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
+import AdminDashboard from "./components/Admin/AdminDashboard";
+import WaiterDashboard from "./components/Waiter/WaiterDashboard";
+import Order from "./components/Waiter/Order";
+import PreparingOrder from "./components/Waiter/Preparing";
+import ChefDashboard from "./components/Chef/ChefDashboard";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <h1>hi</h1>
+      <BrowserRouter>
+       
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/waiter-dashboard" element={<WaiterDashboard />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/preparing-order" element={<PreparingOrder />} />
+          <Route path="/chef-dashboard" element={<ChefDashboard />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
