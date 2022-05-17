@@ -1,7 +1,9 @@
-.App {
-  color: #9bc7af;
-  opacity: 75;
-  width: 90;
-  gap: 90;
-  offset: 0;
+body {
+  margin: 0;
+  font-family: "Comfortaa", "Roboto", "Segoe UI", "Quicksand" "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #9bc7b1;
+  background-image: url(../public/Background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }

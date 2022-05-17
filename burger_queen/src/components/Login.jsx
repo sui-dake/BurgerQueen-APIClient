@@ -6,28 +6,21 @@ import { auth } from "../libs/Firebase-config";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 
 export default function Login() {
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
-  });
-
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
   const navigate = useNavigate();
-  const [error, setError] = useState();
-
-  const email = user.email;
-  const password = user.password;
-
-  const handleChange = ({ target: { name, value } }) =>
-    setUser({ ...user, [name]: value });
-
-  const handleSubmit = () =>
-    signInWithEmailAndPassword(auth, email, password)
+  const onSubmit = (data) => {
+    console.log(data);
+    const authEmail = data.email;
+    const authPass = data.password;
+    console.log(authPass);
+    signInWithEmailAndPassword(auth, authEmail, authPass)
       .then((userCredential) => {
-        // Signed in
-        //const user = userCredential.user;
-        // ...
         console.log("loggeadx!");
-        // navigate("/waiter-dashboard");
+        navigate("/admin-dashboard");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -35,29 +28,31 @@ export default function Login() {
         console.log(errorCode);
         // ..
       });
+  };
 
   return (
-    <section>
-      <div id="container_singin">
-        <form onSubmit={handleSubmit()}>
-          <input
-            className="form_singin"
-            type="email"
-            name="email"
-            placeholder="Correo"
-            onChange={handleChange}
-          />
-          <input
-            className="form_singin"
-            type="password"
-            name="password"
-            placeholder="Contraseña"
-            onChange={handleChange}
-          />
-          <button className="submit"> Entrar </button>
-        </form>
-        {error && <p id="error">{error}</p>}
-      </div>
-    </section>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input
+        {...register("email", {
+          required: true,
+          pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+        })}
+      />
+      {errors.email && "Enter a valid email address"}
+      {console.log(register())}
+
+      <input
+        type="password"
+        {...register("password", {
+          required: true,
+          pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$/,
+        })}
+      />
+
+      {errors.password &&
+        "Password should contains at least 6 characters and containing uppercase, lowercase and numbers"}
+
+      <input type="submit" />
+    </form>
   );
 }
