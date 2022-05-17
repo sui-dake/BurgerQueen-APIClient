@@ -1,12 +1,9 @@
-import { useNavigate } from "react-router-dom";
 import "./login.css";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import { auth } from "../libs/Firebase-config";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-} from "firebase/auth";
+import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -14,54 +11,51 @@ export default function Login() {
     password: "",
   });
 
-  const { login } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState();
+
+  const email = user.email;
+  const password = user.password;
 
   const handleChange = ({ target: { name, value } }) =>
     setUser({ ...user, [name]: value });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    try {
-      await login(user.email, user.password);
-      navigate("/");
-    } catch (error) {
-      setError(error.message);
-      if (error.code === "auth/user-not-found") {
-        setError("Usuario no registrado");
-      }
-      if (error.code === "auth/wrong-password") {
-        setError("Contraseña incorrecta");
-      }
-      if (error.code === "auth/invalid-email") {
-        setError("Ingresa un correo válido");
-      }
-    }
-  };
+  const handleSubmit = () =>
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        //const user = userCredential.user;
+        // ...
+        console.log("loggeadx!");
+        // navigate("/waiter-dashboard");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode);
+        // ..
+      });
 
   return (
     <section>
-      <div id="container_login">
-        <form onSubmit={handleSubmit}>
+      <div id="container_singin">
+        <form onSubmit={handleSubmit()}>
           <input
             className="form_singin"
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Correo"
             onChange={handleChange}
           />
           <input
             className="form_singin"
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             onChange={handleChange}
           />
-          <button className="submit"> Login </button>
+          <button className="submit"> Entrar </button>
         </form>
-
         {error && <p id="error">{error}</p>}
       </div>
     </section>
