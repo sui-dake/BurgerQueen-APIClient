@@ -10,9 +10,8 @@ import ChefDashboard from "./components/Chef/ChefDashboard";
 function App() {
   return (
     <div className="App">
-       <h1>hi</h1>
+      <h1>hi</h1>
       <BrowserRouter>
-       
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
