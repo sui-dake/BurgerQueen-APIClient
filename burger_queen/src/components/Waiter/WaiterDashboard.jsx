@@ -2,10 +2,9 @@ import './waiter.css'
 
 export default function WaiterDashboard (){
     return(
-        <div>
-            <h1>AQUI VA WAITER</h1>
+        <div className='admin_dashboard'>
+            <h1>WAITER UNDER CONSTRUCTION</h1>
               
-            
         </div>
     )
 }

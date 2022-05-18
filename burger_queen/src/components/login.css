@@ -40,3 +40,6 @@ form{
     font-size: 35px;
     color: #E5E5E5;
 }
+.errors{
+    color: #E74E6D;
+}
