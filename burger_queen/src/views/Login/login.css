@@ -12,20 +12,19 @@ html{
     width: 100%;
     height: 200%;
 }
-
 form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     margin: 100px;
     padding: 10%;
 }
-
 .email_pass{
     background: none;
     border: none;
-    border-bottom: 3px solid #876a96;
+    border-bottom: 3px solid #876A96;
+    margin-left: 3px;
     margin-bottom: 10px;
     width: 100%;
     margin-top: 5%;

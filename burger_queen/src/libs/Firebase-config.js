@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyDNq-OaQ2_cZCXLakK9V9NKDEJJAA9j-xc",
   authDomain: "burger-queen-828b1.firebaseapp.com",

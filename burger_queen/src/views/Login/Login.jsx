@@ -2,7 +2,7 @@ import "./login.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { auth } from "../libs/Firebase-config";
+import { auth } from "../../libs/Firebase-config";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 
 export default function Login() {
