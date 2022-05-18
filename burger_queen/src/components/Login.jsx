@@ -31,28 +31,28 @@ export default function Login() {
   };
 
   return (
+    <section id="container_form">
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input
-        {...register("email", {
-          required: true,
-          pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-        })}
-      />
-      {errors.email && "Enter a valid email address"}
-      {console.log(register())}
-
-      <input
-        type="password"
-        {...register("password", {
-          required: true,
-          pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$/,
-        })}
-      />
-
-      {errors.password &&
-        "Password should contains at least 6 characters and containing uppercase, lowercase and numbers"}
-
-      <input type="submit" />
+        <input placeholder="Email" className="email_pass"
+            {...register("email", {
+                required: true,
+                pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+            })}
+        />
+        <p className="errors">{errors.email && "Enter a valid email address"}</p>
+        {console.log(register())}
+        <input placeholder="Password" className="email_pass"
+            type="password"
+            {...register("password", {
+                required: true,
+                pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,}$/,
+            })}
+        /><p className="errors">
+             {errors.password &&
+            "Password should contains atleast 6 characters and containing uppercase, lowercase and numbers"}
+        </p>
+        <input type="submit" id="submit" value={'Enter'} />
     </form>
-  );
+    </section>
+);
 }
