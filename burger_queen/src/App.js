@@ -1,11 +1,11 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
-import AdminDashboard from "./components/Admin/AdminDashboard";
-import WaiterDashboard from "./components/Waiter/WaiterDashboard";
-import Order from "./components/Waiter/Order";
-import PreparingOrder from "./components/Waiter/Preparing";
-import ChefDashboard from "./components/Chef/ChefDashboard";
+import Login from "./views/Login/Login";
+import AdminDashboard from "./views/Admin/AdminDashboard"
+import WaiterDashboard from "./views/Waiter/WaiterDashboard";
+import Order from "./views/Waiter/Order";
+import PreparingOrder from "./views/Waiter/Preparing";
+import ChefDashboard from "./views/Chef/ChefDashboard";
 
 function App() {
   return (
