@@ -1,0 +1,9 @@
+#date {
+  display: flex;
+  justify-content: flex-start;
+
+}
+#date_local{
+    display: flex;
+    justify-content: flex-start;
+}
