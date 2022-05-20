@@ -8,6 +8,7 @@ import PreparingOrder from "./views/Waiter/Preparing";
 import ChefDashboard from './views/Chef/ChefDashboard';
 import Employees from "./views/Admin/adminComponents/Employees";
 import Products from "./views/Admin/adminComponents/Products";
+import Home from "./views/Login/Home";
 // cond
 
 
@@ -26,6 +27,7 @@ function App() {
         {/* <Route path="/" element={elementHome()} /> */}
 
           <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />}/> 
             {/* <Route path='/admin-dashboard/products' element={<Products />}/>
             <Route path='/admin-dashboard/employees' element={<Employees />}/>
