@@ -13,8 +13,8 @@ export default function Switch() {
         <p>Role: name</p>
         <p>logout</p>
         
-        <Link to='/admin-dashboard/employees'><button className="admin_switch" onClick={()=>console.log('employee')}>Employees</button></Link>
-        <Link to='/admin-dashboard/products'><button className="admin_switch" onClick={()=>console.log('product')}>Products</button></Link>
+        <button className="admin_switch" onClick={()=>console.log('employee')}>Employees</button>
+        <button className="admin_switch" onClick={()=>console.log('product')}>Products</button>
         
           {/* <Routes>
             <Route path="/admin-dashboard/products" children={<Products />}/>
