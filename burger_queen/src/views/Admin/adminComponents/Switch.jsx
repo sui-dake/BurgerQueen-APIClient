@@ -3,38 +3,39 @@ import Login from "../../Login/Login";
 import Products from "./Products";
 import Employees from "./Employees";
 
-
 export default function Switch() {
+  return (
+    <figure className="admin_dashboard">
+      <p>Role: name</p>
+      <p>logout</p>
 
-    return (
-      <figure className='admin_dashboard'>
-        <p>Role: name</p>
-        <p>logout</p>
-        
-        <button className="admin_switch" onClick={()=>console.log('employee')}>Employees</button>
-        <button className="admin_switch" onClick={()=>console.log('product')}>Products</button>
-        <Employees />
-        
-          {/* <Routes>
+      <button className="admin_switch" onClick={() => console.log("employee")}>
+        Employees
+      </button>
+      <button className="admin_switch" onClick={() => console.log("product")}>
+        Products
+      </button>
+      <Employees />
+
+      {/* <Routes>
             <Route path="/admin-dashboard/products" children={<Products />}/>
             <Route path="/admin-dashboard/employees" children={<Employees />}/>
           </Routes> */}
-        
 
-        {/* <Routes>
+      {/* <Routes>
           <Route path="/:id" children={<Product />} />
         </Routes> */}
-      </figure>
-    );
-  }
+    </figure>
+  );
+}
 
-  // function Product() {
-    
-  //   let { id } = useParams();
+// function Product() {
 
-  //   return (
-  //     <div>
-  //       <h3>ID: {id}</h3>
-  //     </div>
-  //   );
-  //   }
+//   let { id } = useParams();
+
+//   return (
+//     <div>
+//       <h3>ID: {id}</h3>
+//     </div>
+//   );
+//   }
