@@ -5,28 +5,27 @@ import AdminDashboard from "./views/Admin/AdminDashboard";
 import WaiterDashboard from "./views/Waiter/WaiterDashboard";
 import Order from "./views/Waiter/Order";
 import PreparingOrder from "./views/Waiter/Preparing";
-import ChefDashboard from './views/Chef/ChefDashboard';
+import ChefDashboard from "./views/Chef/ChefDashboard";
 import Employees from "./views/Admin/adminComponents/Employees";
 import Products from "./views/Admin/adminComponents/Products";
-// cond
-
+import Home from "./views/Login/Home";
 
 function App() {
-//  const roll=""
-//   const elementHome=()=>{
-//     if(roll==="mesero"){
-//       return <Employees></Employees>
-//     }else <div>hola</div>
-//   }
+  //  const roll=""
+  //   const elementHome=()=>{
+  //     if(roll==="mesero"){
+  //       return <Employees></Employees>
+  //     }else <div>hola</div>
+  //   }
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/admin-dashboard" element={<AdminDashboard />}/> 
-            {/* <Route path='/admin-dashboard/products' element={<Products />}/>
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          {/* <Route path='/admin-dashboard/products' element={<Products />}/>
             <Route path='/admin-dashboard/employees' element={<Employees />}/>
           </Route> */}
           <Route path="/waiter-dashboard" element={<WaiterDashboard />} />
