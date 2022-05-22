@@ -1,0 +1,8 @@
+.btn_logout {
+  background-color: transparent;
+  border-style: none;
+}
+#btn_logout_image {
+  width: 80px;
+  height: 80px;
+}

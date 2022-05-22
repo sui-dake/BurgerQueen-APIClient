@@ -1,0 +1,46 @@
+html{
+    width: 100%;
+    height: 100%;
+    
+}
+#container_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 200%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 100px;
+    padding: 10%;
+}
+.email_pass{
+    background: none;
+    border: none;
+    border-bottom: 3px solid #876A96;
+    margin-left: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-top: 5%;
+    font-size: 35px;
+}
+#submit{
+    border-bottom: none;
+    border: none;
+    background: #E74E6D;
+    border-radius: 20px;
+    padding: 15px;
+    width: 60%;
+    margin-top: 5%;
+    font-size: 35px;
+    color: #E5E5E5;
+}
+.errors{
+    color: #E74E6D;
+}

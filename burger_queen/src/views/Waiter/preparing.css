@@ -1,0 +1,26 @@
+
+#header_admin {
+  display: flex;
+  justify-content: space-around;
+}
+#btn_img_close {
+  background-color: transparent;
+  border-style: none;
+}
+#img_close {
+  width: 45px;
+  height: 45px;
+}
+#container_preparing{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cooking {
+  width: 150px;
+  height: 150px;
+}
+#spatul_steam {
+  margin-left: -60px;
+}
