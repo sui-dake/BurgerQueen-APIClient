@@ -11,6 +11,8 @@ export default function AdminDashboard() {
       <h1>Role: name</h1>
       <p>logout</p>
       <Switch />
+      <>
+      </>
       {/* <Routes>
         <Route path="/:id" children={<Products />}/>
         <Route path="/:id" children={<Employees />}/>
