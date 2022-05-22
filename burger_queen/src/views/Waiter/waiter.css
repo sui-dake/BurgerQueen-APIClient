@@ -1,3 +1,5 @@
-.waiter_dashboard{
-    display: flex;
+.waiter_dashboard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
