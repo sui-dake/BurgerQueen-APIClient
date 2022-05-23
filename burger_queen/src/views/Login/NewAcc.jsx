@@ -22,14 +22,9 @@ export default function NewAcc() {
     const authEmail = data.email;
     const authPass = data.password;
     const role = data.role;
-    const authName = data.name;
-    const displayName = data.displayName;
+    const displayName = data.name;
     console.log(displayName);
-    //createUserWithEmailAndPassword(auth, authEmail, authPass);
-    //.then((userCredential) => {
-    // Signed in
-    // const user = userCredential.user;
-    // const UID = user.uid;
+
     try {
       await singup(authEmail, authPass);
       await changeName(displayName);
@@ -39,7 +34,7 @@ export default function NewAcc() {
       Email: authEmail,
       Password: authPass,
 
-      Name: authName,
+      Name: displayName,
       Role: role,
     });
 
@@ -65,11 +60,10 @@ export default function NewAcc() {
     //     // ..
     //   });
     return {
-      authName,
+      displayName,
       authPass,
       authEmail,
       role,
-      displayName,
     };
   };
 
@@ -109,7 +103,9 @@ export default function NewAcc() {
 
           <input type="submit" id="submit" value={"Create"} />
         </form>
-        {()=>{console.log(user)}}
+        {() => {
+          console.log(user);
+        }}
       </section>
       {/* <Coincidence name={handleSubmit(onSubmit)}/> */}
     </div>

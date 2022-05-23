@@ -8,9 +8,6 @@ export default function Home() {
     <div className="container_home">
       {/* <NewAcc />
       <SingOut />
-<<<<<<< HEAD
-      <Coincidence />
-=======
       <Coincidence /> */}
       <Link to="/waiter-dashboard" style={{ margin: "5px" }}>
         Waiter Dashboard
@@ -21,7 +18,6 @@ export default function Home() {
       <Link to="/chef-dashboard" style={{ margin: "5px" }}>
         Chef Dashboard
       </Link>
->>>>>>> beec4d4f5231fe74d23d3a1a4ba1cbc3879efdc9
     </div>
   );
 }
