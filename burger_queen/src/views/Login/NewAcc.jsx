@@ -6,7 +6,6 @@ import {
   signOut,
 } from "firebase/auth";
 import { doc, addDoc, collection } from "firebase/firestore";
-import Coincidence from "./Coincidence";
 import { useAuth } from "../../context/authContext";
 
 export default function NewAcc() {
@@ -22,8 +21,7 @@ export default function NewAcc() {
     const authEmail = data.email;
     const authPass = data.password;
     const role = data.role;
-    const authName = data.name;
-    const displayName = data.displayName;
+    const displayName = data.name;
     console.log(displayName);
     //createUserWithEmailAndPassword(auth, authEmail, authPass);
     //.then((userCredential) => {
@@ -39,7 +37,7 @@ export default function NewAcc() {
       Email: authEmail,
       Password: authPass,
 
-      Name: authName,
+      Name: displayName,
       Role: role,
     });
 
@@ -65,7 +63,6 @@ export default function NewAcc() {
     //     // ..
     //   });
     return {
-      authName,
       authPass,
       authEmail,
       role,
@@ -109,9 +106,11 @@ export default function NewAcc() {
 
           <input type="submit" id="submit" value={"Create"} />
         </form>
-        {()=>{console.log(user)}}
+        {() => {
+          console.log(user);
+        }}
       </section>
-      {/* <Coincidence name={handleSubmit(onSubmit)}/> */}
+      
     </div>
   );
 }
