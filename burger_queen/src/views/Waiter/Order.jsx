@@ -21,10 +21,10 @@ export default function Order() {
 
       <section id="buttons_switch">
         <button className="waiter_switch" id="b_employees">
-          Employees
+          Breakfast
         </button>
         <button className="waiter_switch" id="b_products">
-          Products
+          Meal
         </button>
       </section>
       <section style={{ margin: "120px" }}>

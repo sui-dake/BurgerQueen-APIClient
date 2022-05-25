@@ -5,20 +5,18 @@ import Products from "./adminComponents/Products";
 import Employees from "./adminComponents/Employees";
 import ButtonAddEmployee from "./adminComponents/ButtonAddEmployee";
 import OrderTable from "./../Waiter/waiterComponents/components/OrderTable";
-//import { useAuth } from './../context/authContext'
+import SingOut from "../../components/SingOut";
 
 export default function AdminDashboard() {
   return (
-    <div className="admin_dashboard">
-      <h1></h1>
-      <p></p>
-      <Switch />
-      <ButtonAddEmployee />
-
-      <Link to={"/"} style={{ margin: "5px" }}>
-        {" "}
-        Home{" "}
-      </Link>
+    <div>
+      <main className="singout" style={{ marginRight: "70px" }}>
+        <SingOut />
+      </main>
+      <div className="admin_dashboard">
+        <Switch />
+        <ButtonAddEmployee />
+      </div>
     </div>
   );
 }

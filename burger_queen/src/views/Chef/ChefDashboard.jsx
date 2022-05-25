@@ -6,7 +6,7 @@ import SingOut from "../../components/SingOut";
 export default function ChefDashboard() {
   return (
     <div className="chef_dashboard">
-      <main className="singout">
+      <main className="singout" style={{ marginRight: "70px" }}>
         <SingOut />
       </main>
       <section id="date_user">

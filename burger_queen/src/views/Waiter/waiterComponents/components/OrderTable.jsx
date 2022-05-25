@@ -24,8 +24,16 @@ export default function OrderTable() {
 
         {/* {employee.map((user) => ( */}
         <tr>
-          <td style={{ width: "180px", padding: "5px 10px" }}>$5</td>
-          <td style={{ width: "130px", padding: "5px 10px" }}>Americano</td>
+          <td
+            style={{ width: "180px", padding: "5px 10px", textAlign: "center" }}
+          >
+            $5
+          </td>
+          <td
+            style={{ width: "130px", padding: "5px 10px", textAlign: "center" }}
+          >
+            Americano
+          </td>
           <td
             style={{ width: "180px", padding: "5px 10px", textAlign: "center" }}
           >
