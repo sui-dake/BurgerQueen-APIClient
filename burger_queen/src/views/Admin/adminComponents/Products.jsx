@@ -1,13 +1,11 @@
 import { useParams } from "react-router-dom";
 
 export default function Products() {
-    
-    let { id } = useParams
-    console.log('products')
+  let { id } = useParams;
 
-    return (
-      <div>
-        <h3>ID: {id}</h3>
-      </div>
-    );
-    }
+  return (
+    <div>
+      <h3>ID: Products</h3>
+    </div>
+  );
+}

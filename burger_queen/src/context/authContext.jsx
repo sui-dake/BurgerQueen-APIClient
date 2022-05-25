@@ -32,6 +32,7 @@ export function AuthProvider({ children }) {
 
   const singup = (email, password) =>
     createUserWithEmailAndPassword(auth, email, password);
+  //podria ser borrando el auth???
 
   const login = (email, password) =>
     signInWithEmailAndPassword(auth, email, password);
@@ -60,14 +61,18 @@ export function AuthProvider({ children }) {
     const unsuscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
+
       //    console.log(currentUser.uid)
       //     console.log(user.email)
     });
     return () => unsuscribe();
   }, []);
+  useEffect(() => {
+    role();
+  }, [user]);
   return (
     <authContext.Provider
-      value={{ singup, login, logout, user, loading, changeName, roles, role }}
+      value={{ singup, login, logout, user, loading, changeName, roles }}
     >
       {children}
     </authContext.Provider>

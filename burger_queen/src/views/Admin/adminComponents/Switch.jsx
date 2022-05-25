@@ -1,41 +1,24 @@
 import { Link, Route, Routes, useParams } from "react-router-dom";
-import Login from "../../Login/Login";
 import Products from "./Products";
 import Employees from "./Employees";
+import "./switch.css";
 
 export default function Switch() {
   return (
-    <figure className="admin_dashboard">
-      <p>Role: name</p>
-      <p>logout</p>
+    <main className="admin_container">
+      <object id="switch">
+        <button className="admin_switch" id="b_employees">
+          Employees
+        </button>
+        <button className="admin_switch" id="b_products">
+          Products
+        </button>
+      </object>
 
-      <button className="admin_switch" onClick={() => console.log("employee")}>
-        Employees
-      </button>
-      <button className="admin_switch" onClick={() => console.log("product")}>
-        Products
-      </button>
-      <Employees />
-
-      {/* <Routes>
-            <Route path="/admin-dashboard/products" children={<Products />}/>
-            <Route path="/admin-dashboard/employees" children={<Employees />}/>
-          </Routes> */}
-
-      {/* <Routes>
-          <Route path="/:id" children={<Product />} />
-        </Routes> */}
-    </figure>
+      <figure className="admin_dashboard">
+      
+        <Employees />
+      </figure>
+    </main>
   );
 }
-
-// function Product() {
-
-//   let { id } = useParams();
-
-//   return (
-//     <div>
-//       <h3>ID: {id}</h3>
-//     </div>
-//   );
-//   }

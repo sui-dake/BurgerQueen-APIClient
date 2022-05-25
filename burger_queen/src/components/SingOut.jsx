@@ -11,7 +11,7 @@ export default function SingOut() {
       navigate("/login");
     } catch (error) {}
   };
-  console.log(user);
+  
 
   return (
     <div id="singout">

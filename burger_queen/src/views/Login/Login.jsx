@@ -14,7 +14,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
-    console.log(data);
+    //console.log(data);
     const authEmail = data.email;
     const authPass = data.password;
 
@@ -23,22 +23,6 @@ export default function Login() {
       navigate("/");
     } catch (error) {}
   };
-
-  // signInWithEmailAndPassword(auth, authEmail, authPass)
-  //   .then((userCredential) => {
-  //     // Signed in
-  //     //const user = userCredential.user;
-  //     // ...
-  //     console.log("loggeadx!");
-  //     navigate("/");
-  //   })
-  //   .catch((error) => {
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-  //     console.log(errorCode);
-  //     // ..
-  //   });
-  // };
 
   return (
     <section id="container_form">

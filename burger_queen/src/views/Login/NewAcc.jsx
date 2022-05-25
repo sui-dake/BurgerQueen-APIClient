@@ -6,7 +6,6 @@ import {
   signOut,
 } from "firebase/auth";
 import { doc, addDoc, collection } from "firebase/firestore";
-import Coincidence from "./Coincidence";
 import { useAuth } from "../../context/authContext";
 
 export default function NewAcc() {
@@ -60,7 +59,6 @@ export default function NewAcc() {
     //     // ..
     //   });
     return {
-      displayName,
       authPass,
       authEmail,
       role,
@@ -107,7 +105,7 @@ export default function NewAcc() {
           console.log(user);
         }}
       </section>
-      {/* <Coincidence name={handleSubmit(onSubmit)}/> */}
+      
     </div>
   );
 }

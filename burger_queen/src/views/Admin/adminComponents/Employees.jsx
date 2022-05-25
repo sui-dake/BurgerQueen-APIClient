@@ -1,7 +1,7 @@
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { db } from "./../../../libs/Firebase-config";
+
 
 export default function Employees() {
   const [employee, setEmployee] = useState([]);
@@ -16,37 +16,25 @@ export default function Employees() {
       setEmployee(employeeArray);
     });
   }, []);
-  // let { id } = useParams
 
   return (
     <div>
-      <table>
+      <table style={{ border: "none", borderRadius: "20px", padding: "10px" }}>
         <tr>
-          <th style={{ width: "180px" }}>Name</th>
-          <th style={{ width: "80px" }}>Role</th>
-          <th style={{ width: "180px" }}>E-mail</th>
+          <th style={{ width: "180px", padding: "10px" }}>Name</th>
+          <th style={{ width: "80px", padding: "10px" }}>Role</th>
+          <th style={{ width: "180px", padding: "10px" }}>E-mail</th>
         </tr>
-        <tr>
-          {employee.map((user) => (
-            <tr>
-              <td style={{ width: "180px" }}>{user.Name}</td>
-            </tr>
-          ))}
-          <td>
-            {employee.map((user) => (
-              <tr>
-                <td style={{ width: "180px" }}>{user.Role}</td>
-              </tr>
-            ))}
-          </td>
-          <td>
-            {employee.map((user) => (
-              <tr>
-                <td style={{ width: "180px" }}>{user.Email}</td>
-              </tr>
-            ))}
-          </td>
-        </tr>
+
+        {employee.map((user) => (
+          <tr>
+            <td style={{ width: "180px", padding: "5px 10px" }}>{user.Name}</td>
+            <td style={{ width: "130px", padding: "5px 10px" }}>{user.Role}</td>
+            <td style={{ width: "180px", padding: "5px 10px" }}>
+              {user.Email}
+            </td>
+          </tr>
+        ))}
       </table>
     </div>
   );
