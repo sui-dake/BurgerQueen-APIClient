@@ -1,14 +1,22 @@
 import "./chef.css";
-import { Link } from "react-router-dom";
+import User from "../../components/User";
+import DateTime from "../../components/DateTime";
+import SingOut from "../../components/SingOut";
 
 export default function ChefDashboard() {
   return (
-    <div className="admin_dashboard">
-      <h1>Chef Dashboard</h1>
-      <Link to={"/"} style={{ margin: "5px" }}>
-        {" "}
-        Home{" "}
-      </Link>
+    <div className="chef_dashboard">
+      <main className="singout">
+        <SingOut />
+      </main>
+      <section id="date_user">
+        <DateTime />
+        <User />
+      </section>
+      <figure className="chef">
+        <h1>Chef under construction 🛠️</h1>
+        <img id="chef" src="./Chef.png" />
+      </figure>
     </div>
   );
 }

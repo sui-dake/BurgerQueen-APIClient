@@ -6,7 +6,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { doc, addDoc, collection } from "firebase/firestore";
-import Coincidence from "./Coincidence";
+import { useAuth } from "../../context/authContext";
 
 export default function NewAcc() {
   const {
@@ -14,24 +14,30 @@ export default function NewAcc() {
     formState: { errors },
     handleSubmit,
   } = useForm();
-
-  const onSubmit = (data) => {
+  const { singup, changeName, user } = useAuth();
+  console.log(user);
+  const onSubmit = async (data) => {
     console.log(data);
     const authEmail = data.email;
     const authPass = data.password;
     const role = data.role;
-    const authName = data.name;
-    console.log(authName);
+    const displayName = data.name;
+    console.log(displayName);
     //createUserWithEmailAndPassword(auth, authEmail, authPass);
     //.then((userCredential) => {
     // Signed in
     // const user = userCredential.user;
     // const UID = user.uid;
+    try {
+      await singup(authEmail, authPass);
+      await changeName(displayName);
+    } catch (error) {}
+
     addDoc(collection(db, "Users"), {
       Email: authEmail,
       Password: authPass,
 
-      Name: authName,
+      Name: displayName,
       Role: role,
     });
 
@@ -57,10 +63,10 @@ export default function NewAcc() {
     //     // ..
     //   });
     return {
-      authName,
       authPass,
       authEmail,
       role,
+      displayName,
     };
   };
 
@@ -100,8 +106,11 @@ export default function NewAcc() {
 
           <input type="submit" id="submit" value={"Create"} />
         </form>
+        {() => {
+          console.log(user);
+        }}
       </section>
-      {/* <Coincidence name={handleSubmit(onSubmit)}/> */}
+      
     </div>
   );
 }

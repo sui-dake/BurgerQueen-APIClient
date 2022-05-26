@@ -1,0 +1,24 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Americano",
+      "price": 5,
+      "type": "Breakfast"
+    },
+    {
+        "id": 2,
+        "name": "Latte",
+        "price": 7,
+        "type": "Breakfast"
+    },
+    {
+        "id": 3,
+        "name": "Ham & cheese sandwich",
+        "price": 10,
+        "type": "Breakfast"
+      }
+    
+
+  ]
+}

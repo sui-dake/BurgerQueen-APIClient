@@ -1,19 +1,18 @@
 import "./singOut.css";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../libs/Firebase-config";
-import { signOut } from "firebase/auth";
+import { useAuth } from "../context/authContext";
 
 export default function SingOut() {
+  const { logout, user } = useAuth();
   const navigate = useNavigate();
-  const handleLogout = () => {
-    signOut(auth)
-      .then(() => {
-        navigate("/login");
-      })
-      .catch((error) => {
-        console.log("logout error");
-      });
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate("/login");
+    } catch (error) {}
   };
+  
+
   return (
     <div id="singout">
       <button onClick={handleLogout} className="btn_logout">

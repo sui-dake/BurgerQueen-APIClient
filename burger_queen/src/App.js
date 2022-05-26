@@ -9,6 +9,8 @@ import ChefDashboard from "./views/Chef/ChefDashboard";
 import Employees from "./views/Admin/adminComponents/Employees";
 import Products from "./views/Admin/adminComponents/Products";
 import Home from "./views/Login/Home";
+import { AuthProvider } from "./context/authContext";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 function App() {
   //  const roll=""
@@ -20,20 +22,51 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/admin-dashboard" element={<AdminDashboard />} />
-          {/* <Route path='/admin-dashboard/products' element={<Products />}/>
-            <Route path='/admin-dashboard/employees' element={<Employees />}/>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin-dashboard"
+              element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              }
+            />
+            {/* <Route path='/admin-dashboard/products' element={<Products />}/>
+            <Route path='/admin-dashboard/employees' element={<Employ
           </Route> */}
-          <Route path="/waiter-dashboard" element={<WaiterDashboard />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/preparing-order" element={<PreparingOrder />} />
-          <Route path="/chef-dashboard" element={<ChefDashboard />} />
-        </Routes>
-      </BrowserRouter>
+            <Route
+              path="/waiter-dashboard"
+              element={
+                <ProtectedRoute>
+                  <WaiterDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/order" element={<Order />} />
+            <Route path="/preparing-order" element={<PreparingOrder />} />
+            <Route
+              path="/chef-dashboard"
+              element={
+                <ProtectedRoute>
+                  <ChefDashboard />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

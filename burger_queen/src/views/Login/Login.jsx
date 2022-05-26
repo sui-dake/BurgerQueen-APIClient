@@ -2,8 +2,7 @@ import "./login.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { auth } from "../../libs/Firebase-config";
-import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { useAuth } from "../../context/authContext";
 
 export default function Login() {
   const {
@@ -11,26 +10,18 @@ export default function Login() {
     formState: { errors },
     handleSubmit,
   } = useForm();
+  const { login, user } = useAuth();
   const navigate = useNavigate();
-  const onSubmit = (data) => {
-    console.log(data);
+
+  const onSubmit = async (data) => {
+    //console.log(data);
     const authEmail = data.email;
     const authPass = data.password;
-    console.log(authPass);
-    signInWithEmailAndPassword(auth, authEmail, authPass)
-      .then((userCredential) => {
-        // Signed in
-        //const user = userCredential.user;
-        // ...
-        console.log("loggeadx!");
-        navigate("/");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode);
-        // ..
-      });
+
+    try {
+      await login(authEmail, authPass);
+      navigate("/");
+    } catch (error) {}
   };
 
   return (
