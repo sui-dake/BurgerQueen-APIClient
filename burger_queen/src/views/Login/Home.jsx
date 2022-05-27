@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import ChefDashboard from "../Chef/ChefDashboard";
@@ -9,7 +10,7 @@ import { useAuth } from "../../context/authContext";
 export default function Home() {
   const { user, roles } = useAuth();
   let component = null;
-  let name = user.displayName;
+  //let name = user.displayName;
 
   console.log(roles);
   if (roles == "Manager") {
