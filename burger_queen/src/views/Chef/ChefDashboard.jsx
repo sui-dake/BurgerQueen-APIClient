@@ -18,7 +18,7 @@ export default function ChefDashboard() {
         <h1>Chef under construction 🛠️</h1>
         <img id="chef" src="./Chef.png" />
       </figure>
-      <ApiProducts/>
+      <ApiProducts />
     </div>
   );
 }
