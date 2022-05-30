@@ -105,7 +105,6 @@ export default function NewAcc() {
           console.log(user);
         }}
       </section>
-      
     </div>
   );
 }
