@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./views/Login/Login";
@@ -27,43 +28,15 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
 
-            <Route
-              path="/"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin-dashboard"
-              element={
-                <ProtectedRoute>
-                  <AdminDashboard />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/" element={<Home />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
             {/* <Route path='/admin-dashboard/products' element={<Products />}/>
             <Route path='/admin-dashboard/employees' element={<Employ
           </Route> */}
-            <Route
-              path="/waiter-dashboard"
-              element={
-                <ProtectedRoute>
-                  <WaiterDashboard />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/waiter-dashboard" element={<WaiterDashboard />} />
             <Route path="/order" element={<Order />} />
             <Route path="/preparing-order" element={<PreparingOrder />} />
-            <Route
-              path="/chef-dashboard"
-              element={
-                <ProtectedRoute>
-                  <ChefDashboard />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/chef-dashboard" element={<ChefDashboard />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

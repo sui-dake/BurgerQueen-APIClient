@@ -1,0 +1,41 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Hamburguer",
+      "price": 15,
+      "type": "Breakfast"
+    },
+    {
+      "id": 2,
+      "name": "kokeis",
+      "price": 15,
+      "type": "Breakfast"
+    },
+    {
+      "id": 3,
+      "name": "Ham & cheese sandwich",
+      "price": 10,
+      "type": "Breakfast"
+    },
+    {
+      "name": "coke",
+      "price": 13.99,
+      "type": "meal",
+      "id": 5
+    },
+    {
+      "name": "diet coca",
+      "price": 14.99,
+      "type": "meal",
+      "dateEntry": "",
+      "id": 6
+    }
+  ],
+  "type": [
+    {
+      "id": 1,
+      "name": "Breakfast"
+    }
+  ]
+}

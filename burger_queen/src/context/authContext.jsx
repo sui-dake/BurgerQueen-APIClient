@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
@@ -6,15 +8,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-import {
-  getDocs,
-  getDoc,
-  collection,
-  doc,
-  docs,
-  query,
-  where,
-} from "firebase/firestore";
+import { getDocs, collection, query, where } from "firebase/firestore";
 import { auth, db } from "../libs/Firebase-config";
 
 export const authContext = createContext();
