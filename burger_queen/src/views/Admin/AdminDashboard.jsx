@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import "./admin.css";
 import { Link, Route, Routes } from "react-router-dom";
 import Switch from "./adminComponents/Switch";
