@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useEffect } from "react";
 import { useAuth } from "../context/authContext";
 
@@ -9,10 +10,9 @@ export default function Role() {
     role(user);
   }, []);
 
-    return (
-      <section className="user">
-        <p> {roles} </p>
-      </section>
-    );
-  
+  return (
+    <section className="user">
+      <p> {roles} </p>
+    </section>
+  );
 }

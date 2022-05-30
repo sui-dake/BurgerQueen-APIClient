@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import "./chef.css";
 import User from "../../components/User";
 import DateTime from "../../components/DateTime";
