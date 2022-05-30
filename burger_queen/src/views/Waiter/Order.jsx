@@ -14,18 +14,16 @@ export default function Order() {
         <DateTime />
         <User />
       </section>
-
       <article className="customer">
         <p id="customer">Customer:</p>
         <input id="input_customer" />
       </article>
-
       <section id="buttons_switch">
-        <button className="waiter_switch" id="b_employees">
-          Employees
+        <button className="waiter_switch" id="b_breakfast">
+          Breakfast
         </button>
-        <button className="waiter_switch" id="b_products">
-          Products
+        <button className="waiter_switch" id="b_meal">
+          Meal
         </button>
       </section>
       <section style={{ margin: "120px" }}>
