@@ -14,12 +14,10 @@ export default function Order() {
         <DateTime />
         <User />
       </section>
-
       <article className="customer">
         <p id="customer">Customer:</p>
         <input id="input_customer" />
       </article>
-
       <section id="buttons_switch">
         <button className="waiter_switch" id="b_employees">
           Breakfast

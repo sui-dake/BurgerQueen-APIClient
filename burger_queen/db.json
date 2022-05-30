@@ -2,14 +2,14 @@
   "products": [
     {
       "id": 1,
-      "name": "Hamburguer",
-      "price": 15,
+      "name": "Americano",
+      "price": 5,
       "type": "Breakfast"
     },
     {
       "id": 2,
-      "name": "kokeis",
-      "price": 15,
+      "name": "Latte",
+      "price": 7,
       "type": "Breakfast"
     },
     {
@@ -19,23 +19,68 @@
       "type": "Breakfast"
     },
     {
-      "name": "coke",
-      "price": 13.99,
-      "type": "meal",
+      "id": 4,
+      "name": "Fruit juice",
+      "price": 7,
+      "type": "Breakfast"
+    },
+    {
+      "name": "Cheese hamburguer",
+      "price": 10,
+      "type": "Meal",
       "id": 5
     },
     {
-      "name": "diet coca",
-      "price": 14.99,
-      "type": "meal",
-      "dateEntry": "",
+      "name": "Double cheese hamburguer",
+      "price": 15,
+      "type": "Meal",
       "id": 6
+    },
+    {
+      "name": "Fries",
+      "price": 5,
+      "type": "Meal",
+      "id": 7
+    },
+    {
+      "name": "Onion rings",
+      "price": 5,
+      "type": "Meal",
+      "id": 8
+    },
+    {
+      "name": "Water 500ml",
+      "price": 5,
+      "type": "Meal",
+      "id": 9
+    },
+    {
+      "name": "Water 750ml",
+      "price": 7,
+      "type": "Meal",
+      "id": 10
+    },
+    {
+      "name": "Soda 500ml",
+      "price": 7,
+      "type": "Meal",
+      "id": 11
+    },
+    {
+      "name": "Soda 750ml",
+      "price": 10,
+      "type": "Meal",
+      "id": 12
     }
   ],
   "type": [
     {
       "id": 1,
       "name": "Breakfast"
+    },
+    {
+      "id": 2,
+      "name": "Meal"
     }
   ]
 }
