@@ -1,17 +1,19 @@
+/* eslint-disable react/react-in-jsx-scope */
 import "./singOut.css";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
 
 export default function SingOut() {
-  const { logout, user } = useAuth();
+  const { logout } = useAuth();
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
       await logout();
       navigate("/login");
-    } catch (error) {}
+    } catch (error) {
+      console.count()
+    }
   };
-  
 
   return (
     <div id="singout">

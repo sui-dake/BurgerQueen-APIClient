@@ -15,7 +15,7 @@ export const authContext = createContext();
 //HOOK personalizado para no importar tanto de REACT
 export const useAuth = () => {
   const context = useContext(authContext);
-  if (!context) throw new Error("No hay usuario");
+  if (!context) throw new Error("No user");
   return context;
 };
 

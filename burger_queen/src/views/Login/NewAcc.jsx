@@ -1,116 +1,111 @@
-import { auth, db, secondaryApp } from "../../libs/Firebase-config";
-import { useForm } from "react-hook-form";
-import {
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut,
-} from "firebase/auth";
-import { doc, addDoc, collection } from "firebase/firestore";
-import { useAuth } from "../../context/authContext";
+// /* eslint-disable react/react-in-jsx-scope */
+// import { db } from "../../libs/Firebase-config";
+// import { useForm } from "react-hook-form";
+// // import {
+// //   createUserWithEmailAndPassword,
+// //   onAuthStateChanged,
+// //   signOut,
+// // } from "firebase/auth";
+// import {  addDoc, collection } from "firebase/firestore";
+// import { useAuth } from "../../context/authContext";
 
-export default function NewAcc() {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
-  const { singup, changeName, user } = useAuth();
-  console.log(user);
-  const onSubmit = async (data) => {
-    console.log(data);
-    const authEmail = data.email;
-    const authPass = data.password;
-    const role = data.role;
-    const displayName = data.name;
-    console.log(displayName);
-    //createUserWithEmailAndPassword(auth, authEmail, authPass);
-    //.then((userCredential) => {
-    // Signed in
-    // const user = userCredential.user;
-    // const UID = user.uid;
-    try {
-      await singup(authEmail, authPass);
-      await changeName(displayName);
-    } catch (error) {}
+// export default function NewAcc() {
+//   const {
+//     register,
+//     formState: { errors },
+//     handleSubmit,
+//   } = useForm();
+//   const { singup, changeName, user } = useAuth();
+//   console.log(user);
+//   const onSubmit = async (data) => {
+//     console.log(data);
+//     const authEmail = data.email;
+//     const authPass = data.password;
+//     const role = data.role;
+//     const displayName = data.name;
+//     console.log(displayName);
 
-    addDoc(collection(db, "Users"), {
-      Email: authEmail,
-      Password: authPass,
+//     try {
+//       await singup(authEmail, authPass);
+//       await changeName(displayName);
+//     } catch (error) {}
 
-      Name: displayName,
-      Role: role,
-    });
+//     addDoc(collection(db, "Users"), {
+//       Email: authEmail,
+//       Password: authPass,
 
-    // secondaryApp.createUserWithEmailAndPassword(auth, authEmail, authPass)
-    // .then(function(user){
-    //
-    //     secondaryApp.signOut(auth)
-    // })
-    // onAuthStateChanged(auth, (user) => {
-    //   if (user) {
-    //     const uid = user.uid;
-    //     console.log(uid);
-    //   } else {
-    //     console.log("no estas loggeadx");
-    //   }
-    // });
-    // ...
+//       Name: displayName,
+//       Role: role,
+//     });
 
-    //   .catch((error) => {
-    //     const errorCode = error.code;
-    //     const errorMessage = error.message;
+//     // secondaryApp.createUserWithEmailAndPassword(auth, authEmail, authPass)
+//     // .then(function(user){
+//     //
+//     //     secondaryApp.signOut(auth)
+//     // })
+//     // onAuthStateChanged(auth, (user) => {
+//     //   if (user) {
+//     //     const uid = user.uid;
+//     //     console.log(uid);
+//     //   } else {
+//     //     console.log("no estas loggeadx");
+//     //   }
+//     // });
+//     // ...
 
-    //     // ..
-    //   });
-    return {
-      authPass,
-      authEmail,
-      role,
-      displayName,
-    };
-  };
+//     //   .catch((error) => {
+//     //     const errorCode = error.code;
+//     //     const errorMessage = error.message;
 
-  return (
-    <div>
-      <section id="container_form">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <input
-            placeholder="Email"
-            className="email_pass"
-            {...register("email", {
-              required: true,
-            })}
-          />
-          <input
-            placeholder="Password"
-            className="email_pass"
-            type="password"
-            {...register("password", {
-              required: true,
-            })}
-          />
-          <input
-            placeholder="Role"
-            className="email_pass"
-            {...register("role", {
-              required: true,
-            })}
-          />
-          <input
-            placeholder="Name"
-            className="email_pass"
-            {...register("name", {
-              required: true,
-            })}
-          />
+//     //     // ..
+//     //   });
+//     return {
+//       authPass,
+//       authEmail,
+//       role,
+//     };
+//   };
 
-          <input type="submit" id="submit" value={"Create"} />
-        </form>
-        {() => {
-          console.log(user);
-        }}
-      </section>
-      
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <section id="container_form">
+//         <form onSubmit={handleSubmit(onSubmit)}>
+//           <input
+//             placeholder="Email"
+//             className="email_pass"
+//             {...register("email", {
+//               required: true,
+//             })}
+//           />
+//           <input
+//             placeholder="Password"
+//             className="email_pass"
+//             type="password"
+//             {...register("password", {
+//               required: true,
+//             })}
+//           />
+//           <input
+//             placeholder="Role"
+//             className="email_pass"
+//             {...register("role", {
+//               required: true,
+//             })}
+//           />
+//           <input
+//             placeholder="Name"
+//             className="email_pass"
+//             {...register("name", {
+//               required: true,
+//             })}
+//           />
+
+//           <input type="submit" id="submit" value={"Create"} />
+//         </form>
+//         {() => {
+//           console.log(user);
+//         }}
+//       </section>
+//     </div>
+//   );
+// }
