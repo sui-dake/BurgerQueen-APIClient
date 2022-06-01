@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useAuth } from "../context/authContext";
 
 export default function User() {

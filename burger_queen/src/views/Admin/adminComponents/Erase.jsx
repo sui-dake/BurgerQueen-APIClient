@@ -1,0 +1,26 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
+import { db } from "../../../libs/Firebase-config";
+import { doc, deleteDoc } from "firebase/firestore";
+
+export default function Erase({ id }) {
+  const trash = async (id) => {
+    const userCollection = doc(db, "Users", id);
+    await deleteDoc(userCollection);
+  };
+
+  return (
+    <object>
+      <img
+        id="trashBtn"
+        type="button"
+        src="./trash.png"
+        alt="trash"
+        style={{ width: "50%", height: "50%" }}
+        onClick={() => {
+          trash(id);
+        }}
+      />
+    </object>
+  );
+}
