@@ -35,13 +35,13 @@ export default function OrderTable() {
           style={{ border: "none", borderRadius: "20px", padding: "10px" }}
         >
           <tr>
-            <th style={{ width: "150px", padding: "10px", fontSize: "35px" }}>
+            <th style={{ width: "150px", padding: "10px", fontSize: "30px" }}>
               Price
             </th>
-            <th style={{ width: "180px", padding: "10px", fontSize: "35px" }}>
+            <th style={{ width: "180px", padding: "10px", fontSize: "30px" }}>
               Product
             </th>
-            <th style={{ width: "180px", padding: "10px", fontSize: "35px" }}>
+            <th style={{ width: "180px", padding: "10px", fontSize: "30px" }}>
               Quantity
             </th>
           </tr>
@@ -53,7 +53,7 @@ export default function OrderTable() {
                   width: "180px",
                   padding: "5px 10px",
                   textAlign: "center",
-                  fontSize: "28px"
+                  fontSize: "25px",
                 }}
               >
                 $ {item.price}
@@ -63,7 +63,7 @@ export default function OrderTable() {
                   width: "180px",
                   padding: "5px 10px",
                   textAlign: "center",
-                  fontSize: "28px"
+                  fontSize: "25px",
                 }}
               >
                 {item.name}
@@ -73,7 +73,7 @@ export default function OrderTable() {
                   width: "180px",
                   padding: "5px 10px",
                   textAlign: "center",
-                  fontSize: "28px"
+                  fontSize: "25px",
                 }}
               >
                 <Counters />

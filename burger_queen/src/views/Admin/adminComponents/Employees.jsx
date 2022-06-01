@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { db } from "./../../../libs/Firebase-config";
+import ButtonAddEmployee from "./ButtonAddEmployee";
 
 export default function Employees() {
   const [employee, setEmployee] = useState([]);
@@ -37,6 +38,7 @@ export default function Employees() {
           </tr>
         ))}
       </table>
+      <ButtonAddEmployee/>
     </div>
   );
 }
