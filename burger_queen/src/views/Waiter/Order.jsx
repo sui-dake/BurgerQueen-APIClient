@@ -1,13 +1,33 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import DateTime from "../../components/DateTime";
 import User from "../../components/User";
 import "./order.css";
 import { motion } from "framer-motion";
-import OrderTable from "./waiterComponents/components/OrderTable";
+import Breakfast from "./waiterComponents/components/Breakfast";
+import Meal from "./waiterComponents/components/Meal";
 
 export default function Order() {
   const navigate = useNavigate();
+  const [breakfast, setBreakfast] = useState(false);
+  const [meal, setMeal] = useState(false);
+
+  const handleBreakfast = () => {
+    if (breakfast == true) {
+      setBreakfast(true);
+    } else if (breakfast == false) {
+      setBreakfast(true), setMeal(false);
+    }
+  };
+  const handleMeal = () => {
+    if (meal == true) {
+      setMeal(true);
+    } else {
+      setMeal(true), setBreakfast(false);
+    }
+  };
+
   return (
     <div className="new_order">
       <section id="date_user">
@@ -19,15 +39,21 @@ export default function Order() {
         <input id="input_customer" />
       </article>
       <section id="buttons_switch">
-        <button className="waiter_switch" id="b_breakfast">
+        <button
+          className="waiter_switch"
+          id="b_breakfast"
+          onClick={handleBreakfast}
+        >
           Breakfast
         </button>
-        <button className="waiter_switch" id="b_meal">
+
+        <button className="waiter_switch" id="b_meal" onClick={handleMeal}>
           Meal
         </button>
       </section>
       <section style={{ margin: "120px" }}>
-        <OrderTable />
+        {breakfast ? <Breakfast /> : null}
+        {meal ? <Meal /> : null}
       </section>
       <section id="button_order">
         <motion.button
