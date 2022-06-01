@@ -8,6 +8,8 @@
   font-size: 24px;
   text-decoration: none;
   border: 3px solid #e42047;
+  margin-top: 1rem;
+  margin-left: 8rem;
 }
 #button_add_employee:hover {
   animation: pulsate 2s ease-in-out;

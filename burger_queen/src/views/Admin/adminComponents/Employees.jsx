@@ -5,6 +5,7 @@ import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { db } from "./../../../libs/Firebase-config";
 import Erase from "./Erase";
 import EditEmployees from "./EditEmployees";
+import ButtonAddEmployee from "./ButtonAddEmployee";
 
 export default function Employees() {
   const [employee, setEmployee] = useState([]);
@@ -34,70 +35,67 @@ export default function Employees() {
 
   return (
     <div>
-      <div>
-        <table
-          style={{ border: "none", borderRadius: "20px", padding: "10px" }}
-        >
+      <table style={{ border: "none", borderRadius: "20px", padding: "10px" }}>
+        <tr>
+          <th style={{ width: "180px", padding: "10px" }}>Name</th>
+          <th style={{ width: "80px", padding: "10px" }}>Role</th>
+          <th style={{ width: "180px", padding: "10px" }}>E-mail</th>
+        </tr>
+        {employee.map((user) => (
           <tr>
-            <th style={{ width: "180px", padding: "10px" }}>Name</th>
-            <th style={{ width: "80px", padding: "10px" }}>Role</th>
-            <th style={{ width: "180px", padding: "10px" }}>E-mail</th>
+            <td
+              style={{
+                width: "180px",
+                padding: "5px 10px",
+                background: "none",
+                border: "none",
+                borderBottom: "0px solid black",
+              }}
+              defaultValue={user.Name}
+            >
+              {user.Name}
+            </td>
+            <td
+              style={{
+                width: "130px",
+                padding: "5px 10px",
+                background: "none",
+                border: "none",
+                borderBottom: "0px solid black",
+              }}
+              defaultValue={user.Role}
+            >
+              {user.Role}
+            </td>
+            <td
+              style={{
+                width: "180px",
+                padding: "5px 10px",
+                background: "none",
+                border: "none",
+                borderBottom: "0px solid black",
+              }}
+              defaultValue={user.Email}
+            >
+              {user.Email}
+            </td>
+            <td style={{ border: "none" }}>
+              <img
+                id="logo_burger_queen"
+                type="button"
+                src="./edit1.png.png"
+                alt="logo"
+                onClick={() => handleEdit(user.id)}
+              />
+              {edit ? <EditEmployees id={user.id} /> : null}
+            </td>
+            <td style={{ border: "none" }}>
+              <Erase id={user.id} />
+            </td>
           </tr>
-          {employee.map((user) => (
-            <tr>
-              <td
-                style={{
-                  width: "180px",
-                  padding: "5px 10px",
-                  background: "none",
-                  border: "none",
-                  borderBottom: "0px solid black",
-                }}
-                defaultValue={user.Name}
-              >
-                {user.Name}
-              </td>
-              <td
-                style={{
-                  width: "130px",
-                  padding: "5px 10px",
-                  background: "none",
-                  border: "none",
-                  borderBottom: "0px solid black",
-                }}
-                defaultValue={user.Role}
-              >
-                {user.Role}
-              </td>
-              <td
-                style={{
-                  width: "180px",
-                  padding: "5px 10px",
-                  background: "none",
-                  border: "none",
-                  borderBottom: "0px solid black",
-                }}
-                defaultValue={user.Email}
-              >
-                {user.Email}
-              </td>
-              <td style={{ border: "none" }}>
-                <img
-                  id="logo_burger_queen"
-                  type="button"
-                  src="./edit1.png.png"
-                  alt="logo"
-                  onClick={() => handleEdit(user.id)}
-                />
-                {edit ? <EditEmployees id={user.id} /> : null}
-              </td>
-              <td style={{ border: "none" }}>
-                <Erase id={user.id} />
-              </td>
-            </tr>
-          ))}
-        </table>
-      </div>
+        ))}
+      </table>
+      <ButtonAddEmployee />
     </div>
   );
 }

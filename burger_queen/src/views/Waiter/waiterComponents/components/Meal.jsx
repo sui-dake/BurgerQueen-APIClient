@@ -34,13 +34,13 @@ export default function OrderTable() {
           style={{ border: "none", borderRadius: "20px", padding: "10px" }}
         >
           <tr>
-            <th style={{ width: "180px", padding: "10px", fontSize: "35px" }}>
+            <th style={{ width: "180px", padding: "10px", fontSize: "32px" }}>
               Price
             </th>
-            <th style={{ width: "180px", padding: "10px", fontSize: "35px" }}>
+            <th style={{ width: "180px", padding: "10px", fontSize: "32px" }}>
               Product
             </th>
-            <th style={{ width: "180px", padding: "10px", fontSize: "35px" }}>
+            <th style={{ width: "180px", padding: "10px", fontSize: "32px" }}>
               Quantity
             </th>
           </tr>

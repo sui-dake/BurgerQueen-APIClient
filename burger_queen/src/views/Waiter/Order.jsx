@@ -51,7 +51,7 @@ export default function Order() {
           Meal
         </button>
       </section>
-      <section style={{ margin: "120px" }}>
+      <section id="breafkast_meal">
         {breakfast ? <Breakfast /> : null}
         {meal ? <Meal /> : null}
       </section>
