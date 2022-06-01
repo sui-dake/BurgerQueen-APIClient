@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useAuth } from "../context/authContext";
 
 export default function User() {
@@ -5,7 +6,7 @@ export default function User() {
   // console.log(user);
   return (
     <section className="user">
-      <p style={{ fontSize: "30px" }}> {user.displayName} </p>
+      <p style={{ fontSize: "30px" }}> {user?.displayName} </p>
     </section>
   );
 }
