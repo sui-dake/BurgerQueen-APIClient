@@ -5,7 +5,6 @@ import Switch from "./adminComponents/Switch";
 import Products from "./adminComponents/Products";
 import Employees from "./adminComponents/Employees";
 import ButtonAddEmployee from "./adminComponents/ButtonAddEmployee";
-import OrderTable from "./../Waiter/waiterComponents/components/OrderTable";
 import SingOut from "../../components/SingOut";
 
 export default function AdminDashboard() {

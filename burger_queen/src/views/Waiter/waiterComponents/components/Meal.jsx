@@ -1,24 +1,12 @@
-/* eslint-disable react/jsx-key */
 /* eslint-disable react/react-in-jsx-scope */
 import { useState, useEffect } from "react";
 import Counters from "./Counters";
 
 export default function OrderTable() {
-  const [employee, setEmployee] = useState([]);
-  const [quantity, setQuantity] = useState(0);
-  const [quantity2, setQuantity2] = useState(0);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleClick = () => {
-    setQuantity(quantity + 1);
-    setQuantity2(quantity2 + 1);
-  };
-  const handleClick2 = () => {
-    setQuantity(quantity - 1);
-    setQuantity2(quantity2 - 1);
-  };
   useEffect(() => {
     fetch("http://localhost:4000/products/")
       .then((res) => res.json())
@@ -33,6 +21,7 @@ export default function OrderTable() {
         }
       );
   }, []);
+  const meal = products.filter((type) => type.type == "Meal");
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -45,28 +34,35 @@ export default function OrderTable() {
           style={{ border: "none", borderRadius: "20px", padding: "10px" }}
         >
           <tr>
-            <th style={{ width: "180px", padding: "10px" }}>Price</th>
-            <th style={{ width: "80px", padding: "10px" }}>Product</th>
-            <th style={{ width: "180px", padding: "10px" }}>Quantity</th>
+            <th style={{ width: "180px", padding: "10px", fontSize: "35px" }}>
+              Price
+            </th>
+            <th style={{ width: "180px", padding: "10px", fontSize: "35px" }}>
+              Product
+            </th>
+            <th style={{ width: "180px", padding: "10px", fontSize: "35px" }}>
+              Quantity
+            </th>
           </tr>
 
-          {products.map((item, key) => (
+          {meal.map((item, key) => (
             <tr key={key}>
               <td
                 style={{
                   width: "180px",
                   padding: "5px 10px",
                   textAlign: "center",
-                  fontWeight: "bold",
+                  fontSize: "28px",
                 }}
               >
                 $ {item.price}
               </td>
               <td
                 style={{
-                  width: "130px",
+                  width: "180px",
                   padding: "5px 10px",
                   textAlign: "center",
+                  fontSize: "28px",
                 }}
               >
                 {item.name}
@@ -76,6 +72,7 @@ export default function OrderTable() {
                   width: "180px",
                   padding: "5px 10px",
                   textAlign: "center",
+                  fontSize: "28px",
                 }}
               >
                 <Counters />
