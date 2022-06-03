@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./buttonAddEmployee.css";

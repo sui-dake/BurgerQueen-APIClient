@@ -8,6 +8,7 @@ export default function Erase({ id }) {
     const userCollection = doc(db, "Users", id);
     await deleteDoc(userCollection);
   };
+  // condicionar dependiendo de que argumento reciba 
 
   return (
     <object>
@@ -16,7 +17,7 @@ export default function Erase({ id }) {
         type="button"
         src="./trash.png"
         alt="trash"
-        style={{ width: "50%", height: "50%" }}
+        style={{ width: "40px", height: "40px" }}
         onClick={() => {
           trash(id);
         }}
