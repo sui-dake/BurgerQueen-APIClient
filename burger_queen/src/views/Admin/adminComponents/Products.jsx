@@ -29,7 +29,7 @@ export default function Products() {
     return <div>Error: {error.message}</div>;
   } else if (!loading) {
     return (
-      <div class="lds-ellipsis">
+      <div className="lds-ellipsis">
         <div></div>
         <div></div>
         <div></div>

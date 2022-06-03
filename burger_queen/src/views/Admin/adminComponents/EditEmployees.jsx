@@ -8,7 +8,7 @@ import useForm from "./editHook/useForm";
 
 export default function EditEmployees({ id, handleClose }) {
   const [employee, setEmployee] = useState([]);
-  const [formName, setFormName] = useState([]);
+  const [formName, setFormName] = useState(null);
   const [formEmail, setFormEmail] = useState(null);
   const [formRole, setFormRole] = useState(null);
 
@@ -22,35 +22,38 @@ export default function EditEmployees({ id, handleClose }) {
   const editEmployee = async () => {
     const employeeCollection = doc(db, "Users", id);
     await updateDoc(employeeCollection, {
-      Name: name,
-      Email: email,
-      Role: role,
+      Name: formName,
+      Email: formEmail,
+      Role: formRole,
     });
-    //handleClose();
+    handleClose();
   };
 
   const { handleChange, values, handleSubmit } = useForm(editEmployee);
-  // if values.name === undefined {return user.name} else {return values.name}
-  let name = values.name;
-  const email = values.email;
-  const role = values.role;
 
-  const handleSetting = () => {
-    name == undefined ? setFormName(name) : setFormName(name);
-    email == undefined ? setFormEmail(email) : setFormEmail(email);
-    role == undefined ? setFormRole(role) : setFormRole(role);
+  let name = values.name;
+  let email = values.email;
+  let role = values.role;
+
+  const handleSetting = async (user) => {
+    name == undefined ? setFormName(user.Name) : setFormName(name);
+    email == undefined ? setFormEmail(user.Email) : setFormEmail(email);
+    role == undefined ? setFormRole(user.Role) : setFormRole(role);
+    if (formName && formEmail && formRole != null) {
+      setTimeout(handleSubmit, 500);
+    }
   };
-  console.log(handleSetting);
+
   useEffect(() => {
     getEmployee();
   }, []);
-  console.log(name + email + role);
-  console.log(formName + formEmail + formRole);
+  console.log("LETs: " + name + email + role);
+  console.log("STATES: " + formName + formEmail + formRole);
 
   return (
     <div className="modal-table">
-      {employee.map((user) => (
-        <div className="modal-user">
+      {employee.map((user, key) => (
+        <div className="modal-user" key={key}>
           {" "}
           <section className="modal-inputs">
             <p>Name </p>
@@ -86,7 +89,17 @@ export default function EditEmployees({ id, handleClose }) {
               type="button"
               src="./check.png"
               alt="logo"
-              onClick={handleSubmit && handleClose}
+              onClick={() => {
+                handleSetting(user);
+              }}
+            />
+            <img
+              style={{ width: "60px" }}
+              id="img-check"
+              type="button"
+              src="./"
+              alt="logo"
+              onClick={handleSubmit}
             />
           </object>
         </div>
