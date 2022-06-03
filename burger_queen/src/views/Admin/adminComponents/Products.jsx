@@ -41,13 +41,13 @@ export default function Products() {
           style={{ border: "none", borderRadius: "20px", padding: "10px" }}
         >
           <tr>
-            <th style={{ width: "160px", padding: "10px", fontSize: "30px" }}>
+            <th style={{ width: "130px", padding: "5px", fontSize: "30px" }}>
               Products
             </th>
-            <th style={{ width: "160px", padding: "10px", fontSize: "30px" }}>
+            <th style={{ width: "130px", padding: "5px", fontSize: "30px" }}>
               Price
             </th>
-            <th style={{ width: "160px", padding: "10px", fontSize: "30px" }}>
+            <th style={{ width: "130px", padding: "5px", fontSize: "30px" }}>
               Type
             </th>
           </tr>
@@ -56,8 +56,8 @@ export default function Products() {
             <tr key={key}>
               <td
                 style={{
-                  width: "130px",
-                  padding: "5px 10px",
+                  width: "80px",
+                  
                   textAlign: "center",
                   fontSize: "25px",
                 }}
@@ -66,8 +66,8 @@ export default function Products() {
               </td>
               <td
                 style={{
-                  width: "130px",
-                  padding: "5px 10px",
+                  width: "80px",
+                 
                   textAlign: "center",
                   fontSize: "25px",
                 }}
@@ -76,16 +76,28 @@ export default function Products() {
               </td>
               <td
                 style={{
-                  width: "130px",
-                  padding: "5px 10px",
+                  width: "80px",
+                  
                   textAlign: "center",
                   fontSize: "25px",
                 }}
               >
                 {item.type}
               </td>
-              <td><img type='button' src=''/></td>
-              <td>delete</td>
+              <td>
+                <img
+                  style={{ width: "40%", height: "40%" }}
+                  type="button"
+                  src="./edit1.png.png"
+                />
+              </td>
+              <td>
+                <img
+                  style={{ width: "40%", height: "40%" }}
+                  type="button"
+                  src="./trash.png"
+                />
+              </td>
             </tr>
           ))}
         </table>
