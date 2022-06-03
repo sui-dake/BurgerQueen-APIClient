@@ -4,10 +4,12 @@ import { useState } from "react";
 import Products from "./adminComponents/Products";
 import Employees from "./adminComponents/Employees";
 import SingOut from "../../components/SingOut";
+import Modal from "./adminComponents/modal/Modal";
 
 export default function AdminDashboard() {
   const [employee, setEmployee] = useState(false);
   const [product, setProduct] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleEmployee = () => {
     if (true) {

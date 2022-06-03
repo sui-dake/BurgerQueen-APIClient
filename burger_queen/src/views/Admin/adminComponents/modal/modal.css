@@ -1,0 +1,67 @@
+.modal {
+  position: fixed;
+  inset: 0; /* inset sets all 4 values (top right bottom left) much like how we set padding, margin etc., */
+  background-color: rgba(133, 189, 161, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 999;
+  padding: 40px 20px 20px;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.4);
+}
+
+.modal-enter-done {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+.modal-exit {
+  opacity: 0;
+  transform: scale(0.4);
+}
+.close-btn {
+  width: 40px;
+  height: 40px;
+  margin-top: 13px;
+  margin-left: 10px;
+}
+.modal-content {
+  width: 90%;
+  height: 30%;
+  background-color: rgba(231, 78, 109, 0.85);
+  border-radius: 30px;
+  color: #000;
+  font-size: 2rem;
+}
+.modal-user {
+  /* background: rgba(231, 78, 109, 0.85);
+  text-align: center;
+  border: none; */
+  display: flex;
+  flex-direction: row;
+}
+.modal-check {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+.modal-inputs {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  text-align: center;
+  border: none;
+  font-size: 30px;
+}
+.modal-input {
+  background: none;
+  border: none;
+  text-align: center;
+
+}

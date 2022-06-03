@@ -1,6 +1,8 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useState, useEffect } from "react";
 import Loading from "../../../api/Loading";
 import ButtonAddProduct from "./ButtonAddProduct";
+import Erase from "./Erase";
 import "./products.css";
 
 export default function Products() {
@@ -84,8 +86,16 @@ export default function Products() {
               >
                 {item.type}
               </td>
-              <td><img type='button' src=''/></td>
-              <td>delete</td>
+              <td>
+                <img
+                  type="button"
+                  style={{ width: "40px", height: "40px" }}
+                  src="./edit1.png.png"
+                />
+              </td>
+              <td>
+                <Erase />
+              </td>
             </tr>
           ))}
         </table>
