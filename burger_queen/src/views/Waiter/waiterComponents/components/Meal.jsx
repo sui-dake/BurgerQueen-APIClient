@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useState, useEffect } from "react";
-import Counters from "./Counters";
+import Contador from "./Contador";
 
 export default function OrderTable() {
   const [products, setProducts] = useState([]);
@@ -34,10 +34,10 @@ export default function OrderTable() {
           style={{ border: "none", borderRadius: "20px", padding: "10px" }}
         >
           <tr>
-            <th style={{ width: "180px", padding: "10px", fontSize: "32px" }}>
+            <th style={{ width: "140px", padding: "10px", fontSize: "32px" }}>
               Price
             </th>
-            <th style={{ width: "180px", padding: "10px", fontSize: "32px" }}>
+            <th style={{ width: "220px", padding: "10px", fontSize: "32px" }}>
               Product
             </th>
             <th style={{ width: "180px", padding: "10px", fontSize: "32px" }}>
@@ -49,7 +49,7 @@ export default function OrderTable() {
             <tr key={key}>
               <td
                 style={{
-                  width: "180px",
+                  width: "140px",
                   padding: "5px 10px",
                   textAlign: "center",
                   fontSize: "28px",
@@ -59,7 +59,7 @@ export default function OrderTable() {
               </td>
               <td
                 style={{
-                  width: "180px",
+                  width: "220px",
                   padding: "5px 10px",
                   textAlign: "center",
                   fontSize: "28px",
@@ -74,8 +74,10 @@ export default function OrderTable() {
                   textAlign: "center",
                   fontSize: "28px",
                 }}
+                name={item.id}
               >
-                <Counters />
+                <Contador />
+                {console.log(item.name  )}
               </td>
             </tr>
           ))}

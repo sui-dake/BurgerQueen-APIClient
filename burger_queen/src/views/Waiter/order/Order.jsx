@@ -1,12 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import DateTime from "../../components/DateTime";
-import User from "../../components/User";
+import DateTime from "../../../components/DateTime";
+import User from "../../../components/User";
 import "./order.css";
 import { motion } from "framer-motion";
-import Breakfast from "./waiterComponents/components/Breakfast";
-import Meal from "./waiterComponents/components/Meal";
+import Breakfast from "../waiterComponents/components/Breakfast";
+import Meal from "../waiterComponents/components/Meal";
 
 export default function Order() {
   const navigate = useNavigate();

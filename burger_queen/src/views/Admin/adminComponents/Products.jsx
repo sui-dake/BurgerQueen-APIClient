@@ -59,7 +59,7 @@ export default function Products() {
               <td
                 style={{
                   width: "80px",
-                  
+
                   textAlign: "center",
                   fontSize: "25px",
                 }}
@@ -69,7 +69,7 @@ export default function Products() {
               <td
                 style={{
                   width: "80px",
-                 
+
                   textAlign: "center",
                   fontSize: "25px",
                 }}
@@ -79,7 +79,7 @@ export default function Products() {
               <td
                 style={{
                   width: "80px",
-                  
+
                   textAlign: "center",
                   fontSize: "25px",
                 }}
@@ -88,26 +88,13 @@ export default function Products() {
               </td>
               <td>
                 <img
-<<<<<<< HEAD
-                  style={{ width: "40%", height: "40%" }}
-                  type="button"
-=======
                   type="button"
                   style={{ width: "40px", height: "40px" }}
->>>>>>> bc218d2c65c13f351b76edc1b8c7b517f07ed5be
                   src="./edit1.png.png"
                 />
               </td>
               <td>
-<<<<<<< HEAD
-                <img
-                  style={{ width: "40%", height: "40%" }}
-                  type="button"
-                  src="./trash.png"
-                />
-=======
                 <Erase />
->>>>>>> bc218d2c65c13f351b76edc1b8c7b517f07ed5be
               </td>
             </tr>
           ))}

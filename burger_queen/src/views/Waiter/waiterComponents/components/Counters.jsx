@@ -1,7 +1,10 @@
 /* eslint-disable react/jsx-key */
-/* eslint-disable react/react-in-jsx-scope */
+// /* eslint-disable react/prop-types */
+// /* eslint-disable react/jsx-key */
+// /* eslint-disable react/react-in-jsx-scope */
 import { useState } from "react";
 import Counter from "./Counter";
+//import Breakfast from "./Breakfast";
 
 const Counters = () => {
   const [counters, setCounters] = useState([0]);
@@ -10,18 +13,10 @@ const Counters = () => {
 
   return (
     <div>
-      {/* <p>Sum: {sum}</p> */}
-      {/* <button
-        onClick={() => {
-          setCounters([...counters, 0]);
-        }}
-      >
-        Add counter
-      </button> */}
-
-      <div>
-        {counters.map((value, index) => (
+      {counters.map((value, index) => (
+        <div>
           <Counter
+            
             value={value}
             hideIncrement={sum >= 20}
             onIncrement={() => {
@@ -35,8 +30,8 @@ const Counters = () => {
               setCounters(countersCopy);
             }}
           />
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

@@ -38,33 +38,19 @@ export default function Employees() {
     <div>
       <table style={{ border: "none", borderRadius: "20px", padding: "10px" }}>
         <tr>
-<<<<<<< HEAD
           <th style={{ width: "180px", padding: "10px" }}>Name</th>
           <th style={{ width: "80px", padding: "10px" }}>Role</th>
           <th style={{ width: "180px", padding: "10px" }}>E-mail</th>
-=======
-          <th style={{ width: "150px", padding: "10px" }}>Name</th>
-          <th style={{ width: "80px", padding: "10px" }}>Role</th>
-          <th style={{ width: "150px", padding: "10px" }}>E-mail</th>
->>>>>>> bc218d2c65c13f351b76edc1b8c7b517f07ed5be
         </tr>
         {employee.map((user) => (
           <tr>
             <td
               style={{
-<<<<<<< HEAD
-                width: "180px",
-                padding: "5px 10px",
-                background: "none",
-                border: "none",
-                borderBottom: "0px solid black",
-=======
                 width: "150px",
                 padding: "5px 10px",
                 background: "none",
                 border: "none",
                 borderBottom: "1px solid black",
->>>>>>> bc218d2c65c13f351b76edc1b8c7b517f07ed5be
               }}
               defaultValue={user.Name}
             >
@@ -72,19 +58,11 @@ export default function Employees() {
             </td>
             <td
               style={{
-<<<<<<< HEAD
-                width: "130px",
-                padding: "5px 10px",
-                background: "none",
-                border: "none",
-                borderBottom: "0px solid black",
-=======
                 width: "110px",
                 padding: "5px 10px",
                 background: "none",
                 border: "none",
                 borderBottom: "1px solid black",
->>>>>>> bc218d2c65c13f351b76edc1b8c7b517f07ed5be
               }}
               defaultValue={user.Role}
             >
@@ -92,19 +70,11 @@ export default function Employees() {
             </td>
             <td
               style={{
-<<<<<<< HEAD
-                width: "180px",
-                padding: "5px 10px",
-                background: "none",
-                border: "none",
-                borderBottom: "0px solid black",
-=======
                 width: "150px",
                 padding: "5px 10px",
                 background: "none",
                 border: "none",
                 borderBottom: "1px solid black",
->>>>>>> bc218d2c65c13f351b76edc1b8c7b517f07ed5be
               }}
               defaultValue={user.Email}
             >
@@ -112,15 +82,6 @@ export default function Employees() {
             </td>
             <td style={{ border: "none" }}>
               <img
-<<<<<<< HEAD
-                id="logo_burger_queen"
-                type="button"
-                src="./edit1.png.png"
-                alt="logo"
-                onClick={() => handleEdit(user.id)}
-              />
-              {edit ? <EditEmployees id={user.id} /> : null}
-=======
                 type="button"
                 src="./edit1.png.png"
                 style={{ width: "40px", height: "40px" }}
@@ -135,7 +96,6 @@ export default function Employees() {
                   />
                 ) : null}
               </Modal>
->>>>>>> bc218d2c65c13f351b76edc1b8c7b517f07ed5be
             </td>
             <td style={{ border: "none" }}>
               <Erase id={user.id} />
@@ -143,10 +103,6 @@ export default function Employees() {
           </tr>
         ))}
       </table>
-<<<<<<< HEAD
-=======
-
->>>>>>> bc218d2c65c13f351b76edc1b8c7b517f07ed5be
       <ButtonAddEmployee />
     </div>
   );
