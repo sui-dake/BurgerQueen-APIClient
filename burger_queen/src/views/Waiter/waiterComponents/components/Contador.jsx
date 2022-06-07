@@ -15,22 +15,33 @@ function reducer(state, action) {
   }
 }
 
-const Contador = ({ updateState, item }) => {
+const Contador = ({ setOrders, item, order, orders, updateState }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  
+
   //const [qproduct, setQproduct] = useState({})
-  // useEffect(() => {
-  //   updateState(item, state.count);
+  //useEffect(() => {
+  //updateState(item, state.count);
   //   console.log(item.name, "estado", "hol", state.count);
   //   console.log("order");
-  // }, []);
+  //}, []);
 
   return (
     <div>
       Contador: {state.count}
-      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-      <button onClick={() => dispatch({ type: "increment" })}>+</button>
-      {updateState(item, state.count)}
+      <button
+        onClick={() => {
+          dispatch({ type: "decrement" }) + updateState(item, state.count - 1);
+        }}
+      >
+        -
+      </button>
+      <button
+        onClick={() => {
+          dispatch({ type: "increment" }) + updateState(item, state.count + 1);
+        }}
+      >
+        +
+      </button>
     </div>
   );
 };
