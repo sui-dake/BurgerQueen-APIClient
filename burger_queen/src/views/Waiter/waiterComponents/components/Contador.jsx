@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { useReducer, useEffect, useState } from "react";
+import { useReducer } from "react";
 
 const initialState = { count: 0 };
 
@@ -15,7 +15,7 @@ function reducer(state, action) {
   }
 }
 
-const Contador = ({ setOrders, item, order, orders, updateState }) => {
+const Contador = ({ item, updateState }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   //const [qproduct, setQproduct] = useState({})

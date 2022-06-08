@@ -5,30 +5,23 @@
 import { useState, useEffect } from "react";
 import Contador from "./Contador";
 
-export default function OrderTable() {
+export default function BreakfastAndMeal({ breakfast, meal, setOrders }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [order, setOrder] = useState(products);
-  const [orders, setOrders] = useState({
-    quantity: 0,
-    product: "",
-  });
+  const [menu, setMenu] = useState([]);
 
-  let array = [];
+  //let array = [];
   const newOrder = [];
 
   const updateState = (newItem, quantity) => {
     products.map((item) => {
-      // if(newOrder == []){
       if (newItem.name == item.name) {
-        newOrder.push({ ...item, quantity });
+        newOrder.push({...item, quantity});
       } else if (item.length > 1) {
-        newOrder.push({ ...item, quantity });
+        newOrder.push({...item, quantity});
       }
-      // }} else {
-      //   newItem.name == item.name ? newOrder.push({ ...item, quantity}): null
-      // }
     });
 
     setOrder(newOrder);
@@ -51,7 +44,22 @@ export default function OrderTable() {
       );
     updateState();
   }, []);
-  const breakfast = products.filter((type) => type.type == "Breakfast");
+
+  useEffect(() => {
+    setOrders(order);
+  });
+
+  const breakfastFilter = products.filter((type) => type.type == "Breakfast");
+  const mealFilter = products.filter((type) => type.type == "Meal");
+
+  console.count("renderizado");
+  useEffect(() => {
+    if (breakfast == true) {
+      setMenu(breakfastFilter);
+    } else if (meal == true) {
+      setMenu(mealFilter);
+    }
+  }, [breakfast, meal]);
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -75,7 +83,7 @@ export default function OrderTable() {
             </th>
           </tr>
 
-          {breakfast.map((item, key) => {
+          {menu.map((item, key) => {
             return (
               <tr key={key}>
                 <td
@@ -106,13 +114,7 @@ export default function OrderTable() {
                     fontSize: "25px",
                   }}
                 >
-                  <Contador
-                    setOrders={setOrders}
-                    item={item}
-                    order={order}
-                    orders={orders}
-                    updateState={updateState}
-                  />
+                  <Contador item={item} updateState={updateState} />
                   {/*mandarle item de props a contador para que tenga acceso a API*/}
                   {/*algo q agarra item.id para sacar precio, nombre. Multiplica precio por value de contador, crea const donde guarda semitotal. si el value
               es zero entonces no guarda precio ni nombre*/}
@@ -127,7 +129,7 @@ export default function OrderTable() {
               </tr>
             );
           })}
-          {console.log(order)}
+          {/* {console.log(order, "string outside")} */}
         </table>
       </div>
     );
