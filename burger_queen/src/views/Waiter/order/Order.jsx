@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DateTime from "../../../components/DateTime";
 import User from "../../../components/User";
@@ -9,7 +9,7 @@ import BreakfastAndMeal from "../waiterComponents/components/BreakfastAndMeal";
 import OrderAPI from "./api/OrderAPI";
 
 export default function Order() {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   const [breakfast, setBreakfast] = useState(false);
   const [meal, setMeal] = useState(false);
   const [customer, setCustomer] = useState("");
@@ -34,19 +34,25 @@ export default function Order() {
   const handleChange = (e) => {
     setCustomer(e.target.value);
   };
-  const newOrder = [];
+  const newOrder = {
+    customer: customer,
+    total: 20,
+    id: 0,
+    summary: [],
+  };
 
-  const updateOrder = (order, customer) => {
-    orders.map((item) => {
-      order ? newOrder.push({...item, customer}) : null;
-    });
+  const updateOrder = (order) => {
+    //orders.map((item) => {
+    newOrder.summary.push({ ...order });
+    //});
   };
   useEffect(() => {
-    updateOrder(orders, customer);
+    updateOrder(orders);
   });
 
   const handleAPI = () => {
     setReady(true);
+    navigate("/preparing-order");
   };
 
   return (
@@ -89,10 +95,7 @@ export default function Order() {
           id="button_confirm_order"
           onClick={handleAPI}
         >
-          {ready
-            ? <OrderAPI newOrder={newOrder} /> 
-            : null}
-
+          {ready ? <OrderAPI newOrder={newOrder} /> : null}
           Confirm order
         </motion.button>
       </section>

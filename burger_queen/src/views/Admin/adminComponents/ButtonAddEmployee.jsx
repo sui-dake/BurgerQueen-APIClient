@@ -6,7 +6,10 @@ import "./buttonAddEmployee.css";
 export default function ButtonAddEmployee() {
   const navigate = useNavigate();
   return (
-    <div className="container_button_add_employee">
+    <div
+      className="container_button_add_employee"
+      style={{ marginLeft: "80px" }}
+    >
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
