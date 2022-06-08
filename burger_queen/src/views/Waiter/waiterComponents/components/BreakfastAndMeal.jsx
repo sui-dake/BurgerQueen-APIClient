@@ -11,6 +11,7 @@ export default function BreakfastAndMeal({ breakfast, meal, setOrders }) {
   const [error, setError] = useState(null);
   const [order, setOrder] = useState(products);
   const [menu, setMenu] = useState([]);
+ 
 
   //let array = [];
   const newOrder = [];
@@ -114,7 +115,7 @@ export default function BreakfastAndMeal({ breakfast, meal, setOrders }) {
                     fontSize: "25px",
                   }}
                 >
-                  <Contador item={item} updateState={updateState} />
+                 <Contador item={item} updateState={updateState} />
                   {/*mandarle item de props a contador para que tenga acceso a API*/}
                   {/*algo q agarra item.id para sacar precio, nombre. Multiplica precio por value de contador, crea const donde guarda semitotal. si el value
               es zero entonces no guarda precio ni nombre*/}

@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DateTime from "../../../components/DateTime";
 import User from "../../../components/User";
@@ -9,12 +9,13 @@ import BreakfastAndMeal from "../waiterComponents/components/BreakfastAndMeal";
 import OrderAPI from "./api/OrderAPI";
 
 export default function Order() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const [breakfast, setBreakfast] = useState(false);
   const [meal, setMeal] = useState(false);
   const [customer, setCustomer] = useState("");
   const [orders, setOrders] = useState([]);
   const [ready, setReady] = useState(false);
+  
   //NO olvidar poner la fecha y hora en la orden ok
 
   const handleBreakfast = () => {
@@ -34,25 +35,17 @@ export default function Order() {
   const handleChange = (e) => {
     setCustomer(e.target.value);
   };
+
   const newOrder = {
     customer: customer,
     total: 20,
     id: 0,
-    summary: [],
+    summary: [{orders}],
   };
-
-  const updateOrder = (order) => {
-    //orders.map((item) => {
-    newOrder.summary.push({ ...order });
-    //});
-  };
-  useEffect(() => {
-    updateOrder(orders);
-  });
 
   const handleAPI = () => {
     setReady(true);
-    navigate("/preparing-order");
+    //navigate("/preparing-order");
   };
 
   return (
