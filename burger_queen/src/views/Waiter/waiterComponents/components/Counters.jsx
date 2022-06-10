@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 // /* eslint-disable react/prop-types */
 // /* eslint-disable react/jsx-key */
+/* eslint-disable react/react-in-jsx-scope */
 // /* eslint-disable react/react-in-jsx-scope */
 import { useState } from "react";
 import Counter from "./Counter";

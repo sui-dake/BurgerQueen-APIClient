@@ -1,12 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 //import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import DateTime from "../../../components/DateTime";
 import User from "../../../components/User";
 import "./order.css";
 import { motion } from "framer-motion";
-import BreakfastAndMeal from "../waiterComponents/components/BreakfastAndMeal";
+//import BreakfastAndMeal from "../waiterComponents/components/BreakfastAndMeal";
 import OrderAPI from "./api/OrderAPI";
+import Table from "./Table";
 
 export default function Order() {
   //const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function Order() {
   const [orders, setOrders] = useState([]);
   const [ready, setReady] = useState(false);
   
-  //NO olvidar poner la fecha y hora en la orden ok
+  //NO olvidar poner la fecha y hora en la orden ok y el estado
 
   const handleBreakfast = () => {
     if (breakfast == true) {
@@ -48,6 +49,12 @@ export default function Order() {
     //navigate("/preparing-order");
   };
 
+//SOLO GUARDAR CON POST EL CUSTOMER, CON UN MODAL (RECICLADO), ENTONCES 
+//AL DAR CLIC AL BOTON NEWCLIENT, SE DESPLIEGA MODAL Y YA QUE DEMOS CONFIRMAR
+//SE CREA LA ORDEN CON ESTE CUSTOMER Y LO QUE VAYA QUERIENDO EL CLIENTE,
+// SE VA PATCHEAR/PUSHEAR A LA ORDEN DEFINIDA PREVIAMENTE.
+
+
   return (
     <div className="new_order">
       <section id="date_user">
@@ -73,7 +80,7 @@ export default function Order() {
       </section>
       <section id="breafkast_meal">
         {
-          <BreakfastAndMeal
+          <Table
             breakfast={breakfast}
             meal={meal}
             setOrders={setOrders}
@@ -94,4 +101,5 @@ export default function Order() {
       </section>
     </div>
   );
+      
 }
