@@ -8,14 +8,16 @@ import { motion } from "framer-motion";
 //import BreakfastAndMeal from "../waiterComponents/components/BreakfastAndMeal";
 import OrderAPI from "./api/OrderAPI";
 import Table from "./Table";
+import { useParams } from "react-router-dom";
 
 export default function Order() {
   //const navigate = useNavigate();
   const [breakfast, setBreakfast] = useState(false);
   const [meal, setMeal] = useState(false);
-  const [customer, setCustomer] = useState("");
+  //const [customer, setCustomer] = useState("");
   const [orders, setOrders] = useState([]);
   const [ready, setReady] = useState(false);
+  const { id } = useParams();
   
   //NO olvidar poner la fecha y hora en la orden ok y el estado
 
@@ -33,12 +35,9 @@ export default function Order() {
       setMeal(true), setBreakfast(false);
     }
   };
-  const handleChange = (e) => {
-    setCustomer(e.target.value);
-  };
 
   const newOrder = {
-    customer: customer,
+    customer: 'customer',
     total: 20,
     id: 0,
     summary: [{orders}],
@@ -63,7 +62,6 @@ export default function Order() {
       </section>
       <article className="customer">
         <p id="customer">Customer:</p>
-        <input id="input_customer" onChange={handleChange} />
       </article>
       <section id="buttons_switch">
         <button

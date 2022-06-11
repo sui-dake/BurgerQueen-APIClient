@@ -34,7 +34,7 @@ function App() {
             <Route path='/admin-dashboard/employees' element={<Employ
           </Route> */}
             <Route path="/waiter-dashboard" element={<WaiterDashboard />} />
-            <Route path="/order" element={<Order />} />
+            <Route path="/order/:id" element={<Order />} />
             <Route path="/preparing-order" element={<PreparingOrder />} />
             <Route path="/chef-dashboard" element={<ChefDashboard />} />
           </Routes>
