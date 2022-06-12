@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { getProducts } from "../../../api/handlingAPI";
 import BreakfastAndMeal from "../waiterComponents/components/BreakfastAndMeal";
 
-const Table = ({ breakfast, meal, setOrders }) => {
+const Table = ({ breakfast, meal, setOrders, setTotal }) => {
   const [products, setProducts] = useState([]);
   const [menu, setMenu] = useState([]);
 
@@ -34,7 +34,7 @@ const Table = ({ breakfast, meal, setOrders }) => {
       <h2>PRICE    PRODUCT     QUANTITY</h2>
       {menu.map((product, key) => (
         <tr key={key}>
-          <BreakfastAndMeal product={product} setOrders={setOrders}/>
+          <BreakfastAndMeal product={product} setOrders={setOrders} setTotal={setTotal}/>
         </tr>
       ))}
     </div>

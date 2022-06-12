@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 //import { getProducts } from "../../../../api/handlingAPI";
 //import Loading from "../../../../api/Loading";
 
-export default function BreakfastAndMeal({ product, setOrders }) {
+export default function BreakfastAndMeal({ product, setOrders, setTotal }) {
   const [quantity, setQuantity] = useState(0);
   const [items] = useState([product]);
 
@@ -15,6 +15,7 @@ export default function BreakfastAndMeal({ product, setOrders }) {
       newOrder.push({ ...item, quantity });
     });
     setOrders(newOrder);
+    setTotal(quantity*product.price)
   };
 
   const handleIncrement = () => {
@@ -25,10 +26,10 @@ export default function BreakfastAndMeal({ product, setOrders }) {
     setQuantity(quantity - 1);
   };
   useEffect(() => {
-    
     updateState();
+    
   }, [quantity]);
-  
+
   //Podemos hacer otro componente para guardar la database de ORder ya lista,
   // para que vaya construyendo cada objeto con cada order que reciba
   return (
@@ -63,6 +64,7 @@ export default function BreakfastAndMeal({ product, setOrders }) {
       >
         <button onClick={handleDecrement}> - </button>
         <p>{quantity}</p>
+        <p>{quantity*product.price}</p>
         <button onClick={handleIncrement}> + </button>
         {/*algo q agarra product.id para sacar precio, nombre. Multiplica precio por value de contador, crea const donde guarda semitotal. si el value
               es zero entonces no guarda precio ni nombre*/}

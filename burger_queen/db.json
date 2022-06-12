@@ -157,21 +157,6 @@
       "id": 4
     },
     {
-      "customer": "customer",
-      "summary": [
-        {
-          "product": "name",
-          "quantity": "newOrder[0]"
-        },
-        {
-          "product": "Soda",
-          "quantity": 3
-        }
-      ],
-      "total": 22,
-      "id": 5
-    },
-    {
       "customer": "Adelle",
       "total": 20,
       "id": 20,
@@ -205,526 +190,76 @@
       "id": 21
     },
     {
-      "customer": "customer1",
+      "customer": "Emy",
+      "state": "pending",
+      "id": 25,
       "summary": [
         {
-          "product": "newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        },
-        {
-          "product": " newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        }
-      ],
-      "total": "total",
-      "id": 22
-    },
-    {
-      "customer": "customer1",
-      "summary": [
-        {
-          "product": "newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        },
-        {
-          "product": " newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        }
-      ],
-      "total": "total",
-      "id": 23
-    },
-    {
-      "customer": "customer1",
-      "summary": [
-        {
-          "product": "newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        },
-        {
-          "product": " newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        }
-      ],
-      "total": "total",
-      "id": 24
-    },
-    {
-      "customer": "customer1",
-      "summary": [
-        {
-          "product": "newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        },
-        {
-          "product": " newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        }
-      ],
-      "total": "total",
-      "id": 25
-    },
-    {
-      "customer": "sui",
-      "summary": [
-        {
-          "product": "newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        },
-        {
-          "product": " newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        }
-      ],
-      "total": "total",
-      "id": 26
-    },
-    {
-      "customer": "",
-      "summary": [
-        {
-          "product": "newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        },
-        {
-          "product": " newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        }
-      ],
-      "total": "total",
-      "id": 27
-    },
-    {
-      "customer": "sui",
-      "summary": [
-        {
-          "product": "Americano",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        },
-        {
-          "product": " newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        }
-      ],
-      "total": "total",
-      "id": 28
-    },
-    {
-      "customer": "",
-      "summary": [
-        {
-          "product": "Americano",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        },
-        {
-          "product": " newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
-        }
-      ],
-      "total": "total",
-      "id": 29
-    },
-    {
-      "customer": "sui",
-      "summary": [
-        {
-          "product": "Americano",
+          "id": 3,
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "type": "Breakfast",
           "quantity": 2
-        },
-        {
-          "product": " newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
         }
-      ],
-      "total": "total",
-      "id": 30
+      ]
     },
     {
-      "customer": "",
+      "customer": "Lolita",
+      "state": "pending",
+      "id": 26,
       "summary": [
         {
-          "product": "Americano",
-          "quantity": 3
-        },
-        {
-          "product": " newOrder.summary[0].orders[0].name",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
+          "id": 2,
+          "name": "Latte",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 6
         }
-      ],
-      "total": "total",
-      "id": 31
+      ]
     },
     {
-      "customer": "sui",
+      "customer": "GOli",
+      "state": "pending",
+      "id": 27,
       "summary": [
         {
-          "product": "Americano",
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
           "quantity": 2
-        },
-        {
-          "product": "Americano",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
         }
-      ],
-      "total": "total",
-      "id": 32
+      ]
     },
     {
-      "customer": "",
+      "customer": "bruni",
+      "state": "pending",
+      "id": 28,
       "summary": [
         {
-          "product": "Americano",
-          "quantity": 3
-        },
-        {
-          "product": "Americano",
-          "quantity": "newOrder.summary[0].orders[0].quantity"
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 7
         }
       ],
-      "total": "total",
-      "id": 33
+      "total": 70
     },
     {
-      "customer": "sui",
+      "customer": "muris",
+      "state": "pending",
+      "id": 29,
       "summary": [
         {
-          "product": "Americano",
-          "quantity": 2
-        },
-        {
-          "product": "Americano",
+          "id": 2,
+          "name": "Latte",
+          "price": 7,
+          "type": "Breakfast",
           "quantity": 2
         }
       ],
-      "total": "total",
-      "id": 34
-    },
-    {
-      "customer": "",
-      "summary": [
-        {
-          "product": "Americano",
-          "quantity": 3
-        },
-        {
-          "product": "Americano",
-          "quantity": 3
-        }
-      ],
-      "total": "total",
-      "id": 35
-    },
-    {
-      "customer": "sui",
-      "summary": [
-        {
-          "product": "Americano",
-          "quantity": 2
-        },
-        {
-          "product": "Americano",
-          "quantity": 2
-        }
-      ],
-      "total": "total",
-      "id": 36
-    },
-    {
-      "customer": "",
-      "summary": [
-        {
-          "product": "Americano",
-          "quantity": 3
-        },
-        {
-          "product": "Americano",
-          "quantity": 3
-        }
-      ],
-      "total": "total",
-      "id": 37
-    },
-    {
-      "customer": "Goli",
-      "summary": [
-        {
-          "product": "Americano",
-          "quantity": 4
-        },
-        {
-          "product": "Americano",
-          "quantity": 4
-        }
-      ],
-      "total": "total",
-      "id": 38
-    },
-    {
-      "customer": "Gengar",
-      "summary": [
-        {
-          "product": "Latte",
-          "quantity": 1
-        },
-        {
-          "product": "Latte",
-          "quantity": 1
-        }
-      ],
-      "total": "total",
-      "id": 39
-    },
-    {
-      "customer": "Holiii",
-      "summary": [],
-      "total": "total",
-      "id": 40
-    },
-    {
-      "customer": "eze",
-      "summary": [],
-      "total": "total",
-      "id": 41
-    },
-    {
-      "customer": "EMizon",
-      "summary": [],
-      "total": "total",
-      "id": 42
-    },
-    {
-      "customer": "Anya",
-      "summary": [],
-      "total": "total",
-      "id": 43
-    },
-    {
-      "customer": "Mew",
-      "id": 44
-    },
-    {
-      "customer": "LOLA",
-      "id": 45
-    },
-    {
-      "customer": "nami",
-      "id": 46
-    },
-    {
-      "customer": "nami",
-      "id": 47
-    },
-    {
-      "customer": "na",
-      "id": 48
-    },
-    {
-      "customer": "Laura",
-      "id": 49
-    },
-    {
-      "customer": "Lauraqewq",
-      "id": 50
-    },
-    {
-      "customer": "Lauraqewqa",
-      "id": 51
-    },
-    {
-      "customer": "Ame",
-      "id": 52
-    },
-    {
-      "customer": "Ame",
-      "id": 53
-    },
-    {
-      "customer": "LOLA",
-      "id": 54
-    },
-    {
-      "customer": "Lalo",
-      "id": 55
-    },
-    {
-      "customer": "maria",
-      "id": 56
-    },
-    {
-      "customer": "maria",
-      "id": 57
-    },
-    {
-      "customer": "maria",
-      "id": 58
-    },
-    {
-      "customer": "maria",
-      "id": 59
-    },
-    {
-      "customer": "maria",
-      "id": 60
-    },
-    {
-      "customer": "maris",
-      "id": 61
-    },
-    {
-      "customer": "maris",
-      "id": 62
-    },
-    {
-      "customer": "maris",
-      "id": 63
-    },
-    {
-      "customer": "maris",
-      "id": 64
-    },
-    {
-      "customer": "maris",
-      "id": 65
-    },
-    {
-      "customer": "maris",
-      "id": 66
-    },
-    {
-      "customer": "Euge",
-      "id": 67
-    },
-    {
-      "customer": "MArvel",
-      "id": 68
-    },
-    {
-      "customer": "Pancho",
-      "id": 69
-    },
-    {
-      "customer": "tony",
-      "id": 70
-    },
-    {
-      "customer": "pati",
-      "id": 71
-    },
-    {
-      "customer": "pati",
-      "id": 72
-    },
-    {
-      "customer": "Paty ",
-      "id": 73
-    },
-    {
-      "customer": "Gene",
-      "id": 74
-    },
-    {
-      "customer": "Jam",
-      "id": 75
-    },
-    {
-      "customer": "Rom",
-      "id": 76
-    },
-    {
-      "customer": "pat",
-      "id": 77
-    },
-    {
-      "customer": "pat",
-      "id": 78
-    },
-    {
-      "customer": "Gene",
-      "id": 79
-    },
-    {
-      "customer": "Patsh",
-      "id": 80
-    },
-    {
-      "customer": "eze",
-      "id": 81
-    },
-    {
-      "customer": "",
-      "id": 82
-    },
-    {
-      "customer": "",
-      "id": 83
-    },
-    {
-      "customer": "react",
-      "id": 84
-    },
-    {
-      "customer": "aza",
-      "id": 85
-    },
-    {
-      "customer": "pandix",
-      "id": 86
-    },
-    {
-      "customer": "Juancho",
-      "id": 87
-    },
-    {
-      "customer": "lole",
-      "id": 88
-    },
-    {
-      "customer": "Eugenia",
-      "id": 89
-    },
-    {
-      "customer": "Navi",
-      "id": 90
-    },
-    {
-      "customer": "Chan",
-      "id": 91
-    },
-    {
-      "customer": "Gene",
-      "id": 92
-    },
-    {
-      "customer": "Gene",
-      "id": 93
-    },
-    {
-      "customer": "patricio",
-      "id": 94
-    },
-    {
-      "customer": "Carlos",
-      "id": 95
-    },
-    {
-      "customer": "favy",
-      "id": 96
-    },
-    {
-      "customer": "faby",
-      "id": 97
-    },
-    {
-      "customer": "porfi",
-      "id": 98
-    },
-    {
-      "customer": "x faz",
-      "id": 99
-    },
-    {
-      "customer": "war",
-      "id": 100
+      "total": 30
     }
   ]
 }

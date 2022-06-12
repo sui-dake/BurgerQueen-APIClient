@@ -3,8 +3,7 @@ import SingOut from "../../components/SingOut";
 import User from "../../components/User";
 import ButtonNewClient from "./waiterComponents/components/ButtonNewClient";
 import "./waiter.css";
-import Ready from "./waiterComponents/ready/OrdersReady";
-import { Link } from "react-router-dom";
+import PendingOrders from "./waiterComponents/pending/PendingOrders";
 
 export default function WaiterDashboard() {
   return (
@@ -16,14 +15,10 @@ export default function WaiterDashboard() {
         <DateTime />
         <User />
       </header>
-      <section id='main_waiter'>
-        <Ready />
+      <section id="main_waiter">
+        <PendingOrders />
         <ButtonNewClient />
       </section>
-      {/* <Link to={"/"} style={{ margin: "5px" }}>
-        {" "}
-        Home{" "}
-      </Link> */}
     </div>
   );
 }

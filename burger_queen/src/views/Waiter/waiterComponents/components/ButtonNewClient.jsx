@@ -12,23 +12,22 @@ export default function ButtonNewClient() {
   const [current, setCurrent] = useState([]);
   const navigate = useNavigate();
   let customerValue = {
-    customer: customer, //customer newOrder.customer
+    customer: customer,
+    state: "pending", //customer newOrder.customer
   };
   const handleClick = () => {
     postOrder(customerValue).then((data) => {
       setCurrent(data);
       console.log(data.data.id);
-      navigate(`/order/${data.data.id}`)
+      navigate(`/order/${data.data.id}`);
     });
-    
+
     //   const currentFilter = () =>
     //   current.filter((cust) => cust.customer == customer);
     // customer != [] ? console.log(currentFilter()) : null;
     //    currentFilter();
     //navigate(`/order/${data.data.id}`)
   };
-
-  useEffect(() => {}, []);
 
   return (
     <div className="container_button_new_client">

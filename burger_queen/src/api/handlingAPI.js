@@ -22,7 +22,7 @@ export const getOrder = (id) =>
 export const deleteOrder = (id) => axios.delete(`${api}/order/${id}`);
 
 export const updateOrder = (id, payload) =>
-  axios.patch(`${api}/order/${id}`, payload);
+  axios.patch(`${api}/orders/${id}`, payload);
 
 export const postOrder = (payload) =>
   axios.post(`${api}/orders/`, payload)
