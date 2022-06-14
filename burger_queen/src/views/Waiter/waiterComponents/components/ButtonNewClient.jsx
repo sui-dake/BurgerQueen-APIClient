@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Modal from "../../../Admin/adminComponents/modal/Modal";
 import CustomerInput from "./CustomerInput";
 import { getOrders, postOrder } from "../../../../api/handlingAPI";
+import send from "../../../../assets/send.png";
 
 export default function ButtonNewClient() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,11 @@ export default function ButtonNewClient() {
   let customerValue = {
     customer: customer,
     state: "pending", //customer newOrder.customer
+    summary: [{
+      name: '',
+      price: 0,
+      quantity: 0
+    }],
   };
   const handleClick = () => {
     postOrder(customerValue).then((data) => {
@@ -44,7 +50,7 @@ export default function ButtonNewClient() {
           handleClose={() => setIsOpen(false)}
           setCustomer={setCustomer}
         />
-        <button onClick={handleClick}>Send</button>
+        <img id="btn-send" type="button" src={send} onClick={handleClick} />
       </Modal>
     </div>
   );

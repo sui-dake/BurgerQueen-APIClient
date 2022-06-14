@@ -195,13 +195,14 @@
       "id": 25,
       "summary": [
         {
-          "id": 3,
-          "name": "Ham & cheese sandwich",
-          "price": 10,
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
           "type": "Breakfast",
-          "quantity": 2
+          "quantity": 1
         }
-      ]
+      ],
+      "total": 5
     },
     {
       "customer": "Lolita",
@@ -260,6 +261,176 @@
         }
       ],
       "total": 30
+    },
+    {
+      "customer": "Mauricio",
+      "state": "pending",
+      "id": 31,
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 5
+    },
+    {
+      "customer": "Malibu",
+      "state": "pending",
+      "id": 32,
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 5
+    },
+    {
+      "customer": "Pepe",
+      "state": "pending",
+      "id": 33,
+      "summary": [
+        {
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast"
+        },
+        0,
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast"
+        },
+        1,
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast"
+        },
+        2
+      ],
+      "total": 0
+    },
+    {
+      "customer": "Lorde",
+      "state": "pending",
+      "summary": [],
+      "id": 34
+    },
+    {
+      "customer": "Lorde",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Fruit juice",
+          "price": 7,
+          "quantity": 0
+        },
+        {
+          "name": "Americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Americano",
+          "price": 5,
+          "quantity": 2
+        }
+      ],
+      "id": 35,
+      "total": 0
+    },
+    {
+      "customer": "Tania",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Fruit juice",
+          "price": 7,
+          "quantity": 0
+        }
+      ]
+    },
+    {
+      "customer": "Noni",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Fruit juice",
+          "price": 7,
+          "quantity": 0
+        },
+        {
+          "name": "Americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Americano",
+          "price": 5,
+          "quantity": 2
+        },
+        {
+          "name": "Americano",
+          "price": 5,
+          "quantity": 3
+        },
+        {
+          "name": "Latte",
+          "price": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Latte",
+          "price": 7,
+          "quantity": 2
+        }
+      ],
+      "id": 36,
+      "total": 0
+    },
+    {
+      "customer": "Kitty",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Fruit juice",
+          "price": 7,
+          "quantity": 0
+        },
+        {
+          "name": "Americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Americano",
+          "price": 5,
+          "quantity": 2
+        },
+        {
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "quantity": 1
+        },
+        {
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "quantity": 2
+        }
+      ],
+      "id": 37,
+      "total": 0
     }
   ]
 }

@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./views/Login/Login";
 import AdminDashboard from "./views/Admin/AdminDashboard";
 import WaiterDashboard from "./views/Waiter/WaiterDashboard";
-import Order from './views/Waiter/order/Order'
+import Order from "./views/Waiter/order/Order";
 import PreparingOrder from "./views/Waiter/Preparing";
 import ChefDashboard from "./views/Chef/ChefDashboard";
 import Employees from "./views/Admin/adminComponents/Employees";
@@ -26,8 +26,8 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
+            
             <Route path="/login" element={<Login />} />
-
             <Route path="/" element={<Home />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
             {/* <Route path='/admin-dashboard/products' element={<Products />}/>

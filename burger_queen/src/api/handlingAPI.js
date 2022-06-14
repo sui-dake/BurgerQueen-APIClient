@@ -2,8 +2,11 @@ import axios from "axios";
 
 const api = "http://localhost:4000";
 //payload = DATA
-export const getProducts = () =>
-  axios.get(`${api}/products`).then((res) => res.data);
+export const getBreakfast = () =>
+  axios.get(`${api}/products?type=Breakfast`).then((res) => res.data);
+
+export const getMeal = () =>
+  axios.get(`${api}/products?type=Meal`).then((res) => res.data);
 
 export const getProduct = (id) =>
   axios.get(`${api}/products/${id}`).then((res) => res.data);
@@ -24,5 +27,4 @@ export const deleteOrder = (id) => axios.delete(`${api}/order/${id}`);
 export const updateOrder = (id, payload) =>
   axios.patch(`${api}/orders/${id}`, payload);
 
-export const postOrder = (payload) =>
-  axios.post(`${api}/orders/`, payload)
+export const postOrder = (payload) => axios.post(`${api}/orders/`, payload);

@@ -1,0 +1,8 @@
+.print-orders {
+  background-color: #f2e37d;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+width: auto;
+height: auto;
+}

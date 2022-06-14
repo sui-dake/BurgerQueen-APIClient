@@ -1,40 +1,68 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
-import { getProducts } from "../../../api/handlingAPI";
+//import { useState, useEffect } from "react";
+//import { getBreakfast, getMeal } from "../../../api/handlingAPI";
 import BreakfastAndMeal from "../waiterComponents/components/BreakfastAndMeal";
 
-const Table = ({ breakfast, meal, setOrders, setTotal }) => {
-  const [products, setProducts] = useState([]);
-  const [menu, setMenu] = useState([]);
+const Table = ({
+  products,
+  setOrders,
+  setTotal,
+  orders,
+  setCustomerOrder,
+  customerOrder,
+}) => {
+//  const [products, setProducts] = useState([]);
+  //const [menu, setMenu] = useState([]);
 
-  const getMenu = () => {
-    getProducts().then((data) => {
-      setProducts(data);
-    });
-  };
+  // const getMenuBreakfast = () => {
+  //   getBreakfast().then((data) => {
+  //     setProducts(data);
+  //   });
+  // };
 
-  useEffect(() => {
-    getMenu();
-  }, []);
+  // const getMenuMeal = () => {
+  //   getMeal().then((data) => {
+  //     setProducts(data);
+  //   });
+  // };
 
-  const breakfastMenu = products.filter((type) => type.type == "Breakfast");
-  const mealMenu = products.filter((type) => type.type == "Meal");
+  // useEffect(() => {
+  //   getMenuBreakfast();
+  //   getMenuMeal();
+  // }, []);
 
-  useEffect(() => {
-    if (breakfast == true) {
-      setMenu(breakfastMenu);
-    } else if (meal == true) {
-      setMenu(mealMenu);
-    }
-  }, [breakfast, meal]);
+  //const breakfastMenu = products.filter((type) => type.type == "Breakfast");
+  //const mealMenu = products.filter((type) => type.type == "Meal");
+
+  // useEffect(() => {
+  //   if (breakfast == true) {
+  //     setMenu(breakfastMenu);
+  //   } else if (meal == true) {
+  //     setMenu(mealMenu);
+  //   }
+  // }, [breakfast, meal]);
 
   return (
-    <div>
-      <h2>PRICE    PRODUCT     QUANTITY</h2>
-      {menu.map((product, key) => (
-        <tr key={key}>
-          <BreakfastAndMeal product={product} setOrders={setOrders} setTotal={setTotal}/>
+    <div id="order_table">
+      <article
+        className="table_titles"
+        style={{ display: "flex", flexDirection: "row" }}
+      >
+        <p className="table_p">PRICE</p>
+        <p className="table_p">PRODUCT</p>
+        <p className="table_p">QUANTITY</p>
+      </article>
+      {products.map((product, key) => (
+        <tr id='table' key={key}>
+          <BreakfastAndMeal
+            product={product}
+            setOrders={setOrders}
+            setTotal={setTotal}
+            orders={orders}
+            customerOrder={customerOrder}
+            setCustomerOrder={setCustomerOrder}
+          />
         </tr>
       ))}
     </div>

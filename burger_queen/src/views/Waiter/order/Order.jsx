@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/react-in-jsx-scope */
 //import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -9,36 +10,63 @@ import { motion } from "framer-motion";
 import OrderAPI from "./api/OrderAPI";
 import Table from "./Table";
 import { useParams } from "react-router-dom";
-import { getOrder, updateOrder } from "../../../api/handlingAPI";
+import {
+  getOrder,
+  updateOrder,
+  getBreakfast,
+  getMeal,
+} from "../../../api/handlingAPI";
 
 export default function Order() {
   //const navigate = useNavigate();
   const [breakfast, setBreakfast] = useState(false);
   const [meal, setMeal] = useState(false);
-  const [orders, setOrders] = useState([]);
-  const [ready, setReady] = useState(false);
   const [customerOrder, setCustomerOrder] = useState([]);
   const [total, setTotal] = useState(0);
+  const [ready, setReady] = useState(false);
   const { id } = useParams();
+  const [products, setProducts] = useState([]);
+  const [orders, setOrders] = useState({
+    ...customerOrder,
+    summary: [],
+    total: total, //no olvidemos wardartmb la hora
+  });
 
   //NO olvidar poner la fecha y hora en la orden ok y el estado
   console.log("CUSTOMER ORDER", customerOrder);
-  console.log("ORDERS", orders);
-  console.log("TOTAL", total);
-  const handleBreakfast = () => {
-    if (breakfast == true) {
-      setBreakfast(true);
-    } else if (breakfast == false) {
-      setBreakfast(true), setMeal(false);
-    }
+  // console.log("ORDERS", orders);
+  // console.log("TOTAL", total);
+  // // const handleBreakfast = () => {
+  // //   if (breakfast == true) {
+  // //     setBreakfast(true);
+  // //   } else if (breakfast == false) {
+  // //     setBreakfast(true), setMeal(false);
+  // //   }
+  // //   //se llama a getBreakfast.then(data)(setProduct(data))
+  // // };
+  // // const handleMeal = () => {
+  // //   if (meal == true) {
+  // //     setMeal(true);
+  // //   } else {
+  // //     setMeal(true), setBreakfast(false);
+  // //   }
+  // // };
+
+  const getMenuBreakfast = () => {
+    getBreakfast().then((data) => {
+      setProducts(data);
+    });
   };
-  const handleMeal = () => {
-    if (meal == true) {
-      setMeal(true);
-    } else {
-      setMeal(true), setBreakfast(false);
-    }
+
+  const getMenuMeal = () => {
+    getMeal().then((data) => {
+      setProducts(data);
+    });
   };
+
+  // useEffect(() => {
+
+  // }, []);
 
   // const newOrder = {
   //   customer: "customer",
@@ -52,21 +80,19 @@ export default function Order() {
   //   //navigate("/preparing-order");
   // };
   const handleClick = () => {
-    updateOrder(id, customerOrder).then((data) => {
-      
-    });
+    updateOrder(id, orders).then((data) => {});
   };
-  const superiorOrder = () => {
-    setCustomerOrder({
-      ...customerOrder,
-      summary: orders,
-      total: total, //no olvidemos wardartmb la hora
-    });
-  };
-  const coso = []
+  // const superiorOrder = () => {
+  //   setCustomerOrder({
+  //     ...customerOrder,
+  //     summary: orders,
+  //     total: total, //no olvidemos wardartmb la hora
+  //   });
+  // };
+  const coso = [];
   const alphaOrder = () => {
     // typeof customerOrder.summary === 'object' ? coso.push({...customerOrder, orders}): console.log('  NO ES objeto!!')
-    console.log('COSO', coso)
+    console.log("COSO", coso);
   };
 
   const getCustomerOrder = () => {
@@ -78,8 +104,7 @@ export default function Order() {
   }, [id]);
 
   useEffect(() => {
-    superiorOrder();
-    alphaOrder();
+    //superiorOrder();
   }, [orders]);
 
   //SOLO GUARDAR CON POST EL CUSTOMER, CON UN MODAL (RECICLADO), ENTONCES
@@ -100,17 +125,26 @@ export default function Order() {
         <button
           className="waiter_switch"
           id="b_breakfast"
-          onClick={handleBreakfast}
+          onClick={getMenuBreakfast}
         >
           Breakfast
         </button>
 
-        <button className="waiter_switch" id="b_meal" onClick={handleMeal}>
+        <button className="waiter_switch" id="b_meal" onClick={getMenuMeal}>
           Meal
         </button>
       </section>
       <section id="breafkast_meal">
-        {<Table breakfast={breakfast} meal={meal} setOrders={setOrders} setTotal={setTotal}/>}
+        {
+          <Table
+            products={products}
+            orders={orders}
+            setOrders={setOrders}
+            setTotal={setTotal}
+            customerOrder={customerOrder}
+            setCustomerOrder={setCustomerOrder}
+           />
+        }
         {}
       </section>
       <section id="button_order">
