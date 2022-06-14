@@ -3,7 +3,6 @@ import "./chef.css";
 import User from "../../components/User";
 import DateTime from "../../components/DateTime";
 import SingOut from "../../components/SingOut";
-import OrderAPI from "../Waiter/order/api/OrderAPI";
 
 
 export default function ChefDashboard() {
@@ -19,7 +18,6 @@ export default function ChefDashboard() {
       <figure className="chef">
         <h1>Chef under construction 🛠️</h1>
         <img id="chef" src="./Chef.png" />
-        <OrderAPI/>
       </figure>
     </div>
   );
