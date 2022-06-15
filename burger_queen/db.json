@@ -302,43 +302,7 @@
       "total": 0
     },
     {
-      "customer": "Macchiato",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Fruit juice",
-          "price": 7,
-          "quantity": 2
-        }
-      ],
-      "id": 48,
-      "total": 0
-    },
-    {
-      "customer": "Carlos",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Americano",
-          "price": 5,
-          "quantity": 1
-        },
-        {
-          "name": "Ham & cheese sandwich",
-          "price": 10,
-          "quantity": 3
-        },
-        {
-          "name": "Onion rings",
-          "price": 5,
-          "quantity": 3
-        }
-      ],
-      "id": 49,
-      "total": 0
-    },
-    {
-      "customer": "Wea",
+      "customer": "Pati",
       "state": "pending",
       "summary": [
         {
@@ -347,7 +311,156 @@
           "quantity": 0
         }
       ],
-      "id": 50
+      "id": 48
+    },
+    {
+      "customer": "Carlos",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "quantity": 2
+        }
+      ],
+      "id": 49,
+      "total": 0
+    },
+    {
+      "customer": "Weas",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Latte",
+          "price": 7,
+          "quantity": 1
+        }
+      ],
+      "id": 50,
+      "total": [
+        {
+          "name": "Americano",
+          "semi": 5
+        },
+        15,
+        {
+          "name": "Latte",
+          "semi": 7
+        },
+        21
+      ]
+    },
+    {
+      "customer": "Mini So",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "quantity": 1
+        },
+        {
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "quantity": 1
+        },
+        {
+          "name": "Soda 750ml",
+          "price": 10,
+          "quantity": 1
+        }
+      ],
+      "id": 51,
+      "total": [
+        {
+          "name": "Cheese hamburguer",
+          "semi": 10
+        },
+        30,
+        {
+          "name": "Ham & cheese sandwich",
+          "semi": 10
+        },
+        30,
+        {
+          "name": "Soda 750ml",
+          "semi": 10
+        },
+        30
+      ]
+    },
+    {
+      "customer": "Bolonia",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "quantity": 2
+        },
+        {
+          "name": "Fries",
+          "price": 5,
+          "quantity": 1
+        }
+      ],
+      "id": 52,
+      "total": 5
+    },
+    {
+      "customer": "Calimax",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Double cheese hamburguer",
+          "price": 15,
+          "quantity": 2
+        },
+        {
+          "name": "Onion rings",
+          "price": 5,
+          "quantity": 2
+        }
+      ],
+      "id": 53,
+      "total": 10
+    },
+    {
+      "customer": "Arya",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Americano",
+          "price": 5,
+          "quantity": 2
+        }
+      ],
+      "id": 54,
+      "total": {
+        "total": [
+          {
+            "name": "Americano",
+            "semi": 5
+          }
+        ]
+      }
+    },
+    {
+      "customer": "Total",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "id": 55
     }
   ]
 }

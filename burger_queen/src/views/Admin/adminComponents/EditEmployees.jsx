@@ -40,23 +40,23 @@ export default function EditEmployees({ id, handleClose }) {
     email == undefined ? setFormEmail(user.Email) : setFormEmail(email);
     role == undefined ? setFormRole(user.Role) : setFormRole(role);
     if (formName && formEmail && formRole != null) {
-      setTimeout(handleSubmit, 500);
+      setTimeout(handleSubmit, 500); 
     }
   };
 
   useEffect(() => {
     getEmployee();
   }, []);
-  console.log("LETs: " + name + email + role);
-  console.log("STATES: " + formName + formEmail + formRole);
+  // console.log("LETs: " + name + email + role);
+  // console.log("STATES: " + formName + formEmail + formRole);
 
   return (
     <div className="modal-table">
-      {employee.map((user, key) => (
-        <div className="modal-user" key={key}>
+      {employee.map((user, keyUnique) => (
+        <div className="modal-user" key={keyUnique}>
           {" "}
           <section className="modal-inputs">
-            <p>Name </p>
+            <p className="titles-modal">Name </p>
             <input
               className="modal-input"
               defaultValue={user.Name}
@@ -65,7 +65,7 @@ export default function EditEmployees({ id, handleClose }) {
             />
           </section>
           <section className="modal-inputs">
-            <p>Role </p>
+            <p className="titles-modal">Role </p>
             <input
               className="modal-input"
               defaultValue={user.Role}
@@ -74,7 +74,7 @@ export default function EditEmployees({ id, handleClose }) {
             />
           </section>
           <section className="modal-inputs">
-            <p>E-mail </p>
+            <p className="titles-modal">E-mail </p>
             <input
               className="modal-input"
               defaultValue={user.Email}
@@ -83,8 +83,7 @@ export default function EditEmployees({ id, handleClose }) {
             />
           </section>
           <object className="modal-check" style={{ border: "none" }}>
-            <img
-              style={{ width: "60px" }}
+            <img            
               id="img-check"
               type="button"
               src="./check.png"
@@ -92,14 +91,6 @@ export default function EditEmployees({ id, handleClose }) {
               onClick={() => {
                 handleSetting(user);
               }}
-            />
-            <img
-              style={{ width: "60px" }}
-              id="img-check"
-              type="button"
-              src="./"
-              alt="logo"
-              onClick={handleSubmit}
             />
           </object>
         </div>
