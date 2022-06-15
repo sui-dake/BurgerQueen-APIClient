@@ -1,28 +1,49 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useState, useEffect } from "react";
 import Loading from "../../../api/Loading";
+import Modal from "./modal/Modal";
 import ButtonAddProduct from "./ButtonAddProduct";
-import Erase from "./Erase";
+import { getAllProducts, deleteProduct } from "../../../api/handlingAPI";
 import "./products.css";
+import EditProducts from "./EditProducts";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  // useEffect(() => {
+  //   fetch("http://localhost:4000/products/")
+  //     .then((res) => res.json())
+  //     .then(
+  //       (data) => {
+  //         setLoading(true);
+  //         setProducts(data);
+  //       },
+  //       (error) => {
+  //         setLoading(true);
+  //         setError(error);
+  //       }
+  //     );
+  // }, []);
 
-  useEffect(() => {
-    fetch("http://localhost:4000/products/")
-      .then((res) => res.json())
-      .then(
-        (data) => {
-          setLoading(true);
-          setProducts(data);
-        },
+  const fetchProducts = () => {
+    getAllProducts().then((data) => {
+      setProducts(data);
+      setLoading(true),
         (error) => {
           setLoading(true);
           setError(error);
-        }
-      );
+        };
+    });
+  };
+
+  const handleDelete = (id) => {
+    deleteProduct(id).then(fetchProducts).catch(alert);
+  };
+
+  useEffect(() => {
+    fetchProducts();
   }, []);
 
   if (error) {
@@ -91,13 +112,29 @@ export default function Products() {
                   type="button"
                   style={{ width: "40px", height: "40px" }}
                   src="./edit1.png.png"
+                  onClick={() => setIsOpen(true)}
                 />
+                  
               </td>
+              
               <td>
-                <Erase />
+                <img
+                  type="button"
+                  style={{ width: "40px", height: "40px" }}
+                  src="./trash.png"
+                  onClick={() => {
+                    handleDelete(item.id);
+                  }}
+                />
               </td>
             </tr>
           ))}
+          <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
+        <EditProducts
+          handleClose={() => setIsOpen(false)}
+          
+        />
+        </Modal>
         </table>
         <ButtonAddProduct />
       </div>

@@ -22,7 +22,7 @@ export default function PendingOrders() {
         <section className='print-orders' key={key}>
           <p>{item.customer}</p>
           {item.summary.map((token, key1) => (
-            <p key={key1}>{token.name + " " + token.quantity}</p>
+            <p key={key1}>{token.name + " " + token.quantity }</p>
           ))}
         </section>
       ))}

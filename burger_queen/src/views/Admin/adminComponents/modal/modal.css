@@ -46,22 +46,29 @@
   flex-direction: row;
 }
 .modal-check {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-top: 10px;
+  
+}
+#img-check{
+  width: 50px;
+  height: 50px;
+  margin-top: 200px;
+  margin-left: -40px;
 }
 .modal-inputs {
   display: flex;
   flex-direction: column;
   background: none;
-  text-align: center;
   border: none;
+  margin: 10px;
+}
+.titles-modal {
   font-size: 30px;
+  font-weight: 600;
 }
 .modal-input {
   background: none;
   border: none;
-  text-align: center;
-
+  width: 200px;
+  font-size: 25px;
+  font-weight: 300;
 }

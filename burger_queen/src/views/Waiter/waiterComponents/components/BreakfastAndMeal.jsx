@@ -6,10 +6,31 @@ import { useState, useEffect } from "react";
 export default function BreakfastAndMeal({ product, setOrders, orders }) {
   const [quantity, setQuantity] = useState(0);
   const [items, setItems] = useState([product]);
-  const [total, setTotal] = useState(0);
+  const [semiTotal, setSemiTotal] = useState([]);
+  //const []
 
   const newOrder = [];
   //contador sume o reste segun click solo {numero} ligado al producto
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrement = () => {
+    setQuantity(quantity - 1);
+  };
+  const semi = quantity * product.price;
+
+  // const updateTotal = () => {
+  //   items.map((item) => {
+  //     setSemiTotal({
+
+  //         ...orders.total.filter((self) => self.name !== item.name),
+  //          name: item.name, semi: semi,
+
+  //     });
+  //     console.log(semiTotal);
+  //   });
+  // };
   const updateState = () => {
     // console.log(orders);
     items.map((item) => {
@@ -19,26 +40,22 @@ export default function BreakfastAndMeal({ product, setOrders, orders }) {
           ...orders.summary.filter((self) => self.name !== item.name),
           { name: item.name, price: item.price, quantity: quantity },
         ],
-        total: total
+        total: [
+          ...orders.total.filter((self) => self.name !== item.name),
+          { name: item.name, semi: semi },
+        ],
+        // .reduce(function (a, b) {
+        //   return a.semi + b.semi;
+        // }[0])
       });
     });
   };
-  const semi = quantity * product.price
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-    setTotal(...semi, semi);
-  };
-  
-  const handleDecrement = () => {
-    setQuantity(quantity - 1);
-    setTotal(...semi, semi);
-  };
-  console.log(total);
+
   useEffect(() => {
     if (quantity > 0) {
       updateState();
+      //updateTotal();
     }
-
   }, [quantity]);
 
   return (

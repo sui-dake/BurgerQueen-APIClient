@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/react-in-jsx-scope */
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DateTime from "../../../components/DateTime";
 import User from "../../../components/User";
@@ -16,7 +16,7 @@ import {
 } from "../../../api/handlingAPI";
 
 export default function Order() {
-  const navigate = useNavigate();
+ // const navigate = useNavigate();
 
   const [customerOrder, setCustomerOrder] = useState([]);
   const [ready, setReady] = useState(false);
@@ -47,7 +47,7 @@ export default function Order() {
   const handleClick = () => {
     console.log(orders);
     updateOrder(id, orders).then((data) => {});
-    navigate("/preparing-order");
+    //navigate("/preparing-order");
   };
 
   const getCustomerOrder = () => {
