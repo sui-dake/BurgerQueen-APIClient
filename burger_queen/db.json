@@ -85,33 +85,6 @@
   ],
   "orders": [
     {
-      "customer": "Eugenia",
-      "summary": [
-        {
-          "product": "Americano",
-          "quantity": 2
-        },
-        {
-          "product": "Latte",
-          "quantity": 1
-        },
-        {
-          "product": "Soda 500ml",
-          "quantity": 3
-        },
-        {
-          "product": "Water",
-          "quantity": 1
-        },
-        {
-          "product": "Water 500ml",
-          "quantity": 3
-        }
-      ],
-      "total": 38,
-      "id": 1
-    },
-    {
       "customer": "Sui",
       "summary": [
         {
@@ -327,6 +300,54 @@
       ],
       "id": 47,
       "total": 0
+    },
+    {
+      "customer": "Macchiato",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Fruit juice",
+          "price": 7,
+          "quantity": 2
+        }
+      ],
+      "id": 48,
+      "total": 0
+    },
+    {
+      "customer": "Carlos",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Americano",
+          "price": 5,
+          "quantity": 1
+        },
+        {
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "quantity": 3
+        },
+        {
+          "name": "Onion rings",
+          "price": 5,
+          "quantity": 3
+        }
+      ],
+      "id": 49,
+      "total": 0
+    },
+    {
+      "customer": "Wea",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "id": 50
     }
   ]
 }

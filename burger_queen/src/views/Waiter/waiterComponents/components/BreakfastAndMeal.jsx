@@ -19,16 +19,16 @@ export default function BreakfastAndMeal({ product, setOrders, orders }) {
           ...orders.summary.filter((self) => self.name !== item.name),
           { name: item.name, price: item.price, quantity: quantity },
         ],
-        total: total
+        total: total,
       });
     });
   };
-  const semi = quantity * product.price
+  const semi = quantity * product.price;
   const handleIncrement = () => {
     setQuantity(quantity + 1);
     setTotal(...semi, semi);
   };
-  
+
   const handleDecrement = () => {
     setQuantity(quantity - 1);
     setTotal(...semi, semi);
@@ -38,7 +38,6 @@ export default function BreakfastAndMeal({ product, setOrders, orders }) {
     if (quantity > 0) {
       updateState();
     }
-
   }, [quantity]);
 
   return (
@@ -49,7 +48,6 @@ export default function BreakfastAndMeal({ product, setOrders, orders }) {
           padding: "5px 10px",
           textAlign: "center",
           fontSize: "25px",
-          height: "30px",
         }}
       >
         $ {product.price}
