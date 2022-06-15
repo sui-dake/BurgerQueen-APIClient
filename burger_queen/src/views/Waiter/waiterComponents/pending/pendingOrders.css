@@ -1,8 +1,23 @@
+.pending_article {
+  display: flex;
+  flex-direction: column;
+}
+
 .print-orders {
   background-color: #f2e37d;
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
-width: auto;
-height: auto;
+  flex-direction: column;
+  margin: 10px;
+  width: auto;
+  height: auto;
+}
+.container_pending_orders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.print-orders p {
+  margin: 0 10px 8px 10px;
 }

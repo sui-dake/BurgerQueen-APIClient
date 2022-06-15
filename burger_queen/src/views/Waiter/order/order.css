@@ -86,3 +86,25 @@
 #order_table div {
   margin-left: 20px;
 }
+#table_content {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+}
+#counter_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+}
+#table_content button {
+  background: none;
+  border: none;
+  height: 20px;
+}
+#counter_buttons p {
+  height: 10px;
+  margin-bottom: 20px;
+}

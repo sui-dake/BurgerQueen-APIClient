@@ -16,16 +16,20 @@ export default function PendingOrders() {
   }, []);
 
   return (
-    <div className="container_pending_orders">
-      <h1>Pending orders</h1>
-      {pendingOrders.map((item, key) => (
-        <section className='print-orders' key={key}>
-          <p>{item.customer}</p>
-          {item.summary.map((token, key1) => (
-            <p key={key1}>{token.name + " " + token.quantity }</p>
+    <section>
+      <article className="pending_article">
+        <h1 style={{ marginLeft: "80px" }}>Pending orders</h1>
+        <summary className="container_pending_orders">
+          {pendingOrders.map((item, key) => (
+            <section className="print-orders" key={key}>
+              <h2 style={{ margin: "10px" }}>{item.customer}</h2>
+              {item.summary.map((token) => (
+                <p key={item.id}>{token.quantity + " " + token.name}</p>
+              ))}
+            </section>
           ))}
-        </section>
-      ))}
-    </div>
+        </summary>
+      </article>
+    </section>
   );
 }

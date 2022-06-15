@@ -66,7 +66,6 @@ export default function BreakfastAndMeal({ product, setOrders, orders }) {
           padding: "5px 10px",
           textAlign: "center",
           fontSize: "25px",
-          height: "30px",
         }}
       >
         $ {product.price}

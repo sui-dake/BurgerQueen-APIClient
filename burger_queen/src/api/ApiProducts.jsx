@@ -34,7 +34,6 @@ const ApiProducts = () => {
               <li>
                 $ {item.price} ,{item.name}, {item.type}
               </li>
-              
             </div>
           ))}
         </ul>

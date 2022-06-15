@@ -5,6 +5,8 @@ import Products from "./adminComponents/Products";
 import Employees from "./adminComponents/Employees";
 import SingOut from "../../components/SingOut";
 import Modal from "./adminComponents/modal/Modal";
+import DateTime from "../../components/DateTime";
+import User from "../../components/User";
 
 export default function AdminDashboard() {
   const [employee, setEmployee] = useState(false);
@@ -24,10 +26,14 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div>
-      <main className="singout" style={{ marginRight: "70px" }}>
+    <div className="waiter_dashboard">
+      <main className="singout_waiter">
         <SingOut />
       </main>
+      <header id="header_waiter">
+        <DateTime />
+        <User />
+      </header>
       <div className="admin_dashboard">
         <object id="switch">
           <button
@@ -45,8 +51,8 @@ export default function AdminDashboard() {
             Products
           </button>
         </object>
-        {employee ? <Employees /> : null}
-        {product ? <Products /> : null}
+        {employee && <Employees />}
+        {product && <Products />}
       </div>
     </div>
   );
