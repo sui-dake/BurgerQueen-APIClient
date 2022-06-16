@@ -85,6 +85,33 @@
   ],
   "orders": [
     {
+      "customer": "Eugenia",
+      "summary": [
+        {
+          "product": "Americano",
+          "quantity": 2
+        },
+        {
+          "product": "Latte",
+          "quantity": 1
+        },
+        {
+          "product": "Soda 500ml",
+          "quantity": 3
+        },
+        {
+          "product": "Water",
+          "quantity": 1
+        },
+        {
+          "product": "Water 500ml",
+          "quantity": 3
+        }
+      ],
+      "total": 38,
+      "id": 1
+    },
+    {
       "customer": "Sui",
       "summary": [
         {
@@ -302,7 +329,6 @@
       "total": 0
     },
     {
-<<<<<<< HEAD
       "customer": "Pati",
       "state": "pending",
       "summary": [
@@ -313,78 +339,19 @@
         }
       ],
       "id": 48
-=======
-      "customer": "Macchiato",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Fruit juice",
-          "price": 7,
-          "quantity": 2
-        }
-      ],
-      "id": 48,
-      "total": 0
->>>>>>> 30d95f6f7b0038736f2f1869d5479e8c03fb18a4
     },
     {
       "customer": "Carlos",
       "state": "pending",
       "summary": [
         {
-<<<<<<< HEAD
           "name": "Ham & cheese sandwich",
           "price": 10,
           "quantity": 2
-=======
-          "name": "Americano",
-          "price": 5,
-          "quantity": 1
-        },
-        {
-          "name": "Ham & cheese sandwich",
-          "price": 10,
-          "quantity": 3
-        },
-        {
-          "name": "Onion rings",
-          "price": 5,
-          "quantity": 3
->>>>>>> 30d95f6f7b0038736f2f1869d5479e8c03fb18a4
         }
       ],
       "id": 49,
       "total": 0
-    },
-    {
-<<<<<<< HEAD
-      "customer": "Weas",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Americano",
-          "price": 5,
-          "quantity": 1
-        },
-        {
-          "name": "Latte",
-          "price": 7,
-          "quantity": 1
-        }
-      ],
-      "id": 50,
-      "total": [
-        {
-          "name": "Americano",
-          "semi": 5
-        },
-        15,
-        {
-          "name": "Latte",
-          "semi": 7
-        },
-        21
-      ]
     },
     {
       "customer": "Mini So",
@@ -483,9 +450,6 @@
     },
     {
       "customer": "Total",
-=======
-      "customer": "Wea",
->>>>>>> 30d95f6f7b0038736f2f1869d5479e8c03fb18a4
       "state": "pending",
       "summary": [
         {
@@ -494,11 +458,38 @@
           "quantity": 0
         }
       ],
-<<<<<<< HEAD
       "id": 55
-=======
-      "id": 50
->>>>>>> 30d95f6f7b0038736f2f1869d5479e8c03fb18a4
+    },
+    {
+      "customer": "Nico",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "id": 56
+    },
+    {
+      "customer": "Melody",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "id": 57
+    },
+    {
+      "customer": "Vaso",
+      "state": "pending",
+      "summary": [],
+      "id": 58,
+      "total": []
     }
   ]
 }

@@ -4,7 +4,7 @@ import BreakfastAndMeal from "../waiterComponents/components/BreakfastAndMeal";
 
 const Table = ({
   products,
-  setOrders,
+  parentCallback,
   orders,
   setCustomerOrder,
   customerOrder,
@@ -26,7 +26,7 @@ const Table = ({
         <tr id="table_row" key={product.id}>
           <BreakfastAndMeal
             product={product}
-            setOrders={setOrders}
+            parentCallback={parentCallback}
             orders={orders}
             customerOrder={customerOrder}
             setCustomerOrder={setCustomerOrder}
