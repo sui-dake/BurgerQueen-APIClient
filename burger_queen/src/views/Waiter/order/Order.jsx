@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
+  /* eslint-disable no-unused-vars */
 /* eslint-disable react/react-in-jsx-scope */
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DateTime from "../../../components/DateTime";
 import User from "../../../components/User";
@@ -15,65 +15,27 @@ import {
 } from "../../../api/handlingAPI";
 
 export default function Order() {
-  // const navigate = useNavigate();
+   const navigate = useNavigate();
 
   const [customerOrder, setCustomerOrder] = useState([]);
   const { id } = useParams();
   const [products, setProducts] = useState([]);
   const [menu, setMenu] = useState(null);
-  const [b, setB] = useState([]);
-  const [m, setM] = useState([]);
+  const [breakfast, setBreakfast] = useState([]);
+  const [meal, setMeal] = useState([]);
   const [total, setTotal] = useState(0);
   const [order, setOrder] = useState({
     ...customerOrder,
     summary: [],
+    total: total,
     //no olvidemos wardartmb la hora
   });
-  //NO olvidar poner la fecha y hora en la orden ok y el estado
-  // console.log("ORDERS", orders);
-
-  //////////////// CONDITIONALS //////////////////////////////
-  // if (b) {
-  //   return products
-  //     .filter((item) => item.type === "Breakfast")
-  //     .map((product) => (
-  //       <tr id="table_row" key={product.id}>
-  //         <BreakfastAndMeal product={product} parentCallback={updateProducts} />
-  //       </tr>
-  //     ));
-  // }
-  // if (m) {
-  //   return products
-  //     .filter((item) => item.type === "Meal")
-  //     .map((product) => (
-  //       <tr id="table_row" key={product.id}>
-  //         <BreakfastAndMeal product={product} parentCallback={updateProducts} />
-  //       </tr>
-  //     ));
-  // }
-  // const getMenuBreakfast = () => {
-  //   if(b === true){
-  //     setB(true), setM(false)
-  //   }
-  // };
-  // const getMenuMeal = () => {
-  //   if(m === true){
-  //     setM(true), setB(false)
-  //   }
-  // };
-  ///////////////////////////////////////////
-  // const breakfast = products.filter((tkn) => tkn.type == "Breakfast");
-  // const meal = products.filter((tkn) => tkn.type == "Meal");
 
   const getMenuBreakfast = () => {
     setMenu(true);
   };
   const getMenuMeal = () => {
     setMenu(false);
-  };
-  const handleClick = () => {
-    // updateOrder(id, order).then((data) => {});
-    //navigate("/preparing-order");
   };
 
   const getCustomerOrder = () => {
@@ -86,21 +48,18 @@ export default function Order() {
 
   useEffect(() => {
     getAllProducts().then(setProducts);
-    // data = data.map((item) => {
-    //   return { ...item, quantity: 0 };
-    // });
-    //);
   }, []);
+
   useEffect(() => {
     if (products.length > 0) {
-      setB(
+      setBreakfast(
         products
           .filter((tkn) => tkn.type == "Breakfast")
           .map((item) => {
             return { ...item, quantity: 0 };
           })
       );
-      setM(
+      setMeal(
         products
           .filter((tkn) => tkn.type == "Meal")
           .map((item) => {
@@ -115,14 +74,7 @@ export default function Order() {
       return item.id == product.id;
     });
 
-    // useEffect(() => {
-    //   if (quantity > 0) {
-    //  updateState();
-    //     updateTotal();
-    //   }
-    // }, [quantity]);
-
-    const newState = b.map((obj) => {
+    const newState = breakfast.map((obj) => {
       if (obj.id === product.id) {
         const currentQuantity = product.quantity;
         if (
@@ -144,10 +96,9 @@ export default function Order() {
       }
       return obj;
     });
-    setB(newState);
-    //    console.log("BREAKS", b);
+    setBreakfast(newState);
 
-    const newStateMeal = m.map((obj) => {
+    const newStateMeal = meal.map((obj) => {
       if (obj.id === product.id) {
         const currentQuantity = product.quantity;
         if (
@@ -169,36 +120,21 @@ export default function Order() {
       }
       return obj;
     });
-    setM(newStateMeal);
+    setMeal(newStateMeal);
   };
-  //console.log("MEALS", m);
 
   const updateState = () => {
-    // console.log("toda la wea", bm);
-    // bm.map((item) => {
-    //   console.log("sodasss", item, typeof(item));
-    //   setOrder({
-    //     ...order,
-
-    //     summary: [
-    //       ...order.summary.filter((self) => self.name !== item.name),
-
-    //       { name: item.name, price: item.price, quantity: item.quantity },
-    //     ],
-    //     total: total,
-    //   });
-    // });
-
-    const bm = b.concat(m).filter((item) => item.quantity > 0);
-    console.log("BE EME", bm);
-    updateOrder(id, { summary: bm });
+    const beakfastAndMeal = breakfast.concat(meal).filter((item) => item.quantity > 0);
+    console.log("BE EME", beakfastAndMeal);
+    updateOrder(id, { summary: beakfastAndMeal, total: total });
+    navigate("/preparing-order");
   };
-  // console.log('CONCAT', b.concat(m))
 
   useEffect(() => {
     //updateState();
   }, [total]);
   console.log("FINAL", order);
+  
   return (
     <div className="new_order">
       <section id="date_user">
@@ -234,7 +170,7 @@ export default function Order() {
             </article>
           ) : null}
           {menu === true
-            ? b.map((product) => (
+            ? breakfast.map((product) => (
                 <tr id="table_row" key={product.id}>
                   <BreakfastAndMeal
                     product={product}
@@ -243,7 +179,7 @@ export default function Order() {
                 </tr>
               ))
             : menu === false
-            ? m.map((product) => (
+            ? meal.map((product) => (
                 <tr id="table_row" key={product.id}>
                   <BreakfastAndMeal
                     product={product}
@@ -269,7 +205,6 @@ export default function Order() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           id="button_confirm_order"
-          //onClick={handleClick}
           onClick={updateState}
         >
           Confirm order
