@@ -1,6 +1,7 @@
 .pending_article {
   display: flex;
   flex-direction: column;
+  margin: 0px 40px 0 35px;
 }
 
 .print-orders {

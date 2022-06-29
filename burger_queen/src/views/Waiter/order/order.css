@@ -105,6 +105,9 @@
   height: 20px;
 }
 #counter_buttons p {
-  height: 10px;
+  height: 15px;
   margin-bottom: 20px;
+}
+#counter_buttons button {
+  margin-top: 15px;
 }

@@ -6,7 +6,7 @@ import DateTime from "../../../components/DateTime";
 import User from "../../../components/User";
 import "./order.css";
 import { motion } from "framer-motion";
-import Table from "./Table";
+import BreakfastAndMeal from "../waiterComponents/components/BreakfastAndMeal";
 import { useParams } from "react-router-dom";
 import {
   getOrder,
@@ -16,37 +16,43 @@ import {
 } from "../../../api/handlingAPI";
 
 export default function Order() {
- // const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [customerOrder, setCustomerOrder] = useState([]);
-  const [ready, setReady] = useState(false);
   const { id } = useParams();
   const [products, setProducts] = useState([]);
-  const [orders, setOrders] = useState({
+  const [total, setTotal] = useState(0);
+  const [order, setOrder] = useState({
     ...customerOrder,
     summary: [],
-    total: [], //no olvidemos wardartmb la hora
+    //no olvidemos wardartmb la hora
   });
-  console.log(orders);
+  // console.log(order);
   //NO olvidar poner la fecha y hora en la orden ok y el estado
-  console.log("CUSTOMER ORDER", customerOrder);
+  // console.log("CUSTOMER ORDER", customerOrder);
   // console.log("ORDERS", orders);
 
   const getMenuBreakfast = () => {
     getBreakfast().then((data) => {
+      data = data.map((item) => {
+        return { ...item, quantity: 0 };
+      });
       setProducts(data);
     });
   };
 
   const getMenuMeal = () => {
     getMeal().then((data) => {
+      data = data.map((item) => {
+        return { ...item, quantity: 0 };
+      });
       setProducts(data);
     });
   };
 
   const handleClick = () => {
-    console.log(orders);
-    updateOrder(id, orders).then((data) => {});
+    console.log(order);
+    updateOrder(id, order).then((data) => {});
     //navigate("/preparing-order");
   };
 
@@ -57,6 +63,37 @@ export default function Order() {
   useEffect(() => {
     getCustomerOrder();
   }, [id]);
+
+  const updateProducts = (product, action) => {
+    let index = products.findIndex((item) => {
+      return item.id == product.id;
+    });
+
+    const newState = products.map((obj) => {
+      if (obj.id === product.id) {
+        const currentQuantity = product.quantity;
+        if (
+          (action == "Decrement" && currentQuantity != 0) ||
+          action == "Increment"
+        ) {
+          const newQuantity =
+            action == "Increment" ? currentQuantity + 1 : currentQuantity - 1;
+          setTotal(
+            action === "Increment"
+              ? total + product.price
+              : total - product.price
+          );
+          return {
+            ...obj,
+            quantity: newQuantity,
+          };
+        }
+      }
+      return obj;
+    });
+
+    setProducts(newState);
+  };
 
   return (
     <div className="new_order">
@@ -81,18 +118,30 @@ export default function Order() {
         </button>
       </section>
       <section id="breafkast_meal">
-        {
-          <Table
-            products={products}
-            orders={orders}
-            setOrders={setOrders}
-            customerOrder={customerOrder}
-            setCustomerOrder={setCustomerOrder}
-          />
-        }
-        {}
+        <div id="order_table">
+          {console.log("PRO", products)}
+          {products.length != 0 ? (
+            <article
+              className="table_titles"
+              style={{ display: "flex", flexDirection: "row" }}
+            >
+              <p className="table_p">PRICE</p>
+              <p className="table_p">PRODUCT</p>
+              <p className="table_p">QUANTITY</p>
+            </article>
+          ) : null}
+          {products.map((product) => (
+            <tr id="table_row" key={product.id}>
+              <BreakfastAndMeal
+                product={product}
+                parentCallback={updateProducts}
+              />
+            </tr>
+          ))}
+        </div>
       </section>
       <section id="button_order">
+        <p style={{ fontSize: 35 }}>{total}</p>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
