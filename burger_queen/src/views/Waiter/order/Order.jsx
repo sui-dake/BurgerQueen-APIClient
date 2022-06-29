@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
+  /* eslint-disable no-unused-vars */
 /* eslint-disable react/react-in-jsx-scope */
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DateTime from "../../../components/DateTime";
 import User from "../../../components/User";
@@ -11,49 +11,31 @@ import { useParams } from "react-router-dom";
 import {
   getOrder,
   updateOrder,
-  getBreakfast,
-  getMeal,
+  getAllProducts,
 } from "../../../api/handlingAPI";
 
 export default function Order() {
-  // const navigate = useNavigate();
+   const navigate = useNavigate();
 
   const [customerOrder, setCustomerOrder] = useState([]);
   const { id } = useParams();
   const [products, setProducts] = useState([]);
+  const [menu, setMenu] = useState(null);
+  const [breakfast, setBreakfast] = useState([]);
+  const [meal, setMeal] = useState([]);
   const [total, setTotal] = useState(0);
   const [order, setOrder] = useState({
     ...customerOrder,
     summary: [],
+    total: total,
     //no olvidemos wardartmb la hora
   });
-  // console.log(order);
-  //NO olvidar poner la fecha y hora en la orden ok y el estado
-  // console.log("CUSTOMER ORDER", customerOrder);
-  // console.log("ORDERS", orders);
 
   const getMenuBreakfast = () => {
-    getBreakfast().then((data) => {
-      data = data.map((item) => {
-        return { ...item, quantity: 0 };
-      });
-      setProducts(data);
-    });
+    setMenu(true);
   };
-
   const getMenuMeal = () => {
-    getMeal().then((data) => {
-      data = data.map((item) => {
-        return { ...item, quantity: 0 };
-      });
-      setProducts(data);
-    });
-  };
-
-  const handleClick = () => {
-    console.log(order);
-    updateOrder(id, order).then((data) => {});
-    //navigate("/preparing-order");
+    setMenu(false);
   };
 
   const getCustomerOrder = () => {
@@ -64,12 +46,35 @@ export default function Order() {
     getCustomerOrder();
   }, [id]);
 
+  useEffect(() => {
+    getAllProducts().then(setProducts);
+  }, []);
+
+  useEffect(() => {
+    if (products.length > 0) {
+      setBreakfast(
+        products
+          .filter((tkn) => tkn.type == "Breakfast")
+          .map((item) => {
+            return { ...item, quantity: 0 };
+          })
+      );
+      setMeal(
+        products
+          .filter((tkn) => tkn.type == "Meal")
+          .map((item) => {
+            return { ...item, quantity: 0 };
+          })
+      );
+    }
+  }, [products]);
+
   const updateProducts = (product, action) => {
     let index = products.findIndex((item) => {
       return item.id == product.id;
     });
 
-    const newState = products.map((obj) => {
+    const newState = breakfast.map((obj) => {
       if (obj.id === product.id) {
         const currentQuantity = product.quantity;
         if (
@@ -91,10 +96,45 @@ export default function Order() {
       }
       return obj;
     });
+    setBreakfast(newState);
 
-    setProducts(newState);
+    const newStateMeal = meal.map((obj) => {
+      if (obj.id === product.id) {
+        const currentQuantity = product.quantity;
+        if (
+          (action == "Decrement" && currentQuantity != 0) ||
+          action == "Increment"
+        ) {
+          const newQuantity =
+            action == "Increment" ? currentQuantity + 1 : currentQuantity - 1;
+          setTotal(
+            action === "Increment"
+              ? total + product.price
+              : total - product.price
+          );
+          return {
+            ...obj,
+            quantity: newQuantity,
+          };
+        }
+      }
+      return obj;
+    });
+    setMeal(newStateMeal);
   };
 
+  const updateState = () => {
+    const beakfastAndMeal = breakfast.concat(meal).filter((item) => item.quantity > 0);
+    console.log("BE EME", beakfastAndMeal);
+    updateOrder(id, { summary: beakfastAndMeal, total: total });
+    navigate("/preparing-order");
+  };
+
+  useEffect(() => {
+    //updateState();
+  }, [total]);
+  console.log("FINAL", order);
+  
   return (
     <div className="new_order">
       <section id="date_user">
@@ -119,7 +159,6 @@ export default function Order() {
       </section>
       <section id="breafkast_meal">
         <div id="order_table">
-          {console.log("PRO", products)}
           {products.length != 0 ? (
             <article
               className="table_titles"
@@ -130,23 +169,43 @@ export default function Order() {
               <p className="table_p">QUANTITY</p>
             </article>
           ) : null}
-          {products.map((product) => (
-            <tr id="table_row" key={product.id}>
-              <BreakfastAndMeal
-                product={product}
-                parentCallback={updateProducts}
-              />
-            </tr>
-          ))}
+          {menu === true
+            ? breakfast.map((product) => (
+                <tr id="table_row" key={product.id}>
+                  <BreakfastAndMeal
+                    product={product}
+                    parentCallback={updateProducts}
+                  />
+                </tr>
+              ))
+            : menu === false
+            ? meal.map((product) => (
+                <tr id="table_row" key={product.id}>
+                  <BreakfastAndMeal
+                    product={product}
+                    parentCallback={updateProducts}
+                  />
+                </tr>
+              ))
+            : null}
+
+          {/* {products.map((product) => (
+             <tr id="table_row" key={product.id}>
+               <BreakfastAndMeal
+                 product={product}
+                 parentCallback={updateProducts}
+               />
+             </tr>
+           ))} */}
         </div>
       </section>
       <section id="button_order">
-        <p style={{ fontSize: 35 }}>{total}</p>
+        <p style={{ fontSize: 35 }}> Total: ${total}</p>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           id="button_confirm_order"
-          onClick={handleClick}
+          onClick={updateState}
         >
           Confirm order
         </motion.button>

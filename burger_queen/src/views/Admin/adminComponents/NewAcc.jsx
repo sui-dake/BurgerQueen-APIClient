@@ -72,7 +72,7 @@ export default function NewAcc() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             placeholder="Email"
-          
+            className="email_pass"
             {...register("email", {
               required: true,
             })}

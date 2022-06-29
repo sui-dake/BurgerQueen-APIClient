@@ -20,6 +20,7 @@ export default function ButtonNewClient() {
       price: 0,
       quantity: 0
     }],
+    total: 0,
   };
   const handleClick = () => {
     postOrder(customerValue).then((data) => {

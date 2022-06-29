@@ -1,15 +1,8 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/react-in-jsx-scope */
-import { useState, useEffect } from "react";
 
 export default function BreakfastAndMeal({ product, parentCallback }) {
-  const [items, setItems] = useState([product]);
-  const [semiTotal, setSemiTotal] = useState([]);
-  //const []
 
-  const newOrder = [];
-  //contador sume o reste segun click solo {numero} ligado al producto
   const handleIncrement = () => {
     parentCallback(product, "Increment");
   };
@@ -17,44 +10,6 @@ export default function BreakfastAndMeal({ product, parentCallback }) {
   const handleDecrement = () => {
     parentCallback(product, "Decrement");
   };
-
-  // const updateTotal = () => {
-  //   items.map((item) => {
-  //     setSemiTotal({
-
-  //         ...orders.total.filter((self) => self.name !== item.name),
-  //          name: item.name, semi: semi,
-
-  //     });
-  //     console.log(semiTotal);
-  //   });
-  // };
-  const updateState = () => {
-    // console.log(orders);
-    // items.map((item) => {
-    //   setOrders({ //corregir plural
-    //     ...orders,
-    //     summary: [
-    //       ...orders.summary.filter((self) => self.name !== item.name),
-    //       { name: item.name, price: item.price, quantity: quantity },
-    //     ],
-    //     total: [
-    //       ...orders.total.filter((self) => self.name !== item.name),
-    //       { name: item.name, semi: semi },
-    //     ],
-    //     // .reduce(function (a, b) {
-    //     //   return a.semi + b.semi;
-    //     // }[0])
-    //   });
-    // });
-  };
-
-  // useEffect(() => {
-  //   if (quantity > 0) {
-  //     updateState();
-  //     //updateTotal();
-  //   }
-  // }, [quantity]);
 
   return (
     <div id="table_content">

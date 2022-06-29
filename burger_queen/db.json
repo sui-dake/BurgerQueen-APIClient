@@ -73,335 +73,202 @@
   ],
   "orders": [
     {
-      "customer": "Mauricio estrella",
+      "customer": "Bojji",
       "state": "pending",
       "summary": [
         {
+          "id": 1,
           "name": "Americano",
           "price": 5,
+          "type": "Breakfast",
           "quantity": 2
         },
         {
-          "name": "Latte",
-          "price": 7,
-          "quantity": 2
-        },
-        {
+          "id": 3,
           "name": "Ham & cheese sandwich",
           "price": 10,
+          "type": "Breakfast",
+          "quantity": 2
+        }
+      ],
+      "total": 30,
+      "id": 69
+    },
+    {
+      "customer": "Kage",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 5
+        },
+        {
+          "id": 3,
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "type": "Breakfast",
+          "quantity": 4
+        },
+        {
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 0,
+      "id": 70
+    },
+    {
+      "customer": "Brunix",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 4
+        },
+        {
+          "id": 2,
+          "name": "Latte",
+          "price": 7,
+          "type": "Breakfast",
           "quantity": 3
         }
       ],
-      "id": 40,
-      "total": 0
+      "total": 41,
+      "id": 71
     },
     {
-      "customer": "Spidy",
+      "customer": "Bosse",
       "state": "pending",
       "summary": [
         {
-          "name": "Soda 750ml",
-          "price": 10,
-          "quantity": 4
-        },
-        {
-          "name": "Onion rings",
-          "price": 5,
-          "quantity": 4
-        },
-        {
-          "name": "Fruit juice",
-          "price": 7,
-          "quantity": 5
-        }
-      ],
-      "id": 41,
-      "total": 0
-    },
-    {
-      "customer": "Bob toronja",
-      "state": "pending",
-      "summary": [
-        {
+          "id": 1,
           "name": "Americano",
           "price": 5,
-          "quantity": 2
-        },
-        {
-          "name": "Latte",
-          "price": 7,
-          "quantity": 4
-        },
-        {
-          "name": "Ham & cheese sandwich",
-          "price": 10,
-          "quantity": 1
+          "type": "Breakfast",
+          "quantity": 3
         }
       ],
-      "id": 42,
-      "total": 0
+      "total": 15,
+      "id": 72
     },
     {
-      "customer": "Machi",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Americano",
-          "price": 5,
-          "quantity": 4
-        },
-        {
-          "name": "Latte",
-          "price": 7,
-          "quantity": 1
-        }
-      ],
-      "id": 43,
-      "total": 0
-    },
-    {
-      "customer": "Don Cangrejo",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Americano",
-          "price": 5,
-          "quantity": 4
-        },
-        {
-          "name": "Latte",
-          "price": 7,
-          "quantity": 1
-        }
-      ],
-      "id": 44,
-      "total": 14
-    },
-    {
-      "customer": "Arenita",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Ham & cheese sandwich",
-          "price": 10,
-          "quantity": 1
-        },
-        {
-          "name": "Cheese hamburguer",
-          "price": 10,
-          "quantity": 1
-        }
-      ],
-      "id": 45,
-      "total": 0
-    },
-    {
-      "customer": "Plankton",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Americano",
-          "price": 5,
-          "quantity": 1
-        },
-        {
-          "name": "Fries",
-          "price": 5,
-          "quantity": 1
-        }
-      ],
-      "id": 46,
-      "total": 0
-    },
-    {
-      "customer": "Noni",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Fries",
-          "price": 10,
-          "quantity": 20
-        }
-      ],
-      "id": 47,
-      "total": 0
-    },
-    {
-      "customer": "Carlos",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Ham & cheese sandwich",
-          "price": 10,
-          "quantity": 2
-        }
-      ],
-      "id": 49,
-      "total": 0
-    },
-    {
-      "customer": "Mini So",
+      "customer": "Homelander",
       "state": "pending",
       "summary": [
         {
           "name": "Cheese hamburguer",
           "price": 10,
-          "quantity": 1
-        },
-        {
-          "name": "Ham & cheese sandwich",
-          "price": 10,
-          "quantity": 1
-        },
-        {
-          "name": "Soda 750ml",
-          "price": 10,
+          "type": "Meal",
+          "id": 5,
           "quantity": 1
         }
       ],
-      "id": 51,
-      "total": [
-        {
-          "name": "Cheese hamburguer",
-          "semi": 10
-        },
-        30,
-        {
-          "name": "Ham & cheese sandwich",
-          "semi": 10
-        },
-        30,
-        {
-          "name": "Soda 750ml",
-          "semi": 10
-        },
-        30
-      ]
+      "total": 10,
+      "id": 73
     },
     {
-      "customer": "Mauricio",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Cheese hamburguer",
-          "price": 10,
-          "quantity": 2
-        },
-        {
-          "name": "Fries",
-          "price": 5,
-          "quantity": 1
-        }
-      ],
-      "id": 52,
-      "total": 5
-    },
-    {
-      "customer": "Calimax",
+      "customer": "Starligth",
       "state": "pending",
       "summary": [
         {
           "name": "Double cheese hamburguer",
           "price": 15,
-          "quantity": 2
+          "type": "Meal",
+          "id": 6,
+          "quantity": 1
         },
         {
-          "name": "Onion rings",
+          "name": "Fries",
           "price": 5,
-          "quantity": 2
+          "type": "Meal",
+          "id": 7,
+          "quantity": 1
         }
       ],
-      "id": 53,
-      "total": 10
+      "total": 20,
+      "id": 74
     },
     {
-      "customer": "Arya",
+      "customer": "Nezuko Kamado",
       "state": "pending",
       "summary": [
         {
-          "name": "Americano",
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Water 500ml",
           "price": 5,
-          "quantity": 2
+          "type": "Meal",
+          "id": 9,
+          "quantity": 1
+        },
+        {
+          "name": "Soda 750ml",
+          "price": 10,
+          "type": "Meal",
+          "id": 12,
+          "quantity": 1
         }
       ],
-      "id": 54,
-      "total": {
-        "total": [
-          {
-            "name": "Americano",
-            "semi": 5
-          }
-        ]
-      }
+      "total": 22,
+      "id": 75
+    },
+    {
+      "customer": "Muzan",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 10,
+      "id": 76
+    },
+    {
+      "customer": "Pandi",
+      "state": "pending",
+      "summary": [],
+      "total": 0,
+      "id": 77
     },
     {
       "customer": "Fabricio",
       "state": "pending",
       "summary": [
         {
-          "name": "Americano",
-          "price": 5,
-          "quantity": 2
-        },
-        {
-          "name": "Ham & cheese sandwich",
+          "name": "Cheese hamburguer",
           "price": 10,
-          "quantity": 1
-        },
-        {
-          "name": "Water 500ml",
-          "price": 5,
+          "type": "Meal",
+          "id": 5,
           "quantity": 1
         }
       ],
-      "id": 55,
-      "total": [
-        {
-          "name": "Americano",
-          "semi": 10
-        },
-        {
-          "name": "Ham & cheese sandwich",
-          "semi": 10
-        },
-        {
-          "name": "Water 500ml",
-          "semi": 5
-        }
-      ]
-    },
-    {
-      "customer": "Daniel",
-      "state": "pending",
-      "summary": [
-        {
-          "name": "Americano",
-          "price": 5,
-          "quantity": 1
-        },
-        {
-          "name": "Ham & cheese sandwich",
-          "price": 10,
-          "quantity": 3
-        }
-      ],
-      "id": 56,
-      "total": [
-        {
-          "name": "Americano",
-          "semi": 5
-        },
-        {
-          "name": "Ham & cheese sandwich",
-          "semi": 30
-        }
-      ]
-    },
-    {
-      "customer": "Birtman",
-      "state": "pending",
-      "summary": [],
-      "id": 57
+      "total": 10,
+      "id": 78
     }
   ]
 }
