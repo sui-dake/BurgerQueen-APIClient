@@ -1,9 +1,15 @@
+.container_pending {
+  overflow: auto;
+  word-wrap: break-word;
+  width: auto;
+  height: 500px;
+}
 .pending_article {
   display: flex;
   flex-direction: column;
 }
 
-.print-orders {
+.print_orders {
   background-color: #f2e37d;
   border-radius: 20px;
   display: flex;
@@ -17,7 +23,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 40px;
 }
-.print-orders p {
+.print_orders_p {
   margin: 0 10px 8px 10px;
+  font-size: 20px;
 }

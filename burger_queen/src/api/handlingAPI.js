@@ -8,7 +8,7 @@ export const getBreakfast = () =>
 export const getMeal = () =>
   axios.get(`${api}/products?type=Meal`).then((res) => res.data);
 
-  export const getAllProducts = () =>
+export const getAllProducts = () =>
   axios.get(`${api}/products`).then((res) => res.data);
 
 export const getProduct = (id) =>
