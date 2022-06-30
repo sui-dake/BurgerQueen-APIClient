@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import "./pendingOrders.css";
+import styles from "./pendingOrders.module.css";
 import { getOrders } from "../../../../api/handlingAPI";
 import { useState, useEffect } from "react";
 
@@ -16,15 +16,15 @@ export default function PendingOrders() {
   }, []);
 
   return (
-    <section>
-      <article className="pending_article">
-        <h1 style={{ marginLeft: "80px" }}>Pending orders</h1>
-        <summary className="container_pending_orders">
+    <section className={styles.container_pending}>
+      <article className={styles.pending_article}>
+        <h1 style={{ marginLeft: "80px" }}>Pending</h1>
+        <summary className={styles.container_pending_orders}>
           {pendingOrders.map((item) => (
-            <section className="print-orders" key={item.id + ""}>
-              <h2 style={{ margin: "10px" }}>{item.customer}</h2>
+            <section className={styles.print_orders} key={item.id + ""}>
+              <h2>{item.customer}</h2>
               {item.summary.map((token) => (
-                <p key={`${item.id}`}>{token.quantity + " " + token.name}</p>
+                <p className={styles.print_orders_p}key={`${token.id}`}>{token.quantity + " " + token.name}</p>
               ))}
             </section>
           ))}

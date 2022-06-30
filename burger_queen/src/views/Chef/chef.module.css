@@ -1,0 +1,33 @@
+.chef_dashboard{
+  overflow: auto;
+  word-wrap: break-word;
+  width: auto;
+  height: 900px;
+}
+.singout {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 55px;
+  margin-top: -50px;
+}
+#date_user {
+  display: flex;
+  justify-content: space-around;
+}
+.chef {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  overflow: auto;
+}
+.print_orders {
+  width: auto;
+  height: auto;
+}
+.container_orders {
+  background-color: #f2e37d;
+  border-radius: 20px;
+  font-size: 25px;
+  overflow: auto;
+}
