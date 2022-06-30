@@ -7,4 +7,10 @@
   padding: 0;
 }
 .email_pass {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.email_pass_p {
+  margin: 20px 0 20px 0;
 }

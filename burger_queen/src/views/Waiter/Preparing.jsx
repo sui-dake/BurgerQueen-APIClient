@@ -8,7 +8,7 @@ export default function PreparingOrder() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => navigate("/waiter-dashboard"), 5000);
+    setTimeout(() => navigate("/waiter-dashboard"), 3000);
   });
   return (
     <div className={styles.admin_preparing}>

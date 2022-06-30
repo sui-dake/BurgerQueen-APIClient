@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/react-in-jsx-scope */
+import styles from "./BreakfastAndMeal.module.css";
 
 export default function BreakfastAndMeal({ product, parentCallback }) {
-
   const handleIncrement = () => {
     parentCallback(product, "Increment");
   };
@@ -12,39 +12,19 @@ export default function BreakfastAndMeal({ product, parentCallback }) {
   };
 
   return (
-    <div id="table_content">
-      <td
-        style={{
-          width: "140px",
-          padding: "5px 10px",
-          textAlign: "center",
-          fontSize: "25px",
-        }}
-      >
-        $ {product.price}
-      </td>
-      <td
-        style={{
-          width: "220px",
-          padding: "5px 10px",
-          textAlign: "center",
-          fontSize: "25px",
-        }}
-      >
-        {product.name}
-      </td>
-      <td
-        id="counter_buttons"
-        style={{
-          width: "180px",
-          padding: "5px 10px",
-          textAlign: "center",
-          fontSize: "25px",
-        }}
-      >
-        <button onClick={handleDecrement}> - </button>
+    <div className={styles.table_content}>
+      <td className={styles.counter_buttons}>$ {product.price}</td>
+      <td className={styles.counter_buttons}>{product.name}</td>
+      <td className={styles.counter_buttons}>
+        <button className={styles.button} onClick={handleDecrement}>
+          {" "}
+          -{" "}
+        </button>
         <p>{product.quantity}</p>
-        <button onClick={handleIncrement}> + </button>
+        <button className={styles.button} onClick={handleIncrement}>
+          {" "}
+          +{" "}
+        </button>
       </td>
     </div>
   );

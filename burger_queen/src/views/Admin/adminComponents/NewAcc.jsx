@@ -39,40 +39,13 @@ export default function NewAcc() {
       Role: role,
     });
     await currentRemain(user);
-
-    // secondaryApp.createUserWithEmailAndPassword(auth, authEmail, authPass)
-    // .then(function(user){
-    //
-    //     secondaryApp.signOut(auth)
-    // })
-    // onAuthStateChanged(auth, (user) => {
-    //   if (user) {
-    //     const uid = user.uid;
-    //     console.log(uid);
-    //   } else {
-    //     console.log("no estas loggeadx");
-    //   }
-    // });
-    // ...
-
-    //   .catch((error) => {
-    //     const errorCode = error.code;
-    //     const errorMessage = error.message;
-
-    //     // ..
-    //   });
-    return {
-      authPass,
-      authEmail,
-      role,
-    };
   };
 
   return (
     <div>
       <section id={styles.container_form}>
         <form className={styles.new_form} onSubmit={handleSubmit(onSubmit)}>
-          <p>
+          <p className={styles.email_pass_p}>
             E-mail:{" "}
             <input
               placeholder="Email"
@@ -82,7 +55,7 @@ export default function NewAcc() {
               })}
             />
           </p>
-          <p>
+          <p className={styles.email_pass_p}>
             Password:{" "}
             <input
               placeholder="Password"
@@ -93,7 +66,7 @@ export default function NewAcc() {
               })}
             />
           </p>
-          <p>
+          <p className={styles.email_pass_p}>
             Role:{" "}
             <select
               {...register("role", { required: true })}
@@ -104,7 +77,7 @@ export default function NewAcc() {
               <option value="Manager">Manager</option>
             </select>
           </p>
-          <p>
+          <p className={styles.email_pass_p}>
             Full Name:{" "}
             <input
               placeholder="Name"
