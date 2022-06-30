@@ -1,0 +1,30 @@
+.table_content {
+  display: flex;
+}
+
+.counter_buttons {
+  width: 180px;
+  padding: 5px 10px;
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  border: none;
+}
+.button:first-child,
+:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.counter_buttons:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.button {
+  height: fit-content;
+  background: none;
+  border: none;
+  font-size: 30px;
+}

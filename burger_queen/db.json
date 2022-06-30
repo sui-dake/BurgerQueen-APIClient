@@ -49,22 +49,10 @@
       "id": 8
     },
     {
-      "name": "Water 500ml",
-      "price": 5,
-      "type": "Meal",
-      "id": 9
-    },
-    {
       "name": "Water 750ml",
       "price": 7,
       "type": "Meal",
       "id": 10
-    },
-    {
-      "name": "Soda 500ml",
-      "price": 7,
-      "type": "Meal",
-      "id": 11
     },
     {
       "name": "Soda 750ml",
@@ -281,6 +269,34 @@
       ],
       "total": 10,
       "id": 78
+    },
+    {
+      "customer": "More",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 2
+        }
+      ],
+      "total": 10,
+      "id": 79
+    },
+    {
+      "customer": " 101",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "total": 0,
+      "id": 80
     }
   ]
 }

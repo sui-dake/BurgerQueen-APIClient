@@ -1,10 +1,10 @@
-  /* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/react-in-jsx-scope */
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DateTime from "../../../components/DateTime";
 import User from "../../../components/User";
-import "./order.css";
+import styles from "./Order.module.css";
 import { motion } from "framer-motion";
 import BreakfastAndMeal from "../waiterComponents/components/BreakfastAndMeal";
 import { useParams } from "react-router-dom";
@@ -15,7 +15,7 @@ import {
 } from "../../../api/handlingAPI";
 
 export default function Order() {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [customerOrder, setCustomerOrder] = useState([]);
   const { id } = useParams();
@@ -124,7 +124,9 @@ export default function Order() {
   };
 
   const updateState = () => {
-    const beakfastAndMeal = breakfast.concat(meal).filter((item) => item.quantity > 0);
+    const beakfastAndMeal = breakfast
+      .concat(meal)
+      .filter((item) => item.quantity > 0);
     console.log("BE EME", beakfastAndMeal);
     updateOrder(id, { summary: beakfastAndMeal, total: total });
     navigate("/preparing-order");
@@ -134,44 +136,48 @@ export default function Order() {
     //updateState();
   }, [total]);
   console.log("FINAL", order);
-  
+
   return (
-    <div className="new_order">
-      <section id="date_user">
+    <div className={styles.new_order}>
+      <section id={styles.date_user}>
         <DateTime />
         <User />
       </section>
-      <article className="customer">
-        <p id="customer">Customer: {customerOrder.customer}</p>
+      <article className={styles.customer}>
+        <p id={styles.customer}>Customer: {customerOrder.customer}</p>
       </article>
-      <section id="buttons_switch">
+      <section id={styles.buttons_switch}>
         <button
-          className="waiter_switch"
-          id="b_breakfast"
+          className={styles.waiter_switch}
+          id={styles.b_breakfast}
           onClick={getMenuBreakfast}
         >
           Breakfast
         </button>
 
-        <button className="waiter_switch" id="b_meal" onClick={getMenuMeal}>
+        <button
+          className={styles.waiter_switch}
+          id={styles.b_meal}
+          onClick={getMenuMeal}
+        >
           Meal
         </button>
       </section>
-      <section id="breafkast_meal">
-        <div id="order_table">
+      <section id={styles.breafkast_meal}>
+        <div id={styles.order_table}>
           {products.length != 0 ? (
             <article
-              className="table_titles"
+              className={styles.table_titles}
               style={{ display: "flex", flexDirection: "row" }}
             >
-              <p className="table_p">PRICE</p>
-              <p className="table_p">PRODUCT</p>
-              <p className="table_p">QUANTITY</p>
+              <p className={styles.table_p}>Price</p>
+              <p className={styles.table_p}>Product</p>
+              <p className={styles.table_p}>Quantity</p>
             </article>
           ) : null}
           {menu === true
             ? breakfast.map((product) => (
-                <tr id="table_row" key={product.id}>
+                <tr className={styles.table_row} key={product.id}>
                   <BreakfastAndMeal
                     product={product}
                     parentCallback={updateProducts}
@@ -180,7 +186,7 @@ export default function Order() {
               ))
             : menu === false
             ? meal.map((product) => (
-                <tr id="table_row" key={product.id}>
+                <tr id={styles.table_row} key={product.id}>
                   <BreakfastAndMeal
                     product={product}
                     parentCallback={updateProducts}
@@ -199,12 +205,12 @@ export default function Order() {
            ))} */}
         </div>
       </section>
-      <section id="button_order">
+      <section id={styles.button_order}>
         <p style={{ fontSize: 35 }}> Total: ${total}</p>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          id="button_confirm_order"
+          id={styles.button_confirm_order}
           onClick={updateState}
         >
           Confirm order

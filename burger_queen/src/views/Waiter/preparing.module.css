@@ -1,4 +1,3 @@
-
 #header_admin {
   display: flex;
   justify-content: space-around;
@@ -11,7 +10,7 @@
   width: 45px;
   height: 45px;
 }
-#container_preparing{
+#container_preparing {
   display: flex;
   align-items: center;
   flex-direction: column;

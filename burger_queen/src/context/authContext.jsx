@@ -7,6 +7,7 @@ import {
   onAuthStateChanged,
   signOut,
   updateProfile,
+  updateCurrentUser,
 } from "firebase/auth";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { auth, db } from "../libs/Firebase-config";
@@ -39,6 +40,10 @@ export function AuthProvider({ children }) {
     });
   };
 
+  const currentRemain = (user) => {
+    updateCurrentUser(auth, user);
+  };
+
   const role = async () => {
     const nameUser = [];
     const q = query(collection(db, "Users"), where("Email", "==", user.email));
@@ -66,7 +71,16 @@ export function AuthProvider({ children }) {
   }, [user]);
   return (
     <authContext.Provider
-      value={{ singup, login, logout, user, loading, changeName, roles }}
+      value={{
+        singup,
+        login,
+        logout,
+        user,
+        loading,
+        changeName,
+        roles,
+        currentRemain,
+      }}
     >
       {children}
     </authContext.Provider>
