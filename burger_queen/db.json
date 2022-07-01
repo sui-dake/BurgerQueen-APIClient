@@ -59,6 +59,18 @@
       "price": 10,
       "type": "Meal",
       "id": 12
+    },
+    {
+      "name": "Corn",
+      "price": "30",
+      "type": "Breakfast",
+      "id": 13
+    },
+    {
+      "name": "Pankekes",
+      "price": "48",
+      "type": "Breakfast",
+      "id": 14
     }
   ],
   "type": [
@@ -297,6 +309,32 @@
       ],
       "total": 0,
       "id": 80
+    },
+    {
+      "customer": "Grupo Salinas",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "total": 0,
+      "id": 81
+    },
+    {
+      "customer": "Grupo Salinas",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "total": 0,
+      "id": 82
     }
   ]
 }

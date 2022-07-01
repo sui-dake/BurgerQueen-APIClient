@@ -18,7 +18,7 @@ export default function PendingOrders() {
   return (
     <section className={styles.container_pending}>
       <article className={styles.pending_article}>
-        <h1 style={{ marginLeft: "80px" }}>Pending</h1>
+        <h1 className={styles.pending_title}>Pending</h1>
         <summary className={styles.container_pending_orders}>
           {pendingOrders.map((item) => (
             <section className={styles.print_orders} key={item.id + ""}>

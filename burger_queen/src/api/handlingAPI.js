@@ -2,11 +2,7 @@ import axios from "axios";
 
 const api = "http://localhost:4000";
 //payload = DATA
-export const getBreakfast = () =>
-  axios.get(`${api}/products?type=Breakfast`).then((res) => res.data);
-
-export const getMeal = () =>
-  axios.get(`${api}/products?type=Meal`).then((res) => res.data);
+export const postProduct = (payload) => axios.post(`${api}/products`, payload);
 
 export const getAllProducts = () =>
   axios.get(`${api}/products`).then((res) => res.data);
