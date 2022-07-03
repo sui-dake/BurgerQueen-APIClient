@@ -35,28 +35,28 @@ const AddProduct = () => {
   return (
     <div>
       <section>
-        <p className={styles.email_pass_p}>
+        <p className={styles.modals_p}>
           Product:{" "}
           <input
             onChange={handleChange}
             placeholder="Product"
-            className={styles.email_pass}
+            className={styles.modals_inputs}
           />
         </p>
-        <p className={styles.email_pass_p}>
+        <p className={styles.modals_p}>
           Price:{" "}
           <input
             onChange={handleChangePrice}
             placeholder="Price"
-            className={styles.email_pass}
+            className={styles.modals_inputs}
           />
         </p>
-        <p className={styles.email_pass_p}>
+        <p className={styles.modals_p}>
           Type:{" "}
-          <select onChange={handleChangeType} className={styles.email_pass}>
-            <option>Type</option>
-            <option>Breakfast</option>
-            <option>Meal</option>
+          <select onChange={handleChangeType} className={styles.modals_input}>
+            <option className={styles.modals_select}>Type</option>
+            <option className={styles.modals_select}>Breakfast</option>
+            <option className={styles.modals_select}>Meal</option>
           </select>
         </p>
         <button id="button_new_client" onClick={handleClick}>

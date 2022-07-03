@@ -2,8 +2,8 @@
   "products": [
     {
       "id": 1,
-      "name": "Americano",
-      "price": 5,
+      "name": "Americanos",
+      "price": 51,
       "type": "Breakfast"
     },
     {
@@ -61,15 +61,15 @@
       "id": 12
     },
     {
-      "name": "Corn",
-      "price": "30",
-      "type": "Breakfast",
+      "name": "Maiz",
+      "price": 0,
+      "type": [],
       "id": 13
     },
     {
-      "name": "Pankekes",
-      "price": "48",
-      "type": "Breakfast",
+      "name": "Pitsa",
+      "price": 0,
+      "type": [],
       "id": 14
     }
   ],
@@ -335,6 +335,19 @@
       ],
       "total": 0,
       "id": 82
+    },
+    {
+      "customer": "Paty",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "total": 0,
+      "id": 83
     }
   ]
 }
