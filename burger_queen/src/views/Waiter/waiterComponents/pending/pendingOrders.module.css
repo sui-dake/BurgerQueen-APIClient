@@ -2,29 +2,34 @@
   overflow: auto;
   word-wrap: break-word;
   width: auto;
-  height: 500px;
+  height: 400px;
 }
 .pending_article {
   display: flex;
   flex-direction: column;
   margin: 0px 40px 0 35px;
 }
-
+.pending_title{
+  font-size:30px;
+  margin: 0 0 0 40px;
+}
 .print_orders {
   background-color: #f2e37d;
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  overflow: auto;
+  word-wrap: break-word;
   margin: 10px;
-  width: auto;
-  height: auto;
+  width: 200px;
+  height: 200px;
 }
 .container_pending_orders {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 40px;
+
 }
 .print_orders_p {
   margin: 0 10px 8px 10px;
