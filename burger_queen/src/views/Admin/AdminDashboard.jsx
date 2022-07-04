@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import "./admin.css";
+import  "./admin.css";
 import { useState } from "react";
 import Products from "./adminComponents/Products";
 import Employees from "./adminComponents/Employees";

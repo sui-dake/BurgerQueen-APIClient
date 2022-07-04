@@ -19,3 +19,18 @@
       box-shadow: 0 0 25px #f2798f, 0 0 50px #e8c0c7;
     }
   }
+  @media (min-width: 1180px) {
+    #button_add_product{
+      display: inline-block;
+      width: 280px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: #e74e6d;
+      color: #e6e9d9;
+      font-size: 24px;
+      text-decoration: none;
+      border: 3px solid #e42047;
+      margin-top: 1rem;
+      margin-left: 15rem;
+    }
+  }

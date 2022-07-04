@@ -47,3 +47,10 @@ tr {
 #b_products:hover {
   border: 2px solid #8785bd;
 }
+@media (min-width: 1180px) {
+  #switch {
+    margin-top: 45px;
+    position: relative;
+  }
+  
+}

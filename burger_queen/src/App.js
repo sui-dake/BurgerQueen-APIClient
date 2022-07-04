@@ -12,6 +12,7 @@ import Products from "./views/Admin/adminComponents/Products";
 import Home from "./views/Login/Home";
 import { AuthProvider } from "./context/authContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import Header from "./components/Header";
 
 function App() {
   //  const roll=""
@@ -22,24 +23,29 @@ function App() {
   //   }
 
   return (
-    <div className="App">
-      <AuthProvider>
-        <BrowserRouter>
-          <Routes>
-            
-            <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/admin-dashboard" element={<AdminDashboard />} />
-            {/* <Route path='/admin-dashboard/products' element={<Products />}/>
+    <div className="back">
+      <div className="box">
+        <div className="circle-up">
+          <Header />
+        </div>
+
+        <AuthProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/admin-dashboard" element={<AdminDashboard />} />
+              {/* <Route path='/admin-dashboard/products' element={<Products />}/>
             <Route path='/admin-dashboard/employees' element={<Employ
           </Route> */}
-            <Route path="/waiter-dashboard" element={<WaiterDashboard />} />
-            <Route path="/order/:id" element={<Order />} />
-            <Route path="/preparing-order" element={<PreparingOrder />} />
-            <Route path="/chef-dashboard" element={<ChefDashboard />} />
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
+              <Route path="/waiter-dashboard" element={<WaiterDashboard />} />
+              <Route path="/order/:id" element={<Order />} />
+              <Route path="/preparing-order" element={<PreparingOrder />} />
+              <Route path="/chef-dashboard" element={<ChefDashboard />} />
+            </Routes>
+          </BrowserRouter>
+        </AuthProvider>
+      </div>
     </div>
   );
 }

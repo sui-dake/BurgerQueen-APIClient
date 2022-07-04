@@ -1,9 +1,43 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: "Comfortaa", "Roboto", "Segoe UI", "Quicksand" "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   background-color: #9bc7b1;
-  background-image: url(../public/Background.svg);
+  background-image: url(../public/Background.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+}
+.back {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.circle-up,
+.circle-bottom {
+  background-color: #E6E9D9;
+  width: 85vw;
+  height: 10vh;
+  border-radius: 50%;
+}
+
+.box {
+  width: 85vw;
+  height: 85vh;
+  background-color: #E6E9D9;
+  position: relative;
+}
+
+.circle-bottom {
+  position: relative;
+  bottom: 12px;
+  border-radius: 0 50px 50px 0;
+}
+
+.circle-up {
+  position: relative;
+  top: -65px;
 }

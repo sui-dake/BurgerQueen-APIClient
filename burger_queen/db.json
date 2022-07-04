@@ -67,10 +67,28 @@
       "id": 13
     },
     {
-      "name": "Pitsa",
-      "price": 0,
-      "type": [],
+      "name": "Cereal",
+      "price": "12",
+      "type": "Breakfast",
       "id": 14
+    },
+    {
+      "name": "Doritos",
+      "price": "14",
+      "type": "Meal",
+      "id": 15
+    },
+    {
+      "name": "Flan",
+      "price": "12",
+      "type": "Breakfast",
+      "id": 16
+    },
+    {
+      "name": "Crepa",
+      "price": "14",
+      "type": "Breakfast",
+      "id": 17
     }
   ],
   "type": [
@@ -348,6 +366,73 @@
       ],
       "total": 0,
       "id": 83
+    },
+    {
+      "customer": "Ele",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Fries",
+          "price": 5,
+          "type": "Meal",
+          "id": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Soda 750ml",
+          "price": 10,
+          "type": "Meal",
+          "id": 12,
+          "quantity": 2
+        }
+      ],
+      "total": 25,
+      "id": 84
+    },
+    {
+      "customer": "Millan",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 3,
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "type": "Breakfast",
+          "quantity": 3
+        }
+      ],
+      "total": 30,
+      "id": 85
+    },
+    {
+      "customer": "Mani",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 7,
+      "id": 86
+    },
+    {
+      "customer": "Flor",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Onion rings",
+          "price": 5,
+          "type": "Meal",
+          "id": 8,
+          "quantity": 1
+        }
+      ],
+      "total": 5,
+      "id": 87
     }
   ]
 }

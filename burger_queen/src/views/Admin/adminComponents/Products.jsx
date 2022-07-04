@@ -4,7 +4,7 @@ import Loading from "../../../api/Loading";
 import Modal from "./modal/Modal";
 import ButtonAddProduct from "./ButtonAddProduct";
 import { getAllProducts, deleteProduct } from "../../../api/handlingAPI";
-import "./products.css";
+import styles from "./products.module.css";
 import EditProducts from "./EditProducts";
 import { useNavigate } from "react-router-dom";
 
@@ -54,80 +54,49 @@ export default function Products() {
   } else {
     return (
       <div>
-        <table
-          style={{ border: "none", borderRadius: "20px", padding: "10px" }}
-        >
-          <tr>
-            <th style={{ width: "130px", padding: "5px", fontSize: "30px" }}>
-              Products
-            </th>
-            <th style={{ width: "130px", padding: "5px", fontSize: "30px" }}>
-              Price
-            </th>
-            <th style={{ width: "130px", padding: "5px", fontSize: "30px" }}>
-              Type
-            </th>
-          </tr>
-
-          {products.map((item, key) => (
-            <tr key={key}>
-              <td
-                style={{
-                  width: "80px",
-                  textAlign: "center",
-                  fontSize: "25px",
-                }}
-              >
-                {item.name}
-              </td>
-              <td
-                style={{
-                  width: "80px",
-                  textAlign: "center",
-                  fontSize: "25px",
-                }}
-              >
-                $ {item.price}
-              </td>
-              <td
-                style={{
-                  width: "80px",
-                  textAlign: "center",
-                  fontSize: "25px",
-                }}
-              >
-                {item.type}
-              </td>
-              <td>
-                <img
-                  type="button"
-                  style={{ width: "40px", height: "40px" }}
-                  src="./edit1.png.png"
-                  onClick={() => handleEdit(item.id) + setIsOpen(true)}
-                />
-                <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
-                  {edit && editID != null ? (
-                    <EditProducts
-                      id={editID}
-                      handleClose={() => setIsOpen(false)}
-                    />
-                  ) : null}
-                </Modal>
-              </td>
-
-              <td>
-                <img
-                  type="button"
-                  style={{ width: "40px", height: "40px" }}
-                  src="./trash.png"
-                  onClick={() => {
-                    handleDelete(item.id);
-                  }}
-                />
-              </td>
+        <div className={styles.container_allproducts}>
+          <table className={styles.table_products}>
+            <tr>
+              <th className={styles.table_th_product}>Products</th>
+              <th className={styles.table_th}>Price</th>
+              <th className={styles.table_th}>Type</th>
             </tr>
-          ))}
-        </table>
+            {products.map((item, key) => (
+              <tr key={key}>
+                <td className={styles.products_td}>{item.name}</td>
+                <td className={styles.products_td}>$ {item.price}</td>
+                <td className={styles.products_td}>{item.type}</td>
+                <td>
+                  <img
+                    type="button"
+                    className={styles.products_img_edit_delete}
+                    src="./edit1.png.png"
+                    onClick={() => handleEdit(item.id) + setIsOpen(true)}
+                  />
+                  <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
+                    {edit && editID != null ? (
+                      <EditProducts
+                        id={editID}
+                        handleClose={() => setIsOpen(false)}
+                      />
+                    ) : null}
+                  </Modal>
+                </td>
+
+                <td>
+                  <img
+                    type="button"
+                    className={styles.products_img_edit_delete}
+                    src="./trash.png"
+                    onClick={() => {
+                      handleDelete(item.id);
+                    }}
+                  />
+                </td>
+              </tr>
+            ))}
+          </table>
+        </div>
         <ButtonAddProduct />
       </div>
     );
