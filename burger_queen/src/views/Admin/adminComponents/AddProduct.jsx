@@ -19,7 +19,7 @@ const AddProduct = () => {
   };
 
   const handleChangePrice = (e) => {
-    setPrice(e.target.value);
+    setPrice(parseInt(e.target.value));
   };
 
   const handleChangeType = (e) => {
@@ -48,6 +48,7 @@ const AddProduct = () => {
           <input
             onChange={handleChangePrice}
             placeholder="Price"
+            typeof="number"
             className={styles.email_pass}
           />
         </p>

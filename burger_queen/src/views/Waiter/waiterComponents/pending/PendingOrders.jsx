@@ -5,15 +5,21 @@ import { useState, useEffect } from "react";
 
 export default function PendingOrders() {
   const [pendingOrders, setPendingOrders] = useState([]);
+  //const [observer, setObserver] = useState([]);
 
   const printOrders = () => {
     getOrders().then((data) => {
       setPendingOrders(data);
     });
   };
+
   useEffect(() => {
     printOrders();
   }, []);
+  // useEffect(() => {
+  //   console.count("RT");
+  //   setTimeout(() => printOrders(), 1500);
+  // },[]);
 
   return (
     <section className={styles.container_pending}>
@@ -24,7 +30,9 @@ export default function PendingOrders() {
             <section className={styles.print_orders} key={item.id + ""}>
               <h2>{item.customer}</h2>
               {item.summary.map((token) => (
-                <p className={styles.print_orders_p}key={`${token.id}`}>{token.quantity + " " + token.name}</p>
+                <p className={styles.print_orders_p} key={`${token.id}`}>
+                  {token.quantity + " " + token.name}
+                </p>
               ))}
             </section>
           ))}
