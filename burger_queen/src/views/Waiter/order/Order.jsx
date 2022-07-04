@@ -165,7 +165,7 @@ export default function Order() {
       </section>
       <section id={styles.breafkast_meal}>
         <div id={styles.order_table}>
-          {products.length != 0 ? (
+          {menu != null ? (
             <article
               className={styles.table_titles}
               style={{ display: "flex", flexDirection: "row" }}

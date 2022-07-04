@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import "./buttonNewClient.css";
+import React from "react";
+import styles from "./buttonNewClient.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Modal from "../../../Admin/adminComponents/modal/Modal";
@@ -15,11 +16,13 @@ export default function ButtonNewClient() {
   let customerValue = {
     customer: customer,
     state: "pending", //customer newOrder.customer
-    summary: [{
-      name: '',
-      price: 0,
-      quantity: 0
-    }],
+    summary: [
+      {
+        name: "",
+        price: 0,
+        quantity: 0,
+      },
+    ],
     total: 0,
   };
   const handleClick = () => {
@@ -30,11 +33,11 @@ export default function ButtonNewClient() {
   };
 
   return (
-    <div className="container_button_new_client">
+    <div className={styles.container_button_new_client}>
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        id="button_new_client"
+        id={styles.button_new_client}
         onClick={() => setIsOpen(true)}
       >
         New client +👤
@@ -44,7 +47,7 @@ export default function ButtonNewClient() {
           handleClose={() => setIsOpen(false)}
           setCustomer={setCustomer}
         />
-        <img id="btn-send" type="button" src={send} onClick={handleClick} />
+        <img id={styles.btn} type="button" src={send} onClick={handleClick} />
       </Modal>
     </div>
   );

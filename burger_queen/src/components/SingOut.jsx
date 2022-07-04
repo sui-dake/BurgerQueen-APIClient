@@ -17,9 +17,9 @@ export default function SingOut() {
 
   return (
     <div id={styles.singout}>
-      <button onClick={handleLogout} className={styles.btn_logout}>
-        <img id={styles.btn_logout_image} src="./log-out.png" />
-      </button>
-    </div>
+    <button onClick={handleLogout} className={styles.btn_logout}>
+      <img id={styles.btn_logout_image} src="./log-out.png" />
+    </button>
+  </div>
   );
 }

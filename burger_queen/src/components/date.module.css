@@ -1,9 +1,8 @@
 #date {
   display: flex;
   justify-content: flex-start;
-  margin-top: -3px;
-  margin-left: -161px;
-  position: absolute;
+  margin-top: 48px;
+  margin-left: -68px;
 }
 #date_local{
     display: flex;
@@ -13,8 +12,8 @@
   #date {
     display: flex;
     justify-content: flex-start;
-    margin-top: 61px;
-    margin-left: -215px;
+    margin-top: 48px;
+    margin-left: -174px;
     position: absolute;
   }
 }

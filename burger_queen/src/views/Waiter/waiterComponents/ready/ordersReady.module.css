@@ -1,22 +1,23 @@
-.container_pending {
+.container_ready {
   overflow: auto;
   word-wrap: break-word;
   width: auto;
   height: 400px;
 }
-.pending_article {
+.ready_article {
   display: flex;
   flex-direction: column;
   margin: 0px 40px 0 35px;
 }
-.pending_title {
+.ready_title {
   font-size: 30px;
   margin: 0 0 0 40px;
 }
 .print_orders {
-  background-color: #f2e37d;
+  background-color: #eeb3c1;
   border-radius: 20px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   overflow: auto;
   word-wrap: break-word;
@@ -24,7 +25,7 @@
   width: 200px;
   height: 200px;
 }
-.container_pending_orders {
+.container_ready_orders {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

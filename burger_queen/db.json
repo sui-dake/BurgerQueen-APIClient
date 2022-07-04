@@ -73,22 +73,10 @@
       "id": 14
     },
     {
-      "name": "Doritos",
-      "price": "14",
-      "type": "Meal",
+      "name": "Bread",
+      "price": 9,
+      "type": "Breakfast",
       "id": 15
-    },
-    {
-      "name": "Flan",
-      "price": "12",
-      "type": "Breakfast",
-      "id": 16
-    },
-    {
-      "name": "Crepa",
-      "price": "14",
-      "type": "Breakfast",
-      "id": 17
     }
   ],
   "type": [
@@ -104,7 +92,7 @@
   "orders": [
     {
       "customer": "Bojji",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -184,7 +172,7 @@
     },
     {
       "customer": "Bosse",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -199,7 +187,7 @@
     },
     {
       "customer": "Homelander",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -265,7 +253,7 @@
     },
     {
       "customer": "Muzan",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -280,14 +268,14 @@
     },
     {
       "customer": "Pandi",
-      "state": "pending",
+      "state": "served",
       "summary": [],
       "total": 0,
       "id": 77
     },
     {
       "customer": "Fabricio",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -302,7 +290,7 @@
     },
     {
       "customer": "More",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -317,20 +305,29 @@
     },
     {
       "customer": " 101",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
-          "name": "",
-          "price": 0,
-          "quantity": 0
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 3
+        },
+        {
+          "name": "Corn",
+          "price": 30,
+          "type": "Breakfast",
+          "id": 13,
+          "quantity": 2
         }
       ],
-      "total": 0,
+      "total": "153030",
       "id": 80
     },
     {
       "customer": "Grupo Salinas",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "name": "",
@@ -343,7 +340,7 @@
     },
     {
       "customer": "Grupo Salinas",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "name": "",
@@ -356,7 +353,7 @@
     },
     {
       "customer": "Paty",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "name": "",
