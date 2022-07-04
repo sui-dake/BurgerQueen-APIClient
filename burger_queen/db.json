@@ -2,8 +2,8 @@
   "products": [
     {
       "id": 1,
-      "name": "Americano",
-      "price": 5,
+      "name": "Americanos",
+      "price": 51,
       "type": "Breakfast"
     },
     {
@@ -61,15 +61,15 @@
       "id": 12
     },
     {
-      "name": "Corn",
-      "price": "30",
-      "type": "Breakfast",
+      "name": "Maiz",
+      "price": 0,
+      "type": [],
       "id": 13
     },
     {
-      "name": "Pankekes",
-      "price": "48",
-      "type": "Breakfast",
+      "name": "Pitsa",
+      "price": 0,
+      "type": [],
       "id": 14
     },
     {
@@ -352,84 +352,17 @@
       "id": 82
     },
     {
-      "customer": "XCX",
+      "customer": "Paty",
       "state": "pending",
       "summary": [
         {
-          "id": 4,
-          "name": "Fruit juice",
-          "price": 7,
-          "type": "Breakfast",
-          "quantity": 5
-        },
-        {
-          "name": "Corn",
-          "price": "30",
-          "type": "Breakfast",
-          "id": 13,
-          "quantity": 2
-        },
-        {
-          "name": "Pankekes",
-          "price": "48",
-          "type": "Breakfast",
-          "id": 14,
-          "quantity": 2
+          "name": "",
+          "price": 0,
+          "quantity": 0
         }
       ],
-      "total": "03030484877777",
+      "total": 0,
       "id": 83
-    },
-    {
-      "customer": "weeer",
-      "state": "pending",
-      "summary": [
-        {
-          "id": 2,
-          "name": "Latte",
-          "price": 7,
-          "type": "Breakfast",
-          "quantity": 10
-        },
-        {
-          "id": 4,
-          "name": "Fruit juice",
-          "price": 7,
-          "type": "Breakfast",
-          "quantity": 3
-        }
-      ],
-      "total": 91,
-      "id": 84
-    },
-    {
-      "customer": "Marie",
-      "state": "pending",
-      "summary": [
-        {
-          "id": 1,
-          "name": "Americano",
-          "price": 5,
-          "type": "Breakfast",
-          "quantity": 4
-        },
-        {
-          "id": 2,
-          "name": "Latte",
-          "price": 7,
-          "type": "Breakfast",
-          "quantity": 3
-        },
-        {
-          "name": "Cheese hamburguer",
-          "price": 10,
-          "type": "Meal",
-          "id": 5,
-          "quantity": 2
-        }
-      ],
-      "total": 61,
-      "id": 85
     }
   ]
 }

@@ -5,3 +5,15 @@
   border-radius: 50%;
   background: rgb(27, 26, 26);
 }
+.container_images {
+  display: flex;
+  justify-content: space-around;
+}
+.loading_images {
+  width: 80px;
+  height: 80px;
+}
+.loading_images_bread {
+  width: 110px;
+  height: 110px;
+}
