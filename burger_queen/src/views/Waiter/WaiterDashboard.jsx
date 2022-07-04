@@ -4,6 +4,7 @@ import User from "../../components/User";
 import ButtonNewClient from "./waiterComponents/components/ButtonNewClient";
 import "./waiter.css";
 import PendingOrders from "./waiterComponents/pending/PendingOrders";
+import OrdersReady from "./waiterComponents/ready/OrdersReady";
 
 export default function WaiterDashboard() {
   return (
@@ -16,7 +17,9 @@ export default function WaiterDashboard() {
         <User />
       </header>
       <section id="main_waiter">
+        <OrdersReady />
         <PendingOrders />
+
         <ButtonNewClient />
       </section>
     </div>

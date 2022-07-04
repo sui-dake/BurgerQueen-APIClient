@@ -92,7 +92,7 @@
   "orders": [
     {
       "customer": "Bojji",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -172,7 +172,7 @@
     },
     {
       "customer": "Bosse",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -187,7 +187,7 @@
     },
     {
       "customer": "Homelander",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -253,7 +253,7 @@
     },
     {
       "customer": "Muzan",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -268,14 +268,14 @@
     },
     {
       "customer": "Pandi",
-      "state": "pending",
+      "state": "served",
       "summary": [],
       "total": 0,
       "id": 77
     },
     {
       "customer": "Fabricio",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -290,7 +290,7 @@
     },
     {
       "customer": "More",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -305,7 +305,7 @@
     },
     {
       "customer": " 101",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "id": 1,
@@ -316,7 +316,7 @@
         },
         {
           "name": "Corn",
-          "price": "30",
+          "price": 30,
           "type": "Breakfast",
           "id": 13,
           "quantity": 2
@@ -327,7 +327,7 @@
     },
     {
       "customer": "Grupo Salinas",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "name": "",
@@ -340,7 +340,7 @@
     },
     {
       "customer": "Grupo Salinas",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "name": "",
@@ -353,7 +353,7 @@
     },
     {
       "customer": "Paty",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "name": "",

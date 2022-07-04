@@ -33,40 +33,41 @@ const AddProduct = () => {
   };
 
   return (
-    <div>
-      <section>
-        <p className={styles.modals_p}>
-          Product:{" "}
-          <input
-            onChange={handleChange}
-            placeholder="Product"
-            className={styles.modals_inputs}
+      <div>
+        <section>
+          <p className={styles.modals_p}>
+            Product:{" "}
+            <input
+              onChange={handleChange}
+              placeholder="Product"
+              className={styles.modals_inputs}
+            />
+          </p>
+          <p className={styles.modals_p}>
+            Price:{" "}
+            <input
+              onChange={handleChangePrice}
+              placeholder="Price"
+              className={styles.modals_inputs}
+            />
+          </p>
+          <p className={styles.modals_p}>
+            Type:{" "}
+            <select onChange={handleChangeType} className={styles.select}>
+              <option className={styles.modals_select}>Type</option>
+              <option className={styles.modals_select}>Breakfast</option>
+              <option className={styles.modals_select}>Meal</option>
+            </select>
+          </p>
+          <img
+            id={styles.btn_send}
+            src={send}
+            type="button"
+            onClick={handleClick}
           />
-        </p>
-        <p className={styles.modals_p}>
-          Price:{" "}
-          <input
-            onChange={handleChangePrice}
-            placeholder="Price"
-            className={styles.modals_inputs}
-          />
-        </p>
-        <p className={styles.modals_p}>
-          Type:{" "}
-          <select onChange={handleChangeType} className={styles.modals_input}>
-            <option className={styles.modals_select}>Type</option>
-            <option className={styles.modals_select}>Breakfast</option>
-            <option className={styles.modals_select}>Meal</option>
-          </select>
-        </p>
-        <button id="button_new_client" onClick={handleClick}>
-          Send
-        </button>
-
-        <img id="btn-send" type="button" onClick={handleClick} />
-      </section>
-    </div>
-  );
+        </section>
+      </div>
+    );
 };
 
 export default AddProduct;
