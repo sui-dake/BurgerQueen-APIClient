@@ -15,16 +15,14 @@ export default function ChefDashboard() {
     });
   };
   const cooked = (id) => {
-    updateOrder(id, { state: "ready" });
+    updateOrder(id, { state: "ready" }).then(
+      setTimeout(() => printOrdersChef(), 500)
+    );
   };
 
   useEffect(() => {
     printOrdersChef();
   }, []);
-
-  useEffect(() => {
-    setTimeout(() => printOrdersChef(), 1500);
-  });
 
   return (
     <div className={styles.chef_dashboard}>

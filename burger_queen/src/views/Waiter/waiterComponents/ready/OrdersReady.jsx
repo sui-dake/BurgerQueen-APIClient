@@ -12,15 +12,15 @@ export default function OrdersReady() {
     });
   };
   const served = (id) => {
-    updateOrder(id, { state: "served" });
+    updateOrder(id, { state: "served" }).then(
+      setTimeout(() => printOrders(), 500)
+    );
   };
 
   useEffect(() => {
     printOrders();
   }, []);
-  useEffect(() => {
-    setTimeout(() => printOrders(), 1500);
-  });
+
   // useEffect(() => {
   //   console.count("RT");
   //   setTimeout(() => printOrders(), 1500);

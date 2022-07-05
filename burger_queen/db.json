@@ -25,13 +25,13 @@
       "type": "Breakfast"
     },
     {
-      "name": "Cheese hamburguer",
+      "name": "Cheese hamburger",
       "price": 10,
       "type": "Meal",
       "id": 5
     },
     {
-      "name": "Double cheese hamburguer",
+      "name": "Double cheese hamburger",
       "price": 15,
       "type": "Meal",
       "id": 6
@@ -59,18 +59,6 @@
       "price": 10,
       "type": "Meal",
       "id": 12
-    },
-    {
-      "name": "Cereal",
-      "price": "12",
-      "type": "Breakfast",
-      "id": 14
-    },
-    {
-      "name": "Bread",
-      "price": 9,
-      "type": "Breakfast",
-      "id": 15
     }
   ],
   "type": [
@@ -181,7 +169,7 @@
     },
     {
       "customer": "Homelander",
-      "state": "ready",
+      "state": "served",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -247,7 +235,7 @@
     },
     {
       "customer": "Muzan",
-      "state": "ready",
+      "state": "served",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -269,7 +257,7 @@
     },
     {
       "customer": "Fabricio",
-      "state": "ready",
+      "state": "served",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -284,7 +272,7 @@
     },
     {
       "customer": "More",
-      "state": "ready",
+      "state": "served",
       "summary": [
         {
           "id": 1,
@@ -359,6 +347,7 @@
       "id": 83
     },
     {
+<<<<<<< HEAD
       "customer": "Ele",
       "state": "ready",
       "summary": [
@@ -368,12 +357,31 @@
           "type": "Meal",
           "id": 7,
           "quantity": 1
+=======
+      "customer": "TOTALPLAY",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 2
+        },
+        {
+          "name": "Double cheese hamburger",
+          "price": 15,
+          "type": "Meal",
+          "id": 6,
+          "quantity": 3
+>>>>>>> 7974a83aceb4d10cf2b71dc74a48363f85fd253e
         },
         {
           "name": "Soda 750ml",
           "price": 10,
           "type": "Meal",
           "id": 12,
+<<<<<<< HEAD
           "quantity": 2
         }
       ],
@@ -524,6 +532,16 @@
     },
     {
       "customer": "Luna",
+=======
+          "quantity": 1
+        }
+      ],
+      "total": 69,
+      "id": 84
+    },
+    {
+      "customer": "Pal",
+>>>>>>> 7974a83aceb4d10cf2b71dc74a48363f85fd253e
       "state": "pending",
       "summary": [
         {
@@ -533,6 +551,7 @@
         }
       ],
       "total": 0,
+<<<<<<< HEAD
       "id": 94
     },
     {
@@ -601,6 +620,9 @@
       ],
       "total": 51,
       "id": 98
+=======
+      "id": 85
+>>>>>>> 7974a83aceb4d10cf2b71dc74a48363f85fd253e
     }
   ]
 }
