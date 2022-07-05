@@ -12,12 +12,12 @@
  }
  .modals_select {
    font-size: 20px;
-   background-color: aqua;
+   background-color:#E6E9D9;
    border-radius: 10px;
  }
  .select {
    font-size: 30px;
-   background: blueviolet;
+   background: #E6E9D9;
  }
  .modals_type {
    margin: 8px 10px 55px 80px;
@@ -27,10 +27,18 @@
  #btn_send {
    width: 60px;
    height: 60px;
-   margin-top: -120px;
+   margin-top: 4px;
    margin-left: 610px;
    margin-bottom: 74px;
    position: relative;
  }
  @media (min-width: 1180px) {
+  #btn_send {
+    width: 60px;
+    height: 60px;
+    margin-top: 4px;
+    margin-left: 769px;
+    margin-bottom: 74px;
+    position: relative;
+  }
  }

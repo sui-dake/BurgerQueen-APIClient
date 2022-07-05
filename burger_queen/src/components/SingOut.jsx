@@ -11,7 +11,7 @@ export default function SingOut() {
       await logout();
       navigate("/login");
     } catch (error) {
-      console.count()
+      console.count();
     }
   };
 

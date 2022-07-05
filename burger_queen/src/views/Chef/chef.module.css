@@ -4,7 +4,7 @@
   width: auto;
   height: 900px;
 }
-.singout {
+.singoutt {
   display: flex;
   justify-content: flex-end;
   margin-right: 55px;
@@ -13,6 +13,7 @@
 #date_user {
   display: flex;
   justify-content: space-around;
+  margin-top: 10px;
 }
 .chef {
   display: flex;
@@ -24,6 +25,7 @@
 .print_orders {
   width: auto;
   height: auto;
+  padding: 0 20px;
 }
 .container_orders {
   background-color: #f2e37d;

@@ -23,24 +23,24 @@ function App() {
 
   return (
     <div className="App">
-      <AuthProvider>
-        <BrowserRouter>
-          <Routes>
-            
-            <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/admin-dashboard" element={<AdminDashboard />} />
-            {/* <Route path='/admin-dashboard/products' element={<Products />}/>
+        <AuthProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/admin-dashboard" element={<AdminDashboard />} />
+              {/* <Route path='/admin-dashboard/products' element={<Products />}/>
             <Route path='/admin-dashboard/employees' element={<Employ
           </Route> */}
-            <Route path="/waiter-dashboard" element={<WaiterDashboard />} />
-            <Route path="/order/:id" element={<Order />} />
-            <Route path="/preparing-order" element={<PreparingOrder />} />
-            <Route path="/chef-dashboard" element={<ChefDashboard />} />
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
-    </div>
+              <Route path="/waiter-dashboard" element={<WaiterDashboard />} />
+              <Route path="/order/:id" element={<Order />} />
+              <Route path="/preparing-order" element={<PreparingOrder />} />
+              <Route path="/chef-dashboard" element={<ChefDashboard />} />
+            </Routes>
+          </BrowserRouter>
+        </AuthProvider>
+      </div>
+
   );
 }
 

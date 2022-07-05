@@ -14,14 +14,14 @@ export default function BreakfastAndMeal({ product, parentCallback }) {
   return (
     <div className={styles.table_content}>
       <td className={styles.counter_buttons}>$ {product.price}</td>
-      <td className={styles.counter_buttons}>{product.name}</td>
+      <td className={styles.counter_buttons_name}>{product.name}</td>
       <td className={styles.counter_buttons}>
-        <button className={styles.button} onClick={handleDecrement}>
+        <button className={styles.buttons} onClick={handleDecrement}>
           {" "}
           -{" "}
         </button>
         <p>{product.quantity}</p>
-        <button className={styles.button} onClick={handleIncrement}>
+        <button className={styles.buttons} onClick={handleIncrement}>
           {" "}
           +{" "}
         </button>

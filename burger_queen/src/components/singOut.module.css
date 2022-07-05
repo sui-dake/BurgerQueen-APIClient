@@ -1,9 +1,9 @@
 .btn_logout {
   background-color: transparent;
   border-style: none;
-  margin-top: 83px;
-  margin-left: -5px;
-  position: absolute
+  margin-left: -75px;
+
+  position: absolute;
 }
 #btn_logout_image {
   width: 50px;
@@ -13,8 +13,8 @@
   .btn_logout {
     background-color: transparent;
     border-style: none;
-    margin-top: -10px;
-    margin-left: -5px;
-    position: absolute
+    margin-top: 25px;
+    margin-left: -75px;
+    position: absolute;
   }
 }

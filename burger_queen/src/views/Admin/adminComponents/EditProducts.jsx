@@ -3,7 +3,8 @@
 import React from "react";
 import { updateProduct, getProduct } from "../../../api/handlingAPI";
 import { useEffect, useState } from "react";
-import styles from "./addProduct.module.css";
+import styles from "./editproduct.module.css";
+import send from "../../../assets/send.png";
 
 const EditProducts = ({ id, handleClose }) => {
   const [product, setProduct] = useState([]);
@@ -71,17 +72,14 @@ const EditProducts = ({ id, handleClose }) => {
       </p>
       <p className={styles.modals_p}>
         Type:{" "}
-        <select onChange={handleChangeType} className={styles.modals_input}>
+        <select onChange={handleChangeType} className={styles.select}>
           <option className={styles.modals_select}>Type</option>
           <option className={styles.modals_select}>Breakfast</option>
           <option className={styles.modals_select}>Meal</option>
         </select>
       </p>
-      <button id="button_new_client" onClick={handleClick}>
-        Send
-      </button>
 
-      <img id="btn-send" type="button" onClick={handleClick} />
+      <img id={styles.btn_send} type="button" src={send} onClick={handleClick} />
     </section>
   );
 };

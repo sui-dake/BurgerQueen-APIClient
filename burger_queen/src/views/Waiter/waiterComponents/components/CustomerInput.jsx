@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-
+import styles from './customer.module.css'
 const CustomerInput = ({ setCustomer }) => {
 
   const handleChange = (e) => {
@@ -9,8 +9,8 @@ const CustomerInput = ({ setCustomer }) => {
 
   return (
     <article className="customer">
-      <p id="customer">Customer:</p>
-      <input id="input_customer" onChange={handleChange} />
+      <p id={styles.customer}>Customer:</p>
+      <input id={styles.input_customer} onChange={handleChange} />
     </article>
   );
 };

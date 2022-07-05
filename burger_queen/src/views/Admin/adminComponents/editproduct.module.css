@@ -1,0 +1,36 @@
+.modals_p {
+    margin: 8px 10px 55px 80px;
+    padding: 0;
+    font-size: 40px;
+  }
+  .modals_inputs {
+    font-size: 30px;
+    border: none;
+    background: none;
+    border-bottom: 3px solid #1d3030;
+    width: auto;
+  }
+  .modals_select {
+    font-size: 18px;
+    background-color: #E6E9D9;
+    border-radius: 10px;
+  }
+  .select {
+    font-size: 30px;
+    background: #E6E9D9;
+  }
+  .modals_type {
+    margin: 8px 10px 55px 80px;
+    padding: 0;
+    font-size: 30px;
+  }
+  #btn_send {
+    width: 60px;
+    height: 60px;
+    margin-top: 4px;
+    margin-left: 610px;
+    margin-bottom: 74px;
+    position: relative;
+  }
+  @media (min-width: 1180px) {
+  }
