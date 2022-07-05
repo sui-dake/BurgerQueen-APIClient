@@ -28,13 +28,14 @@ export default function ChefDashboard() {
 
   return (
     <div className={styles.chef_dashboard}>
-      <main className={styles.singout}>
+      <main className={styles.singoutt}>
         <SingOut />
       </main>
-      <section id="date_user">
+      <section id={styles.date_user}>
+         
         <DateTime />
         <User />
-      </section>
+     </section>
       <summary>
         {ordersChef.map((order) => (
           <div className={styles.chef} key={order.id}>

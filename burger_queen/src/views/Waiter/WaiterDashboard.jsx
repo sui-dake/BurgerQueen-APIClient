@@ -22,6 +22,7 @@ export default function WaiterDashboard() {
 
         <ButtonNewClient />
       </section>
+      
     </div>
   );
 }

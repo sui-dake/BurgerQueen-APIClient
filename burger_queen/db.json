@@ -61,12 +61,6 @@
       "id": 12
     },
     {
-      "name": "Maiz",
-      "price": 0,
-      "type": [],
-      "id": 13
-    },
-    {
       "name": "Cereal",
       "price": "12",
       "type": "Breakfast",
@@ -114,7 +108,7 @@
     },
     {
       "customer": "Kage",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -150,7 +144,7 @@
     },
     {
       "customer": "Brunix",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "id": 1,
@@ -172,7 +166,7 @@
     },
     {
       "customer": "Bosse",
-      "state": "ready",
+      "state": "served",
       "summary": [
         {
           "id": 1,
@@ -202,7 +196,7 @@
     },
     {
       "customer": "Starligth",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Double cheese hamburguer",
@@ -224,7 +218,7 @@
     },
     {
       "customer": "Nezuko Kamado",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 4,
@@ -366,7 +360,7 @@
     },
     {
       "customer": "Ele",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Fries",
@@ -388,7 +382,7 @@
     },
     {
       "customer": "Millan",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "id": 3,
@@ -403,7 +397,7 @@
     },
     {
       "customer": "Mani",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 4,
@@ -418,7 +412,7 @@
     },
     {
       "customer": "Flor",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "name": "Onion rings",
@@ -430,6 +424,183 @@
       ],
       "total": 5,
       "id": 87
+    },
+    {
+      "customer": "Alexa",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 17,
+      "id": 88
+    },
+    {
+      "customer": "Ninetales",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Double cheese hamburguer",
+          "price": 15,
+          "type": "Meal",
+          "id": 6,
+          "quantity": 2
+        }
+      ],
+      "total": 30,
+      "id": 89
+    },
+    {
+      "customer": "Charo",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Double cheese hamburguer",
+          "price": 15,
+          "type": "Meal",
+          "id": 6,
+          "quantity": 2
+        }
+      ],
+      "total": 30,
+      "id": 90
+    },
+    {
+      "customer": "Ziany",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americanos",
+          "price": 51,
+          "type": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 51,
+      "id": 91
+    },
+    {
+      "customer": "Marcia",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 10,
+      "id": 92
+    },
+    {
+      "customer": "Cookies",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americanos",
+          "price": 51,
+          "type": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 51,
+      "id": 93
+    },
+    {
+      "customer": "Luna",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "total": 0,
+      "id": 94
+    },
+    {
+      "customer": "Kitty",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 10,
+      "id": 95
+    },
+    {
+      "customer": "Queen",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 10,
+      "id": 96
+    },
+    {
+      "customer": "Naruta",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Cereal",
+          "price": "12",
+          "type": "Breakfast",
+          "id": 14,
+          "quantity": 6
+        },
+        {
+          "name": "Bread",
+          "price": 9,
+          "type": "Breakfast",
+          "id": 15,
+          "quantity": 5
+        }
+      ],
+      "total": "012121212121299999",
+      "id": 97
+    },
+    {
+      "customer": "Zeny",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americanos",
+          "price": 51,
+          "type": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 51,
+      "id": 98
     }
   ]
 }

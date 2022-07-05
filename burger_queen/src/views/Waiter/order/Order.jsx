@@ -163,58 +163,63 @@ export default function Order() {
           Meal
         </button>
       </section>
-      <section id={styles.breafkast_meal}>
-        <div id={styles.order_table}>
-          {menu != null ? (
-            <article
-              className={styles.table_titles}
-              style={{ display: "flex", flexDirection: "row" }}
-            >
-              <p className={styles.table_p}>Price</p>
-              <p className={styles.table_p}>Product</p>
-              <p className={styles.table_p}>Quantity</p>
-            </article>
-          ) : null}
-          {menu === true
-            ? breakfast.map((product) => (
-                <tr className={styles.table_row} key={product.id}>
-                  <BreakfastAndMeal
-                    product={product}
-                    parentCallback={updateProducts}
-                  />
-                </tr>
-              ))
-            : menu === false
-            ? meal.map((product) => (
-                <tr id={styles.table_row} key={product.id}>
-                  <BreakfastAndMeal
-                    product={product}
-                    parentCallback={updateProducts}
-                  />
-                </tr>
-              ))
-            : null}
+      <div className={styles.container_overflow}>
+        <section id={styles.breafkast_meal}>
+          <div id={styles.order_table}>
+            {menu != null ? (
+              <article
+                className={styles.table_titles}
+                style={{ display: "flex", flexDirection: "row" }}
+              >
+                <p className={styles.table_p}>Price</p>
+                <p className={styles.table_p}>Product</p>
+                <p className={styles.table_p}>Quantity</p>
+              </article>
+            ) : null}
 
-          {/* {products.map((product) => (
-             <tr id="table_row" key={product.id}>
-               <BreakfastAndMeal
-                 product={product}
-                 parentCallback={updateProducts}
-               />
-             </tr>
-           ))} */}
-        </div>
-      </section>
+            {menu === true
+              ? breakfast.map((product) => (
+                  <tr className={styles.table_row} key={product.id}>
+                    <BreakfastAndMeal
+                      product={product}
+                      parentCallback={updateProducts}
+                    />
+                  </tr>
+                ))
+              : menu === false
+              ? meal.map((product) => (
+                  <tr className={styles.table_row} key={product.id}>
+                    <BreakfastAndMeal
+                      product={product}
+                      parentCallback={updateProducts}
+                    />
+                  </tr>
+                ))
+              : null}
+
+            {/* {products.map((product) => (
+       <tr id="table_row" key={product.id}>
+         <BreakfastAndMeal
+           product={product}
+           parentCallback={updateProducts}
+         />
+       </tr>
+     ))} */}
+          </div>
+        </section>
+      </div>
       <section id={styles.button_order}>
-        <p style={{ fontSize: 35 }}> Total: ${total}</p>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          id={styles.button_confirm_order}
-          onClick={updateState}
-        >
-          Confirm order
-        </motion.button>
+        {menu != null ? <p className={styles.total}> Total: ${total}</p> : null}
+        {menu != null ? (
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            id={styles.button_confirm_order}
+            onClick={updateState}
+          >
+            Confirm order
+          </motion.button>
+        ) : null}
       </section>
     </div>
   );

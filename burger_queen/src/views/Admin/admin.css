@@ -49,7 +49,7 @@ tr {
 }
 @media (min-width: 1180px) {
   #switch {
-    margin-top: 45px;
+    margin-top: -20px;
     position: relative;
   }
   

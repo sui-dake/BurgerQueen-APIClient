@@ -12,7 +12,6 @@ import Products from "./views/Admin/adminComponents/Products";
 import Home from "./views/Login/Home";
 import { AuthProvider } from "./context/authContext";
 import { ProtectedRoute } from "./components/ProtectedRoute";
-import Header from "./components/Header";
 
 function App() {
   //  const roll=""
@@ -23,12 +22,7 @@ function App() {
   //   }
 
   return (
-    <div className="back">
-      <div className="box">
-        <div className="circle-up">
-          <Header />
-        </div>
-
+    <div className="App">
         <AuthProvider>
           <BrowserRouter>
             <Routes>
@@ -46,7 +40,7 @@ function App() {
           </BrowserRouter>
         </AuthProvider>
       </div>
-    </div>
+
   );
 }
 
