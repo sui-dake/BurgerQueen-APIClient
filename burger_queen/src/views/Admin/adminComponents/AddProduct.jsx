@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { postProduct } from "../../../api/handlingAPI";
 import styles from "./addProduct.module.css";
-import send from "../../../assets/send.png";
+//import send from "../../../assets/send.png";
 
 const AddProduct = () => {
   const [product, setProduct] = useState([]);

@@ -59,12 +59,6 @@
       "price": 10,
       "type": "Meal",
       "id": 12
-    },
-    {
-      "name": "Popcorns",
-      "price": 4,
-      "type": "Meal",
-      "id": 13
     }
   ],
   "type": [
@@ -175,7 +169,7 @@
     },
     {
       "customer": "Homelander",
-      "state": "served",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -263,7 +257,7 @@
     },
     {
       "customer": "Fabricio",
-      "state": "served",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -278,7 +272,7 @@
     },
     {
       "customer": "More",
-      "state": "served",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -443,7 +437,7 @@
     },
     {
       "customer": "Ninetales",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Double cheese hamburguer",
@@ -503,7 +497,7 @@
     },
     {
       "customer": "Cookies",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -518,7 +512,7 @@
     },
     {
       "customer": "Luna",
-      "state": "served",
+      "state": "ready",
       "summary": [
         {
           "name": "",
@@ -531,7 +525,7 @@
     },
     {
       "customer": "Kitty",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -546,7 +540,7 @@
     },
     {
       "customer": "Queen",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -561,7 +555,7 @@
     },
     {
       "customer": "Naruta",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "name": "Cereal",
@@ -583,7 +577,7 @@
     },
     {
       "customer": "Zeny",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,

@@ -47,7 +47,7 @@ export default function ChefDashboard() {
               ))}
               <img
                 type="button"
-                style={{ width: "40px", height: "40px" }}
+                className={styles.buttn_check_chef}
                 src="./check.png"
                 onClick={() => {
                   cooked(order.id);

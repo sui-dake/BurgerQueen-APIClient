@@ -2,7 +2,7 @@
   overflow: auto;
   word-wrap: break-word;
   width: auto;
-  height: 900px;
+  height: 928px;
 }
 .singoutt {
   display: flex;
@@ -32,4 +32,17 @@
   border-radius: 20px;
   font-size: 25px;
   overflow: auto;
+}
+.buttn_check_chef {
+  width: 40px;
+  height: 40px;
+  margin-left: 230px;
+}
+@media (min-width: 1180px) {
+  .chef_dashboard {
+    overflow: auto;
+    word-wrap: break-word;
+    width: auto;
+    height: 648px;
+  }
 }
