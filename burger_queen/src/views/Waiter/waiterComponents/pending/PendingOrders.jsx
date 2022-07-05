@@ -17,10 +17,10 @@ export default function PendingOrders() {
   useEffect(() => {
     printOrders();
   }, []);
-  useEffect(() => {
-    console.count("RT");
-    setTimeout(() => printOrders(), 1500);
-  });
+  // useEffect(() => {
+  //   console.count("RT");
+  //   setTimeout(() => printOrders(), 1500);
+  // });
 
   return (
     <section className={styles.container_pending}>

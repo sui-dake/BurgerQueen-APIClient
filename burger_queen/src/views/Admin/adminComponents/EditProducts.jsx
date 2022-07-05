@@ -4,40 +4,47 @@ import React from "react";
 import { updateProduct, getProduct } from "../../../api/handlingAPI";
 import { useEffect, useState } from "react";
 import styles from "./addProduct.module.css";
-import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
-const EditProducts = ({ id }) => {
+const EditProducts = ({ id, handleClose }) => {
   const [product, setProduct] = useState([]);
   const [productName, setProductName] = useState([]);
   const [price, setPrice] = useState(0);
   const [type, setType] = useState([]);
+  const [productName1, setProductName1] = useState([]);
+  const [price1, setPrice1] = useState(0);
+  const [type1, setType1] = useState([]);
 
   const handleChangeName = (e) => {
-    setProductName(e.target.value);
+    setProductName1(e.target.value);
   };
 
   const handleChangePrice = (e) => {
-    setPrice(parseInt(e.target.value));
+    setPrice1(parseInt(e.target.value));
   };
 
   const handleChangeType = (e) => {
-    setType(e.target.value);
+    setType1(e.target.value);
   };
 
-  let nameF = productName;
-  let priceF = price;
-  let typeF = type;
+  let nameF = productName1;
+  let priceF = price1;
+  let typeF = type1;
 
   const handleClick = () => {
-    productName == [] && setProductName(product.name);
-    price == 0 && setPrice(product.price);
-    type == [] && setType(product.type);
-    let productValue = {
+    productName1.length == 0
+      ? setProductName(product.name)
+      : setProductName(nameF);
+    price1 === 0 ? setPrice(product.price) : setPrice(priceF);
+    type1.length === 0 ? setType(product.type) : setType(typeF);
+    const productValue = {
       name: productName,
       price: price,
       type: type,
     };
-    console.log(productValue);
+    if (productName !== [] && price !== 0 && type !== []) {
+      updateProduct(id, productValue).then(handleClose);
+    }
+    console.log(id, productValue);
   };
   useEffect(() => {
     getProduct(id).then(setProduct);

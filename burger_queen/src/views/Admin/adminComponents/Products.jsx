@@ -7,6 +7,8 @@ import { getAllProducts, deleteProduct } from "../../../api/handlingAPI";
 import styles from "./products.module.css";
 import EditProducts from "./EditProducts";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -14,7 +16,7 @@ export default function Products() {
   const [error, setError] = useState(null);
   const [edit, setEdit] = useState(false);
   const [editID, setEditID] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(null);
 
   const navigate = useNavigate();
 
@@ -39,13 +41,32 @@ export default function Products() {
     setEditID(id);
   };
 
-  const handleDelete = (id) => {
-    deleteProduct(id).then(fetchProducts).catch(alert);
-  };
-
   useEffect(() => {
     fetchProducts();
   }, []);
+
+  useEffect(() => {
+    isOpen === false && fetchProducts();
+    console.count();
+  }, [isOpen]);
+  const MySwal = withReactContent(Swal);
+
+  const alert = (id) => {
+    MySwal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#8785bd",
+      cancelButtonColor: "#f2e37d",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        deleteProduct(id).then(fetchProducts);
+      }
+    });
+  };
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -89,7 +110,7 @@ export default function Products() {
                     className={styles.products_img_edit_delete}
                     src="./trash.png"
                     onClick={() => {
-                      handleDelete(item.id);
+                      alert(item.id);
                     }}
                   />
                 </td>

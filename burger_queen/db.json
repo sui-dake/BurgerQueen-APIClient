@@ -25,13 +25,13 @@
       "type": "Breakfast"
     },
     {
-      "name": "Cheese hamburguer",
+      "name": "Cheese hamburger",
       "price": 10,
       "type": "Meal",
       "id": 5
     },
     {
-      "name": "Double cheese hamburguer",
+      "name": "Double cheese hamburger",
       "price": 15,
       "type": "Meal",
       "id": 6
@@ -59,24 +59,6 @@
       "price": 10,
       "type": "Meal",
       "id": 12
-    },
-    {
-      "name": "Maiz",
-      "price": 0,
-      "type": [],
-      "id": 13
-    },
-    {
-      "name": "Pitsa",
-      "price": 0,
-      "type": [],
-      "id": 14
-    },
-    {
-      "name": "Bread",
-      "price": 9,
-      "type": "Breakfast",
-      "id": 15
     }
   ],
   "type": [
@@ -114,7 +96,7 @@
     },
     {
       "customer": "Kage",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -187,7 +169,7 @@
     },
     {
       "customer": "Homelander",
-      "state": "ready",
+      "state": "served",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -224,7 +206,7 @@
     },
     {
       "customer": "Nezuko Kamado",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 4,
@@ -253,7 +235,7 @@
     },
     {
       "customer": "Muzan",
-      "state": "ready",
+      "state": "served",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -275,7 +257,7 @@
     },
     {
       "customer": "Fabricio",
-      "state": "ready",
+      "state": "served",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -290,7 +272,7 @@
     },
     {
       "customer": "More",
-      "state": "ready",
+      "state": "served",
       "summary": [
         {
           "id": 1,
@@ -363,6 +345,48 @@
       ],
       "total": 0,
       "id": 83
+    },
+    {
+      "customer": "TOTALPLAY",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 2
+        },
+        {
+          "name": "Double cheese hamburger",
+          "price": 15,
+          "type": "Meal",
+          "id": 6,
+          "quantity": 3
+        },
+        {
+          "name": "Soda 750ml",
+          "price": 10,
+          "type": "Meal",
+          "id": 12,
+          "quantity": 1
+        }
+      ],
+      "total": 69,
+      "id": 84
+    },
+    {
+      "customer": "Pal",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "total": 0,
+      "id": 85
     }
   ]
 }
