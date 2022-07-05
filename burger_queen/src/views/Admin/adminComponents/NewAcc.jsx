@@ -72,9 +72,9 @@ export default function NewAcc() {
               {...register("role", { required: true })}
               className={styles.email_pass}
             >
-              <option value="Waiter/waitress">Waiter/waitress</option>
-              <option value="Chef">Chef</option>
-              <option value="Manager">Manager</option>
+              <option className={styles.modals_select} value="Waiter/waitress">Waiter/waitress</option>
+              <option className={styles.modals_select} value="Chef">Chef</option>
+              <option className={styles.modals_select} value="Manager">Manager</option>
             </select>
           </p>
           <p className={styles.email_pass_p}>
@@ -88,7 +88,7 @@ export default function NewAcc() {
             />
           </p>
 
-          <input type="submit" id="submit" value={"Create"} />
+          <input type="submit" id={styles.submit_newacc} value={"Create"} />
         </form>
         {() => {
           console.log(user);

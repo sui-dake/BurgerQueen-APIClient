@@ -1,0 +1,44 @@
+.employees_tr {
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+.th_name {
+  width: 140px;
+  padding: 10px;
+  font-size: 32px;
+}
+.th_role {
+  width: 65px;
+  padding: 10px;
+  font-size: 32px;
+}
+.tr_user {
+  width: 150px;
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.tr_role {
+    width: 110px;
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .edit_employees{
+    width: 40px;
+    height: 40px;
+  }
+  @media (min-width: 1180px) {
+    .th_name {
+        width: 280px;
+        padding: 10px;
+      }
+      .th_role {
+        width: 140px;
+        padding: 10px;
+      }
+  }
+

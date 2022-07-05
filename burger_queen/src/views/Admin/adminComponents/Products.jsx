@@ -57,12 +57,12 @@ export default function Products() {
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#8785bd",
-      cancelButtonColor: "#f2e37d",
+      confirmButtonColor: "#85BDA1",
+      cancelButtonColor: "#e74e6d",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        Swal.fire("Deleted!", "Your product has been deleted.", "success");
         deleteProduct(id).then(fetchProducts);
       }
     });

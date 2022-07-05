@@ -2,8 +2,8 @@
   "products": [
     {
       "id": 1,
-      "name": "Americanos",
-      "price": 51,
+      "name": "Americano",
+      "price": 5,
       "type": "Breakfast"
     },
     {
@@ -169,7 +169,7 @@
     },
     {
       "customer": "Homelander",
-      "state": "served",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -257,7 +257,7 @@
     },
     {
       "customer": "Fabricio",
-      "state": "served",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -272,7 +272,7 @@
     },
     {
       "customer": "More",
-      "state": "served",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -347,7 +347,6 @@
       "id": 83
     },
     {
-<<<<<<< HEAD
       "customer": "Ele",
       "state": "ready",
       "summary": [
@@ -357,31 +356,12 @@
           "type": "Meal",
           "id": 7,
           "quantity": 1
-=======
-      "customer": "TOTALPLAY",
-      "state": "pending",
-      "summary": [
-        {
-          "id": 4,
-          "name": "Fruit juice",
-          "price": 7,
-          "type": "Breakfast",
-          "quantity": 2
-        },
-        {
-          "name": "Double cheese hamburger",
-          "price": 15,
-          "type": "Meal",
-          "id": 6,
-          "quantity": 3
->>>>>>> 7974a83aceb4d10cf2b71dc74a48363f85fd253e
         },
         {
           "name": "Soda 750ml",
           "price": 10,
           "type": "Meal",
           "id": 12,
-<<<<<<< HEAD
           "quantity": 2
         }
       ],
@@ -457,7 +437,7 @@
     },
     {
       "customer": "Ninetales",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Double cheese hamburguer",
@@ -517,7 +497,7 @@
     },
     {
       "customer": "Cookies",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -532,17 +512,7 @@
     },
     {
       "customer": "Luna",
-=======
-          "quantity": 1
-        }
-      ],
-      "total": 69,
-      "id": 84
-    },
-    {
-      "customer": "Pal",
->>>>>>> 7974a83aceb4d10cf2b71dc74a48363f85fd253e
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "",
@@ -551,12 +521,11 @@
         }
       ],
       "total": 0,
-<<<<<<< HEAD
       "id": 94
     },
     {
       "customer": "Kitty",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -571,7 +540,7 @@
     },
     {
       "customer": "Queen",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "name": "Cheese hamburguer",
@@ -586,7 +555,7 @@
     },
     {
       "customer": "Naruta",
-      "state": "pending",
+      "state": "served",
       "summary": [
         {
           "name": "Cereal",
@@ -608,7 +577,7 @@
     },
     {
       "customer": "Zeny",
-      "state": "pending",
+      "state": "ready",
       "summary": [
         {
           "id": 1,
@@ -620,9 +589,6 @@
       ],
       "total": 51,
       "id": 98
-=======
-      "id": 85
->>>>>>> 7974a83aceb4d10cf2b71dc74a48363f85fd253e
     }
   ]
 }
