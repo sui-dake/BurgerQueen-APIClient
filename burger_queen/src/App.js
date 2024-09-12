@@ -1,9 +1,10 @@
+/* eslint-disable react/react-in-jsx-scope */
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./views/Login/Login";
 import AdminDashboard from "./views/Admin/AdminDashboard";
 import WaiterDashboard from "./views/Waiter/WaiterDashboard";
-import Order from "./views/Waiter/Order";
+import Order from "./views/Waiter/order/Order";
 import PreparingOrder from "./views/Waiter/Preparing";
 import ChefDashboard from "./views/Chef/ChefDashboard";
 import Employees from "./views/Admin/adminComponents/Employees";
@@ -22,52 +23,24 @@ function App() {
 
   return (
     <div className="App">
-      <AuthProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/login" element={<Login />} />
-
-            <Route
-              path="/"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin-dashboard"
-              element={
-                <ProtectedRoute>
-                  <AdminDashboard />
-                </ProtectedRoute>
-              }
-            />
-            {/* <Route path='/admin-dashboard/products' element={<Products />}/>
+        <AuthProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/admin-dashboard" element={<AdminDashboard />} />
+              {/* <Route path='/admin-dashboard/products' element={<Products />}/>
             <Route path='/admin-dashboard/employees' element={<Employ
           </Route> */}
-            <Route
-              path="/waiter-dashboard"
-              element={
-                <ProtectedRoute>
-                  <WaiterDashboard />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/order" element={<Order />} />
-            <Route path="/preparing-order" element={<PreparingOrder />} />
-            <Route
-              path="/chef-dashboard"
-              element={
-                <ProtectedRoute>
-                  <ChefDashboard />
-                </ProtectedRoute>
-              }
-            />
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
-    </div>
+              <Route path="/waiter-dashboard" element={<WaiterDashboard />} />
+              <Route path="/order/:id" element={<Order />} />
+              <Route path="/preparing-order" element={<PreparingOrder />} />
+              <Route path="/chef-dashboard" element={<ChefDashboard />} />
+            </Routes>
+          </BrowserRouter>
+        </AuthProvider>
+      </div>
+
   );
 }
 

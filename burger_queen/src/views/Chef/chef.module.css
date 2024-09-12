@@ -1,0 +1,48 @@
+.chef_dashboard {
+  overflow: auto;
+  word-wrap: break-word;
+  width: auto;
+  height: 928px;
+}
+.singoutt {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 55px;
+  margin-top: -50px;
+}
+#date_user {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.chef {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  overflow: auto;
+}
+.print_orders {
+  width: auto;
+  height: auto;
+  padding: 0 20px;
+}
+.container_orders {
+  background-color: #f2e37d;
+  border-radius: 20px;
+  font-size: 25px;
+  overflow: auto;
+}
+.buttn_check_chef {
+  width: 40px;
+  height: 40px;
+  margin-left: 230px;
+}
+@media (min-width: 1180px) {
+  .chef_dashboard {
+    overflow: auto;
+    word-wrap: break-word;
+    width: auto;
+    height: 648px;
+  }
+}

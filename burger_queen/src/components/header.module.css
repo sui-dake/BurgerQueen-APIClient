@@ -1,0 +1,16 @@
+#container_header {
+  display: flex;
+  justify-content: center;
+  margin-top: 8.8%;
+}
+#logo_burger_queen {
+  width: 45%;
+  height: 20%;
+}
+@media (min-width: 1180px) {
+  #logo_burger_queen {
+    width: 30%;
+    height: 20%;
+    margin-top: -6.4%;
+  }
+}

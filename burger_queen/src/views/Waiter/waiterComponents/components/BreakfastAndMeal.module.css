@@ -1,0 +1,74 @@
+.table_content {
+  display: flex;
+
+}
+
+.counter_buttons {
+  width: 120px;
+  padding: 5px 10px;
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  border: none;
+}
+.counter_buttons_name {
+  width: 290px;
+  padding: 5px 10px;
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  border: none;
+}
+.button:first-child,
+:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.counter_buttons:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.buttons {
+  height: fit-content;
+  background: none;
+  border: none;
+  font-size: 30px;
+  font-weight: 500;
+}
+@media (min-width: 1180px) {
+  .table_content {
+    display: flex;
+    margin-left: -270px;
+  }
+  .counter_buttons {
+    width: 200px;
+    padding: 5px 10px;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    border: none;
+  }
+  .counter_buttons_name {
+    width: 380px;
+    padding: 5px 10px;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    border: none;
+  }
+}

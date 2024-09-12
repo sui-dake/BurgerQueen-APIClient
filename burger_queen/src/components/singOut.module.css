@@ -1,0 +1,20 @@
+.btn_logout {
+  background-color: transparent;
+  border-style: none;
+  margin-left: -75px;
+
+  position: absolute;
+}
+#btn_logout_image {
+  width: 50px;
+  height: 50px;
+}
+@media (min-width: 1180px) {
+  .btn_logout {
+    background-color: transparent;
+    border-style: none;
+    margin-top: 25px;
+    margin-left: -75px;
+    position: absolute;
+  }
+}

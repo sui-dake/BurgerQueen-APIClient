@@ -1,0 +1,50 @@
+.container_ready {
+  overflow: auto;
+  word-wrap: break-word;
+  width: auto;
+  height: 400px;
+}
+.ready_article {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 40px 0 35px;
+}
+.ready_title {
+  font-size: 30px;
+  margin: -30px 0 0 40px;
+  position: fixed;
+}
+.print_orders {
+  background-color: #eeb3c1;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: auto;
+  word-wrap: break-word;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+}
+.container_ready_orders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.print_orders_p {
+  margin: 0 10px 8px 10px;
+  font-size: 20px;
+}
+@media (min-width: 1180px) {
+  .container_ready {
+    overflow: auto;
+    word-wrap: break-word;
+    width: auto;
+    height: 220px;
+  }
+  .ready_title {
+    font-size: 30px;
+    margin: -35px 0 40px 83px;
+    position: fixed;
+  }
+}

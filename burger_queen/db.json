@@ -1,5 +1,5 @@
 {
-  "product": [
+  "products": [
     {
       "id": 1,
       "name": "Americano",
@@ -7,18 +7,588 @@
       "type": "Breakfast"
     },
     {
-        "id": 2,
-        "name": "Latte",
-        "price": 7,
-        "type": "Breakfast"
+      "id": 2,
+      "name": "Latte",
+      "price": 7,
+      "type": "Breakfast"
     },
     {
-        "id": 3,
-        "name": "Ham & cheese sandwich",
-        "price": 10,
-        "type": "Breakfast"
-      }
-    
-
+      "id": 3,
+      "name": "Ham & cheese sandwich",
+      "price": 10,
+      "type": "Breakfast"
+    },
+    {
+      "id": 4,
+      "name": "Fruit juice",
+      "price": 7,
+      "type": "Breakfast"
+    },
+    {
+      "name": "Cheese hamburger",
+      "price": 10,
+      "type": "Meal",
+      "id": 5
+    },
+    {
+      "name": "Double cheese hamburger",
+      "price": 15,
+      "type": "Meal",
+      "id": 6
+    },
+    {
+      "name": "Fries",
+      "price": 5,
+      "type": "Meal",
+      "id": 7
+    },
+    {
+      "name": "Onion rings",
+      "price": 5,
+      "type": "Meal",
+      "id": 8
+    },
+    {
+      "name": "Water 750ml",
+      "price": 7,
+      "type": "Meal",
+      "id": 10
+    },
+    {
+      "name": "Soda 750ml",
+      "price": 10,
+      "type": "Meal",
+      "id": 12
+    }
+  ],
+  "type": [
+    {
+      "id": 1,
+      "name": "Breakfast"
+    },
+    {
+      "id": 2,
+      "name": "Meal"
+    }
+  ],
+  "orders": [
+    {
+      "customer": "Bojji",
+      "state": "ready",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "type": "Breakfast",
+          "quantity": 2
+        }
+      ],
+      "total": 30,
+      "id": 69
+    },
+    {
+      "customer": "Kage",
+      "state": "ready",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 5
+        },
+        {
+          "id": 3,
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "type": "Breakfast",
+          "quantity": 4
+        },
+        {
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 0,
+      "id": 70
+    },
+    {
+      "customer": "Brunix",
+      "state": "served",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 4
+        },
+        {
+          "id": 2,
+          "name": "Latte",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 3
+        }
+      ],
+      "total": 41,
+      "id": 71
+    },
+    {
+      "customer": "Bosse",
+      "state": "served",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 3
+        }
+      ],
+      "total": 15,
+      "id": 72
+    },
+    {
+      "customer": "Homelander",
+      "state": "ready",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 10,
+      "id": 73
+    },
+    {
+      "customer": "Starligth",
+      "state": "ready",
+      "summary": [
+        {
+          "name": "Double cheese hamburguer",
+          "price": 15,
+          "type": "Meal",
+          "id": 6,
+          "quantity": 1
+        },
+        {
+          "name": "Fries",
+          "price": 5,
+          "type": "Meal",
+          "id": 7,
+          "quantity": 1
+        }
+      ],
+      "total": 20,
+      "id": 74
+    },
+    {
+      "customer": "Nezuko Kamado",
+      "state": "ready",
+      "summary": [
+        {
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Water 500ml",
+          "price": 5,
+          "type": "Meal",
+          "id": 9,
+          "quantity": 1
+        },
+        {
+          "name": "Soda 750ml",
+          "price": 10,
+          "type": "Meal",
+          "id": 12,
+          "quantity": 1
+        }
+      ],
+      "total": 22,
+      "id": 75
+    },
+    {
+      "customer": "Muzan",
+      "state": "served",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 10,
+      "id": 76
+    },
+    {
+      "customer": "Pandi",
+      "state": "served",
+      "summary": [],
+      "total": 0,
+      "id": 77
+    },
+    {
+      "customer": "Fabricio",
+      "state": "ready",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 10,
+      "id": 78
+    },
+    {
+      "customer": "More",
+      "state": "ready",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 2
+        }
+      ],
+      "total": 10,
+      "id": 79
+    },
+    {
+      "customer": " 101",
+      "state": "served",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americano",
+          "price": 5,
+          "type": "Breakfast",
+          "quantity": 3
+        },
+        {
+          "name": "Corn",
+          "price": 30,
+          "type": "Breakfast",
+          "id": 13,
+          "quantity": 2
+        }
+      ],
+      "total": "153030",
+      "id": 80
+    },
+    {
+      "customer": "Grupo Salinas",
+      "state": "served",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "total": 0,
+      "id": 81
+    },
+    {
+      "customer": "Grupo Salinas",
+      "state": "served",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "total": 0,
+      "id": 82
+    },
+    {
+      "customer": "Paty",
+      "state": "served",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "total": 0,
+      "id": 83
+    },
+    {
+      "customer": "Ele",
+      "state": "ready",
+      "summary": [
+        {
+          "name": "Fries",
+          "price": 5,
+          "type": "Meal",
+          "id": 7,
+          "quantity": 1
+        },
+        {
+          "name": "Soda 750ml",
+          "price": 10,
+          "type": "Meal",
+          "id": 12,
+          "quantity": 2
+        }
+      ],
+      "total": 25,
+      "id": 84
+    },
+    {
+      "customer": "Millan",
+      "state": "served",
+      "summary": [
+        {
+          "id": 3,
+          "name": "Ham & cheese sandwich",
+          "price": 10,
+          "type": "Breakfast",
+          "quantity": 3
+        }
+      ],
+      "total": 30,
+      "id": 85
+    },
+    {
+      "customer": "Mani",
+      "state": "ready",
+      "summary": [
+        {
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 7,
+      "id": 86
+    },
+    {
+      "customer": "Flor",
+      "state": "served",
+      "summary": [
+        {
+          "name": "Onion rings",
+          "price": 5,
+          "type": "Meal",
+          "id": 8,
+          "quantity": 1
+        }
+      ],
+      "total": 5,
+      "id": 87
+    },
+    {
+      "customer": "Alexa",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 4,
+          "name": "Fruit juice",
+          "price": 7,
+          "type": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 17,
+      "id": 88
+    },
+    {
+      "customer": "Ninetales",
+      "state": "ready",
+      "summary": [
+        {
+          "name": "Double cheese hamburguer",
+          "price": 15,
+          "type": "Meal",
+          "id": 6,
+          "quantity": 2
+        }
+      ],
+      "total": 30,
+      "id": 89
+    },
+    {
+      "customer": "Charo",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Double cheese hamburguer",
+          "price": 15,
+          "type": "Meal",
+          "id": 6,
+          "quantity": 2
+        }
+      ],
+      "total": 30,
+      "id": 90
+    },
+    {
+      "customer": "Ziany",
+      "state": "pending",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americanos",
+          "price": 51,
+          "type": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 51,
+      "id": 91
+    },
+    {
+      "customer": "Marcia",
+      "state": "pending",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 10,
+      "id": 92
+    },
+    {
+      "customer": "Cookies",
+      "state": "ready",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americanos",
+          "price": 51,
+          "type": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 51,
+      "id": 93
+    },
+    {
+      "customer": "Luna",
+      "state": "ready",
+      "summary": [
+        {
+          "name": "",
+          "price": 0,
+          "quantity": 0
+        }
+      ],
+      "total": 0,
+      "id": 94
+    },
+    {
+      "customer": "Kitty",
+      "state": "ready",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 10,
+      "id": 95
+    },
+    {
+      "customer": "Queen",
+      "state": "ready",
+      "summary": [
+        {
+          "name": "Cheese hamburguer",
+          "price": 10,
+          "type": "Meal",
+          "id": 5,
+          "quantity": 1
+        }
+      ],
+      "total": 10,
+      "id": 96
+    },
+    {
+      "customer": "Naruta",
+      "state": "served",
+      "summary": [
+        {
+          "name": "Cereal",
+          "price": "12",
+          "type": "Breakfast",
+          "id": 14,
+          "quantity": 6
+        },
+        {
+          "name": "Bread",
+          "price": 9,
+          "type": "Breakfast",
+          "id": 15,
+          "quantity": 5
+        }
+      ],
+      "total": "012121212121299999",
+      "id": 97
+    },
+    {
+      "customer": "Zeny",
+      "state": "ready",
+      "summary": [
+        {
+          "id": 1,
+          "name": "Americanos",
+          "price": 51,
+          "type": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 51,
+      "id": 98
+    }
   ]
 }

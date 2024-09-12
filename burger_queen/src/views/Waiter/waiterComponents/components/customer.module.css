@@ -1,0 +1,11 @@
+#customer {
+  margin-left: 100px;
+}
+#input_customer {
+  font-size: 30px;
+  border: none;
+  background: none;
+  border-bottom: 3px solid #1d3030;
+  margin-left: 100px;
+  width: auto;
+}

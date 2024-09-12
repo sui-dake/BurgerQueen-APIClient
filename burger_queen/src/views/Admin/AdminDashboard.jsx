@@ -1,24 +1,59 @@
-import "./admin.css";
-import { Link, Route, Routes } from "react-router-dom";
-import Switch from "./adminComponents/Switch";
+/* eslint-disable react/react-in-jsx-scope */
+import  "./admin.css";
+import { useState } from "react";
 import Products from "./adminComponents/Products";
 import Employees from "./adminComponents/Employees";
-import ButtonAddEmployee from "./adminComponents/ButtonAddEmployee";
-import OrderTable from "./../Waiter/waiterComponents/components/OrderTable";
-//import { useAuth } from './../context/authContext'
+import SingOut from "../../components/SingOut";
+import Modal from "./adminComponents/modal/Modal";
+import DateTime from "../../components/DateTime";
+import User from "../../components/User";
 
 export default function AdminDashboard() {
-  return (
-    <div className="admin_dashboard">
-      <h1></h1>
-      <p></p>
-      <Switch />
-      <ButtonAddEmployee />
+  const [employee, setEmployee] = useState(false);
+  const [product, setProduct] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-      <Link to={"/"} style={{ margin: "5px" }}>
-        {" "}
-        Home{" "}
-      </Link>
+  const handleEmployee = () => {
+    if (true) {
+      setEmployee(true), setProduct(false);
+    }
+  };
+
+  const handleProduct = () => {
+    if (true) {
+      setProduct(true), setEmployee(false);
+    }
+  };
+
+  return (
+    <div className="waiter_dashboard">
+      <main className="singout_waiter">
+        <SingOut />
+      </main>
+      <header id="header_waiter">
+        <DateTime />
+        <User />
+      </header>
+      <div className="admin_dashboard">
+        <object id="switch">
+          <button
+            className="admin_switch"
+            id="b_employees"
+            onClick={handleEmployee}
+          >
+            Employees
+          </button>
+          <button
+            className="admin_switch"
+            id="b_products"
+            onClick={handleProduct}
+          >
+            Products
+          </button>
+        </object>
+        {employee && <Employees />}
+        {product && <Products />}
+      </div>
     </div>
   );
 }

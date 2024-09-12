@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
@@ -5,23 +7,16 @@ import {
   onAuthStateChanged,
   signOut,
   updateProfile,
+  updateCurrentUser,
 } from "firebase/auth";
-import {
-  getDocs,
-  getDoc,
-  collection,
-  doc,
-  docs,
-  query,
-  where,
-} from "firebase/firestore";
+import { getDocs, collection, query, where } from "firebase/firestore";
 import { auth, db } from "../libs/Firebase-config";
 
 export const authContext = createContext();
 //HOOK personalizado para no importar tanto de REACT
 export const useAuth = () => {
   const context = useContext(authContext);
-  if (!context) throw new Error("No hay usuario");
+  if (!context) throw new Error("No user");
   return context;
 };
 
@@ -43,6 +38,10 @@ export function AuthProvider({ children }) {
     updateProfile(auth.currentUser, {
       displayName: name,
     });
+  };
+
+  const currentRemain = (user) => {
+    updateCurrentUser(auth, user);
   };
 
   const role = async () => {
@@ -72,7 +71,16 @@ export function AuthProvider({ children }) {
   }, [user]);
   return (
     <authContext.Provider
-      value={{ singup, login, logout, user, loading, changeName, roles }}
+      value={{
+        singup,
+        login,
+        logout,
+        user,
+        loading,
+        changeName,
+        roles,
+        currentRemain,
+      }}
     >
       {children}
     </authContext.Provider>

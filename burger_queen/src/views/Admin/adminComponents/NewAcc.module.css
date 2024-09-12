@@ -1,0 +1,45 @@
+.new_form {
+  margin: 0 0 0px 0;
+  padding: 0;
+}
+#container_form {
+  margin: -70px 10px 0px 20px;
+  padding: 0;
+}
+.email_pass {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 32px;
+}
+.email_pass_p {
+  margin: 20px 0 20px 0;
+  font-size: 35px;
+}
+#submit_newacc{
+  border: 3px solid #e42047;
+  background: #E5E5E5;
+  border-radius: 20px;
+  padding: 12px;
+  width: 37%;
+  margin-top: 5%;
+  font-size: 32px;
+  color: #e42047;
+}
+.modals_select {
+  font-size: 20px;
+  background-color:#E6E9D9;
+  border-radius: 10px;
+}
+@media (min-width: 1180px) {
+  #submit_newacc{
+    border: 3px solid #e42047;
+    background: #E5E5E5;
+    border-radius: 20px;
+    padding: 11px;
+    width: 28%;
+    margin-top: 4%;
+    font-size: 32px;
+    color: #e42047;
+  }
+}

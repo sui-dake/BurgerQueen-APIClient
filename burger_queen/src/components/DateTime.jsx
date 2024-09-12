@@ -1,4 +1,4 @@
-import "./date.css";
+import styles from "./date.module.css";
 import { useState, useEffect } from "react";
 
 export default function DateTime() {
@@ -13,7 +13,7 @@ export default function DateTime() {
 
   return (
     <div>
-      <h2>
+      <h2 id={styles.date}>
         {date.toDateString()} {date.toLocaleTimeString()}
       </h2>
     </div>
